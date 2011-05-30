@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\SRE">
+      <UniqueIdentifier>{083866e0-dacc-463a-98c8-ee74446a7187}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\SRE\ExtendedSA">
+      <UniqueIdentifier>{3aa771ff-2279-45e8-920b-0a420542b7cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\SRE">
+      <UniqueIdentifier>{319715c0-3942-41ea-8716-eefcb636aa94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\SRE\ExtendedSA">
+      <UniqueIdentifier>{f18d6fc5-a543-4b7f-9c10-92d8ec846853}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\SRE\ExtendedSA\FSM">
+      <UniqueIdentifier>{3e2fe34a-ad0b-4b5a-abaa-97d4f8a14335}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\SRE\World">
+      <UniqueIdentifier>{c1bccb04-234e-45ff-bbe3-6487174db3ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\SRE\World">
+      <UniqueIdentifier>{884c7386-d9da-49f0-8263-3189b5313f82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\SRE\Robot">
+      <UniqueIdentifier>{32c86390-a531-4bb5-839d-039e7e954d3c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ExtendedSA.h">
+      <Filter>ヘッダー ファイル\SRE\ExtendedSA</Filter>
+    </ClInclude>
+    <ClInclude Include="Message.hpp">
+      <Filter>ヘッダー ファイル\SRE\ExtendedSA</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <Filter>ヘッダー ファイル\SRE\ExtendedSA</Filter>
+    </ClInclude>
+    <ClInclude Include="Server.h">
+      <Filter>ヘッダー ファイル\SRE\ExtendedSA</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>ヘッダー ファイル\SRE\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Robot.h">
+      <Filter>ヘッダー ファイル\SRE\Robot</Filter>
+    </ClInclude>
+    <ClInclude Include="States.h">
+      <Filter>ヘッダー ファイル\SRE\ExtendedSA\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="Part.h">
+      <Filter>ヘッダー ファイル\SRE\Robot</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Client.cpp">
+      <Filter>ソース ファイル\SRE\ExtendedSA</Filter>
+    </ClCompile>
+    <ClCompile Include="Server.cpp">
+      <Filter>ソース ファイル\SRE\ExtendedSA</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldGL.cpp">
+      <Filter>ソース ファイル\SRE\World</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldPhysX.cpp">
+      <Filter>ソース ファイル\SRE\World</Filter>
+    </ClCompile>
+    <ClCompile Include="SRE_test_main.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
