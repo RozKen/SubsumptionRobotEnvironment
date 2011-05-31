@@ -9,12 +9,13 @@
 #ifndef SRE_World_World_H_
 #define SRE_World_World_H_
 
-#include <vector>		//Used for TumblingRobot Array
+//#include <vector>		//Used for TumblingRobot Array
 #include <iostream>		//Used for Console Message I/O
 #include <string>		//Used for Console Window Closing Stopper
-#include <GL/glut.h>	//Used for OpenGL (GLUT)
 
 #include "Robot.h"		//Robots
+
+#include <GL/glut.h>	//Used for OpenGL (GLUT)
 
 #ifdef _WIN64
 #pragma comment(lib, "glut64.lib")
@@ -24,29 +25,25 @@
 #pragma comment(lib, "PhysXLoader.lib")
 #endif //WIN32
 
+#define FPS 20.0		///Frame Per Second
+
 namespace SRE{
 	namespace ExtendedSA{
 		class Server;				//Prototype Declaration
 	}
 namespace World{
-
-	#define FPS 20.0		///Frame Per Second
-	#define DENSITY 0.5f	///Density of Mass Objects
-	#define MASS 1.0f		///Default Mass
 	class World{
 	public:
-		World(int argc, char **argv);
+		World(int argc, char **argv);	//Constructor
+		void InitWorld();
 		/*
 		 * for PhysX
 		 */
 		bool InitNx();
 		static void CleanUpNx();
 		bool InitScene();
+
 		void CreateGroundPlane();
-		//NxActor* CreateBox(float w, float d, float h,float xInit, float yInit, float zInit);
-		//NxActor* CreateBox(NxVec3 dimensions, NxVec3 pos);
-		//NxActor* CreateSphere(float r, float xInit, float yInit, float zInit);
-		//NxActor* CreateSphere(float r, NxVec3 pos);
 		//void CreateTumblingRobot(const NxVec3 pos);
 		//void CreateSpringRobot(const NxVec3 pos);
 
@@ -65,24 +62,23 @@ namespace World{
 		static void ReshapeCallback(int width, int height);
 		static void IdleCallback();
 
-		//Robots Object
-		//struct TumblingRobots{
-		//	NxActor *body;
-		//	NxActor *leftArm;
-		//	NxActor *rightArm;
-		//};
-
-		//struct SpringRobot{
-		//	std::vector<NxActor *> vertices;
-		//	NxVec3 centerOfMass;
-		//};
-
-		//OpenGL Utility Functions
+		//Utility Functions for OpenGL
 		static void myGLBox(double x, double y, double z);
 		static void myGLBox(NxVec3 dimensions);
 		static void myGLCylinder(double radius, double height, int sides);
 
-	//protected:
+		//Getters and Setters
+		NxPhysicsSDK*	getPhysicsSDK();
+		NxScene*		getScene();
+		NxVec3			getGravity();
+
+		void			addRobot(SRE::Robot::Robot* robot);
+
+		bool			getIsSimulate();
+		void			setIsSimulate(bool flag);
+		void			switchIsSimulate();
+
+	protected:
 		//PhysX
 		//To Handle these pointers at static Function (ClenUp), 
 		//they need to be static members.
@@ -97,7 +93,13 @@ namespace World{
 		static int				gMouseX;	//=0						///X-position of Mouse Poiner
 		static int				gMouseY;	//=0						///Y-Position of Mouse Pointer
 		static unsigned char	gMouseButton[3];	//={0}					///Mouse Button State
-		
+			
+		//Flags
+		static bool						isSimulate;				///Flag for Simulation
+		//bool						isWalk;					///Flag for Walk
+		//bool						isVibrate;				///Flag for Vibrate
+		//bool						isShrink;				///Flag for Shrink
+
 		//Robots
 		//std::vector<TumblingRobots> robots;					///Store Tumbling Robots
 		//std::vector<SpringRobot>	spRobots;				///Store Spring Robots
@@ -105,14 +107,36 @@ namespace World{
 		
 		//Subsumption Architecture
 		SRE::ExtendedSA::Server*	host;					///Server for Extended Subsumption Architecture
-		
-		//Flags
-		static bool						isSimulate;				///Flag for Simulation
-		//bool						isWalk;					///Flag for Walk
-		//bool						isVibrate;				///Flag for Vibrate
-		//bool						isShrink;				///Flag for Shrink
 
 	};	//class World
+
+	inline NxPhysicsSDK*	World::getPhysicsSDK(){
+		return pPhysicsSDK;
+	}
+
+	inline NxScene*		World::getScene(){
+		return pScene;
+	}
+	inline NxVec3		World::getGravity(){
+		return DefaultGravity;
+	}
+
+	inline void			World::addRobot(SRE::Robot::Robot* robot){
+		robots.push_back(robot);
+	}
+
+	inline bool			World::getIsSimulate(){
+		return isSimulate;
+	}
+	inline void			World::setIsSimulate(bool flag){
+		isSimulate = flag;
+		return;
+	}
+	inline void			World::switchIsSimulate(){
+		isSimulate = !isSimulate;
+		return;
+	}
+
 }	//namespace World
 }	//namespace SRE
 

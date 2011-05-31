@@ -12,19 +12,23 @@ namespace Robot{
 	class Part;				//Prototype Declaration
 	class Robot{
 	public:
-		Robot();
+		Robot(NxScene* scene, NxVec3 position);
 		virtual ~Robot();
 
 		//Getters
-		std::vector<ExtendedSA::Client *>	getClients();
-		std::vector<Part *>		getParts();
+		std::vector<ExtendedSA::Client *>	getClients() const;
+		std::vector<Part *>		getParts() const;
 		//Getters and Setters
-		NxVec3		getPosition();
+		NxVec3		getPosition() const;
 		void		setPosition(NxVec3 position);
-		NxQuat		getOrientation();
+		NxQuat		getOrientation() const;
 		void		setOrientation(NxQuat orientation);
-	
+
 	protected:
+		virtual void Create() = 0;
+		//Pointer to World
+		NxScene*		pScene;
+
 		//Control Systems
 		std::vector<ExtendedSA::Client *> clients;	//"Client" Derivative Classes
 
@@ -32,6 +36,7 @@ namespace Robot{
 		std::vector<Part *> parts;		//"Part" Derivative Classes
 
 		//Joints
+		std::vector<NxJoint *> joints;		//NxJoint Classes
 			//Joints are specific to each Robot Type
 
 		//Other Robot-Specific Elements
@@ -39,19 +44,31 @@ namespace Robot{
 		NxQuat	orientation;		///Robot's Global Orientation
 	
 	};
-	inline std::vector<ExtendedSA::Client *>	Robot::getClients(){
+	inline Robot::Robot(NxScene* scene, NxVec3 position) : pScene(scene), position(position){
+		///Existence of Copy Constructor of NxPhysicsSDK and NxScene should be confirmed
+		return;
+	}
+
+	inline Robot::~Robot(){
+		//delete pScene;
+		clients.clear();
+		parts.clear();
+		return;
+	}
+
+	inline std::vector<ExtendedSA::Client *>	Robot::getClients() const{
 		return clients;
 	}
-	inline std::vector<Part *>		Robot::getParts(){
+	inline std::vector<Part *>		Robot::getParts() const{
 		return parts;
 	}
-	inline NxVec3	Robot::getPosition(){
+	inline NxVec3	Robot::getPosition() const{
 		return position;
 	}
 	inline void		Robot::setPosition(NxVec3 position){
 		this->position = position;
 	}
-	inline NxQuat	Robot::getOrientation(){
+	inline NxQuat	Robot::getOrientation() const{
 		return orientation;
 	}
 	inline void		Robot::setOrientation(NxQuat orientation){

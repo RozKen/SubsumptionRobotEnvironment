@@ -86,7 +86,7 @@ namespace ExtendedSA{
 	Message* Client::createMessage(std::string to, int message){
 		std::vector<Client*> clients = _host->getClients();
 		Client *clTo;
-		for ( int i = 0; i < clients.size(); i++ ){
+		for (unsigned int i = 0; i < clients.size(); i++ ){
 			if( clients[i]->getName() == to ){
 				clTo = clients[i];
 				break;

@@ -37,6 +37,9 @@
     <Filter Include="ヘッダー ファイル\SRE\Robot">
       <UniqueIdentifier>{32c86390-a531-4bb5-839d-039e7e954d3c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\SRE\Robot">
+      <UniqueIdentifier>{fbf60b47-dfd4-4ad1-a702-f4c3c431313a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ExtendedSA.h">
@@ -63,6 +66,15 @@
     <ClInclude Include="Part.h">
       <Filter>ヘッダー ファイル\SRE\Robot</Filter>
     </ClInclude>
+    <ClInclude Include="TumblingRobot.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="TumblingBody.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="TumblingArm.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -79,6 +91,18 @@
     </ClCompile>
     <ClCompile Include="SRE_test_main.cpp">
       <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="TumblingRobot.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="TumblingBody.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="TumblingArm.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Part.cpp">
+      <Filter>ソース ファイル\SRE\Robot</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

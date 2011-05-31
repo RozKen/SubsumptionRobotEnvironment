@@ -81,14 +81,23 @@
     <ClInclude Include="Robot.h" />
     <ClInclude Include="Server.h" />
     <ClInclude Include="States.h" />
+    <ClInclude Include="TumblingRobot.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Part.cpp" />
     <ClCompile Include="Server.cpp" />
     <ClCompile Include="SRE_test_main.cpp" />
+    <ClCompile Include="TumblingArm.cpp" />
+    <ClCompile Include="TumblingBody.cpp" />
+    <ClInclude Include="TumblingBody.h" />
+    <ClCompile Include="TumblingRobot.cpp" />
     <ClCompile Include="WorldGL.cpp" />
     <ClCompile Include="WorldPhysX.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TumblingArm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

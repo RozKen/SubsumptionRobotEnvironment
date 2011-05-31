@@ -8,31 +8,45 @@
 #include <cstdlib>			//for Random
 #include <time.h>			//for Random
 
-#include "World.h"			//Class Declaration
 #include "ExtendedSA.h"		//Using Server class
+#include "World.h"			//Class Declaration
+#include "TumblingRobot.h"	//Using TumblingRobot
 
-//#include "Server.h"
-//#incluce "Arm.hpp"
-//#incluce "Walk.hpp"
 
 namespace SRE{
 namespace World{
-	World::World(int argc, char **argv) : DefaultGravity(0, -9.8, 0) {
-		/*pPhysicsSDK = NULL;
-		pScene = NULL;
-		isSimulate = false;
-		gEye = NxVec3(50.0f, 50.0f, 50.0f);
-		gDir = NxVec3(-1.0f, -1.0f, -1.0f);
-		gMouseX = 0;
-		gMouseY = 0;
-		gMouseButton[0] = 0;*/
-
+	World::World(int argc, char **argv) : DefaultGravity(0, -9.8, 0){
 		host = new SRE::ExtendedSA::Server();
 		InitGLUT(argc, argv);
 		InitNx();
 		InitScene();
 		CreateGroundPlane();
-		glutMainLoop();
+		//glutMainLoop();		//‚±‚ê‚â‚é‚ÆConstructor‚©‚ç”²‚¯o‚¹‚È‚¢c
+	}
+
+	/**
+	 * InitGLUT(int argc, char ** argv) : Initialize GLUT
+	 * @param argc : Number of Inputs to Main Function
+	 * @param argv : Each Command of inputs to the Function
+	 * @return
+	 */
+	void World::InitGLUT(int argc, char ** argv){
+		glutInit(&argc, argv);
+		glutInitWindowSize(640, 480);
+		glutInitDisplayMode(GLUT_RGB|GLUT_DOUBLE|GLUT_DEPTH);
+		int mainHandle = glutCreateWindow("Subsumption Robot Environment");
+		glutSetWindow(mainHandle);
+		glutDisplayFunc(RenderCallback);
+		glutReshapeFunc(SRE::World::World::ReshapeCallback);
+		glutIdleFunc(SRE::World::World::IdleCallback);
+		glutKeyboardFunc(SRE::World::World::KeyboardCallback);
+		glutSpecialFunc(SRE::World::World::ArrowKeyCallback);
+		glutMouseFunc(SRE::World::World::MouseCallback);
+		glutMotionFunc(SRE::World::World::MotionCallback);
+		MotionCallback(0,0);
+		MyGLInit();
+		atexit(SRE::World::World::CleanUpNx);
+		return;
 	}
 	void World::MyGLInit(){
 		// Setup default render states
@@ -52,7 +66,7 @@ namespace World{
 		glLightfv(GL_LIGHT0, GL_POSITION, position);
 		glEnable(GL_LIGHT0);
 	
-		glClearColor(0.5, 0.5, 0.5, 1.0);		//”wŒiF‚ðÝ’è
+		glClearColor(0.3, 0.3, 0.3, 1.0);		//”wŒiF‚ðÝ’è
 
 		srand((unsigned) time (NULL));		//Random Seed‚ðÝ’è
 	}
@@ -75,8 +89,15 @@ namespace World{
 			case 'b':
 				//CreateBox(2.5f, 2.5f, 2.5f, 2.5f, 2.5f, -10);
 				break;
+			case 'f':
+				//CreateGroundPlane();
+				break;
 			case 't':
 				//CreateTumblingRobot(NxVec3(-20, 30, -20));
+				//TumblingRobot* robot = new TumblingRobot(pScene, NxVec3(0, 0, 0));
+				TumblingRobot(pScene, NxVec3(0, 10, 0));
+				//TODO : register to World
+				//robots->push_back(robot);
 				break;
 			case 'p':
 				//CreateSpringRobot(NxVec3(0, 50, 0));

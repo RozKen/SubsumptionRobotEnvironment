@@ -4,12 +4,15 @@
 	@author Kenichi Yorozu
 	@ 30th May 2011
  */
+
+//#include "TumblingRobot.h"
 #include "World.h"
 
 using namespace std;
 using namespace SRE;
 
-//static •Ï”‚ÌéŒ¾‚Æ‰Šú‰»
+
+//Declaration and Initialization of static member variables of class World
 NxPhysicsSDK* World::World::pPhysicsSDK = NULL;
 NxScene* World::World::pScene = NULL;
 bool World::World::isSimulate = false;
@@ -21,6 +24,7 @@ int World::World::gMouseY = 0;
 unsigned char World::World::gMouseButton[3] = {0};
 
 void main (int argc, char **argv){
-	World::World* world = new World::World(argc, argv);	
-
+	World::World* world = new World::World(argc, argv);
+	
+	glutMainLoop();
 }
