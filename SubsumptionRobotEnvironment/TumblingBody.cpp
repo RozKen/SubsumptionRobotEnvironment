@@ -7,10 +7,12 @@ TumblingBody::TumblingBody(NxScene* scene, NxVec3 robotPosition): Part(scene, ro
 }
 
 void TumblingBody::Create(){
-	if(pScene == NULL)	return;
+	if(pScene == NULL){
 #ifdef _DEBUG
-	std::cout<< "pScene == NULL at TumblingBody::Create()" << std::endl;
+		std::cout<< "pScene == NULL at TumblingBody::Create()" << std::endl;
 #endif	//_DEBUG
+		return;
+	}
 	pPhysXActor = CreateBox(NxVec3(1.5f, 1.5f, 1.5f), robotPosition + localPosition);
 	//NxBodyDesc	bodyDesc;
 	//NxActorDesc	actorDesc;

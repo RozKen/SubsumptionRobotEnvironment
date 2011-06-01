@@ -1,4 +1,4 @@
-﻿2011/06/01 1:59:25 にビルドを開始しました。
+﻿2011/06/02 2:50:47 にビルドを開始しました。
      1>ノード 2 上のプロジェクト "C:\Users\RozKen\Documents\Dropbox\Development\cpp\subsumption\SubsumptionRobotEnvironment\SubsumptionRobotEnvironment\SubsumptionRobotEnvironment.vcxproj" (build ターゲット)。
      1>InitializeBuildStatus:
          "AlwaysCreate" が指定されたため "Debug\SubsumptionRobotEnvironment.unsuccessfulbuild" を作成しています。
@@ -31,4 +31,4 @@
 
 ビルドに成功しました。
 
-経過時間 00:00:02.15
+経過時間 00:00:02.86

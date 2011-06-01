@@ -212,6 +212,8 @@ namespace World{
 			NxActor* actor = *actors++;
 			if(actor->userData == NULL){
 				// draw grid
+				glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+				glDisable(GL_LIGHTING);
 				glBegin(GL_LINES);
 					int y = 0;
 					for(int i=-10;i<=10;++i) {
@@ -222,6 +224,7 @@ namespace World{
 						glVertex3f(-100,y,i*10);
 					}
 				glEnd();
+				glEnable(GL_LIGHTING);
 			}
 			int nbShapes = actor->getNbShapes();
 			NxShape* const* shapes = actor->getShapes();

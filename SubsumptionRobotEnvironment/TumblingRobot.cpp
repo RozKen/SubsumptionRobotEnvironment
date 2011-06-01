@@ -9,10 +9,12 @@ TumblingRobot::TumblingRobot(NxScene* scene, const NxVec3 position)
 }
 
 void TumblingRobot::Create(){
-	if(this->pScene == NULL)	return;
+	if(this->pScene == NULL){
 #ifdef _DEBUG
-	std::cout<< "pScene == NULL at TumblingRobot::Create()" << std::endl;
+		std::cout<< "pScene == NULL at TumblingRobot::Create()" << std::endl;
 #endif	//_DEBUG
+		return;
+	}
 	TumblingBody*	body = new TumblingBody(pScene, position);
 	TumblingArm*	leftArm = new TumblingArm(pScene, position, NxVec3(-2, 0, 0), NxQuat(-10, NxVec3(0, 1, 0)) );
 	TumblingArm*	rightArm = new TumblingArm(pScene, position, NxVec3(2, 0, 0),	NxQuat(10, NxVec3(0, 1, 0)) );
