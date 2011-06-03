@@ -1,4 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node5" href="$_tumbling_arm_8h.html" title="TumblingArm.h" alt="" coords="161,83,271,112"/>
-<area shape="rect" id="node7" href="$_part_8h.html" title="Part.h" alt="" coords="188,160,244,189"/>
+<area shape="rect" id="node5" href="$_tumbling_arm_8h.html" title="TumblingArm.h" alt="" coords="112,85,243,117"/>
+<area shape="rect" id="node13" href="$_arm_control_8hpp.html" title="This file containes ArmControl State Declaration and Definition." alt="" coords="267,85,403,117"/>
+<area shape="rect" id="node15" href="$_client_8h.html" title="Client.h" alt="" coords="319,165,396,197"/>
+<area shape="rect" id="node7" href="$_part_8h.html" title="Part.h" alt="" coords="144,165,211,197"/>
+<area shape="rect" id="node20" href="$_states_8h.html" title="States.h" alt="" coords="412,245,492,277"/>
 </map>

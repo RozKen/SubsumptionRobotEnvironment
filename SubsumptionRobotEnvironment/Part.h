@@ -8,6 +8,9 @@
 #define MASS 1.0f		///Default Mass
 
 namespace SRE{
+	namespace ExtendedSA{
+		class Client;			//Prototype Declaration
+	}
 namespace Robot{
 	/**
 	  Interface Class of Parts of Robots.
@@ -18,6 +21,7 @@ namespace Robot{
 	public:
 		Part(NxScene* scene, NxVec3 robotPosition);			///Constructor
 		//virtual ~Part();		///Destructor
+		virtual void update();
 
 		//Utility Functions for PhysX
 		NxActor* CreateBox(float w, float d, float h,float xInit, float yInit, float zInit);
@@ -34,11 +38,14 @@ namespace Robot{
 		void		setLocalPosition(NxVec3 position);
 		NxQuat		getLocalOrientation();
 		void		setLocalOrientation(NxQuat orientation);
+
+		void		setClient(SRE::ExtendedSA::Client* controlClient);
 	protected:
 		virtual void Create() = 0;
 
 		//Pointer to World
 		NxScene*	pScene;				///Pointer to Scene (World)
+		ExtendedSA::Client* client;		///Control Client of this Part
 
 		NxActor*	pPhysXActor;		///Actor Object
 		NxShape*	pPhysXShape;		///Shape of Actor
@@ -48,7 +55,7 @@ namespace Robot{
 		NxQuat		robotOrientation;	///Position of Whole Robot
 	};
 
-	inline Part::Part(NxScene* scene, NxVec3 robotPosition) : pScene(scene), robotPosition(robotPosition){
+	inline Part::Part(NxScene* scene, NxVec3 robotPosition) : pScene(scene), robotPosition(robotPosition), client(NULL){
 	}
 
 	inline NxActor* Part::getActor(){
@@ -77,6 +84,14 @@ namespace Robot{
 	}
 	inline void Part::setLocalOrientation(NxQuat orientation){
 		localOrientation = orientation;
+		return;
+	}
+	/**
+	 Partの制御を司るClientを指定する
+	 @param controlClient このPartを操作するExtendedSAのClientへのポインタ
+	 */
+	inline void	Part::setClient(ExtendedSA::Client* controlClient){
+		client = controlClient;
 		return;
 	}
 }	//namespace Robot

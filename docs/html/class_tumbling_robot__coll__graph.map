@@ -1,3 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$class_s_r_e_1_1_robot_1_1_robot.html" title="SRE::Robot::Robot" alt="" coords="5,5,139,35"/>
+<area shape="rect" id="node2" href="$class_s_r_e_1_1_robot_1_1_robot.html" title="SRE::Robot::Robot" alt="" coords="32,107,189,139"/>
+<area shape="rect" id="node4" href="$class_s_r_e_1_1_extended_s_a_1_1_server.html" title="This is a Server Object. Host Clients and process Messages." alt="" coords="5,5,216,37"/>
 </map>

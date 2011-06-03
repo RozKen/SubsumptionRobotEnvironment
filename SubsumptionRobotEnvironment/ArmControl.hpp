@@ -5,8 +5,8 @@
  @date 23th April 2011
  */
 
-#ifndef ArmControl_hpp_
-#define ArmControl_hpp_
+#ifndef ArmControl_HPP_
+#define ArmControl_HPP_
 
 #include "Client.h"
 
@@ -26,7 +26,7 @@ public:
 	//int Reset();		//Use Default
 	//void sendMessage(Client *to, int message);		//Use Default
 	//Getters and Setters
-	int getState();
+	int getState() const;
 	//void setHost(Server *host);							//use Default
 	void setState(State state);
 	void setState(int state);
@@ -54,7 +54,7 @@ inline ArmControl::ArmControl(SRE::ExtendedSA::Server *host) : _currentState(nul
  @brief Acquire current State as int
  @return int _currentState
  */
-inline int ArmControl::getState(){
+inline int ArmControl::getState() const{
 	return (int)_currentState;
 }
 /**
@@ -76,4 +76,4 @@ inline void ArmControl::setState(int state){
 	return;
 }
 
-#endif //ArmControl_hpp_
+#endif //ArmControl_HPP_

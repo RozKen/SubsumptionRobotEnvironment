@@ -26,7 +26,7 @@ namespace SRE{
 			//Destructor
 			//~Client();
 			//Functions
-			virtual int Execute();
+			virtual int Execute() = 0;
 			virtual int Reset();
 			virtual Message* createMessage(Client *to, int message);
 			virtual Message* createMessage(std::string to, int message);
@@ -34,7 +34,7 @@ namespace SRE{
 			virtual void sendMessage(Client *to, int message);
 			virtual void sendMessage(std::string to, int message);
 			//Getter and Setters
-			virtual int getState() const;
+			virtual int getState() const = 0;
 			virtual void setState(State state);
 			virtual void setState(int state);
 			virtual Server* getHost() const;

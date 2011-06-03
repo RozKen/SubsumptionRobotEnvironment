@@ -83,31 +83,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="_tumbling_arm_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &lt;iostream&gt;</span>
 <a name="l00002"></a>00002 <span class="preprocessor">#include &quot;<a class="code" href="_tumbling_arm_8h.html">TumblingArm.h</a>&quot;</span>
-<a name="l00003"></a><a class="code" href="class_tumbling_arm.html#a0c4fa4e4442fb65793b5fd7c15d837a0">00003</a> <a class="code" href="class_tumbling_arm.html#a0c4fa4e4442fb65793b5fd7c15d837a0">TumblingArm::TumblingArm</a>(NxScene* scene, NxVec3 robotPosition, NxVec3 localPosition,
-<a name="l00004"></a>00004         NxQuat localOrientation) : Part(scene, robotPosition){
-<a name="l00005"></a>00005         this-&gt;localPosition = <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a547e5a79acf17f78577bc07f441247db" title="Shape of Actor.">localPosition</a>;
-<a name="l00006"></a>00006         this-&gt;localOrientation = <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a5b367ece347871720c455f641261283e" title="Local Position in Robot.">localOrientation</a>;
-<a name="l00007"></a>00007         <a class="code" href="class_tumbling_arm.html#ae2db236740a892c4f8f09eff19c8b08b">Create</a>();
-<a name="l00008"></a>00008 }
-<a name="l00009"></a>00009 
-<a name="l00010"></a><a class="code" href="class_tumbling_arm.html#ae2db236740a892c4f8f09eff19c8b08b">00010</a> <span class="keywordtype">void</span> <a class="code" href="class_tumbling_arm.html#ae2db236740a892c4f8f09eff19c8b08b">TumblingArm::Create</a>(){
-<a name="l00011"></a>00011         <span class="keywordflow">if</span>(<a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a7527e0e62a09056af1f34b9232c6159a">pScene</a> == NULL){
-<a name="l00012"></a>00012 <span class="preprocessor">#ifdef _DEBUG</span>
-<a name="l00013"></a>00013 <span class="preprocessor"></span>                std::cout&lt;&lt; <span class="stringliteral">&quot;pScene == NULL at TumblingArm::Create()&quot;</span> &lt;&lt; std::endl;
-<a name="l00014"></a>00014 <span class="preprocessor">#endif  //_DEBUG</span>
-<a name="l00015"></a>00015 <span class="preprocessor"></span>                <span class="keywordflow">return</span>;
-<a name="l00016"></a>00016         }
-<a name="l00017"></a>00017         <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a51904f8093f218298eb6742c8351fe53" title="Pointer to Scene (World)">pPhysXActor</a> = <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae8c7ff41e2250ccf1b7b172de376ff06" title="Constructor.">CreateBox</a>(NxVec3(0.5f, 3.0f, 0.15f), <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae35214905fd616acf83093d9e9b58e0c" title="Local Orientation in Robot.">robotPosition</a> + <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a547e5a79acf17f78577bc07f441247db" title="Shape of Actor.">localPosition</a>);
-<a name="l00018"></a>00018         <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a51904f8093f218298eb6742c8351fe53" title="Pointer to Scene (World)">pPhysXActor</a>-&gt;setGlobalOrientationQuat(<a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a5b367ece347871720c455f641261283e" title="Local Position in Robot.">localOrientation</a>);
-<a name="l00019"></a>00019         <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a6c2f7df40a2c4161a027d960ceedcd53" title="Actor Object.">pPhysXShape</a> = <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a51904f8093f218298eb6742c8351fe53" title="Pointer to Scene (World)">pPhysXActor</a>-&gt;getShapes()[0];
-<a name="l00020"></a>00020         <span class="keywordflow">return</span>;
-<a name="l00021"></a>00021 }
+<a name="l00003"></a>00003 <span class="preprocessor">#include &quot;<a class="code" href="_arm_control_8hpp.html" title="This file containes ArmControl State Declaration and Definition.">ArmControl.hpp</a>&quot;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="_client_8h.html">Client.h</a>&quot;</span>
+<a name="l00005"></a><a class="code" href="class_tumbling_arm.html#a0c4fa4e4442fb65793b5fd7c15d837a0">00005</a> <a class="code" href="class_tumbling_arm.html#a0c4fa4e4442fb65793b5fd7c15d837a0">TumblingArm::TumblingArm</a>(NxScene* scene, NxVec3 robotPosition, NxVec3 localPosition,
+<a name="l00006"></a>00006         NxQuat localOrientation) : Part(scene, robotPosition), maxTorque(10000000000){
+<a name="l00007"></a>00007         this-&gt;localPosition = <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a547e5a79acf17f78577bc07f441247db" title="Shape of Actor.">localPosition</a>;
+<a name="l00008"></a>00008         this-&gt;localOrientation = <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a5b367ece347871720c455f641261283e" title="Local Position in Robot.">localOrientation</a>;
+<a name="l00009"></a>00009         <a class="code" href="class_tumbling_arm.html#ae2db236740a892c4f8f09eff19c8b08b">Create</a>();
+<a name="l00010"></a>00010 }
+<a name="l00011"></a>00011 
+<a name="l00012"></a><a class="code" href="class_tumbling_arm.html#ae2db236740a892c4f8f09eff19c8b08b">00012</a> <span class="keywordtype">void</span> <a class="code" href="class_tumbling_arm.html#ae2db236740a892c4f8f09eff19c8b08b">TumblingArm::Create</a>(){
+<a name="l00013"></a>00013         <span class="keywordflow">if</span>(<a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a7527e0e62a09056af1f34b9232c6159a">pScene</a> == NULL){
+<a name="l00014"></a>00014 <span class="preprocessor">#ifdef _DEBUG</span>
+<a name="l00015"></a>00015 <span class="preprocessor"></span>                std::cout&lt;&lt; <span class="stringliteral">&quot;pScene == NULL at TumblingArm::Create()&quot;</span> &lt;&lt; std::endl;
+<a name="l00016"></a>00016 <span class="preprocessor">#endif  //_DEBUG</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span>                <span class="keywordflow">return</span>;
+<a name="l00018"></a>00018         }
+<a name="l00019"></a>00019         <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a51904f8093f218298eb6742c8351fe53" title="Control Client of this Part.">pPhysXActor</a> = <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae8c7ff41e2250ccf1b7b172de376ff06">CreateBox</a>(NxVec3(0.5f, 3.0f, 0.15f), <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae35214905fd616acf83093d9e9b58e0c" title="Local Orientation in Robot.">robotPosition</a> + <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a547e5a79acf17f78577bc07f441247db" title="Shape of Actor.">localPosition</a>);
+<a name="l00020"></a>00020         <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a51904f8093f218298eb6742c8351fe53" title="Control Client of this Part.">pPhysXActor</a>-&gt;setGlobalOrientationQuat(<a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a5b367ece347871720c455f641261283e" title="Local Position in Robot.">localOrientation</a>);
+<a name="l00021"></a>00021         <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a6c2f7df40a2c4161a027d960ceedcd53" title="Actor Object.">pPhysXShape</a> = <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a51904f8093f218298eb6742c8351fe53" title="Control Client of this Part.">pPhysXActor</a>-&gt;getShapes()[0];
+<a name="l00022"></a>00022         <span class="keywordflow">return</span>;
+<a name="l00023"></a>00023 }
+<a name="l00024"></a>00024 
+<a name="l00025"></a><a class="code" href="class_tumbling_arm.html#a409293bfae15457a613072a6bb36b7e8">00025</a> <span class="keywordtype">void</span> <a class="code" href="class_tumbling_arm.html#a409293bfae15457a613072a6bb36b7e8" title="Constructor.">TumblingArm::update</a>(){
+<a name="l00026"></a>00026         <span class="keywordflow">if</span>(<a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acc98d3c7d7a592c3889b206577abed7e" title="Pointer to Scene (World)">client</a> == NULL){     <span class="comment">//clientÇ™éwíËÇ≥ÇÍÇƒÇ¢Ç»Ç¢PartÇÃèÍçáÇÕÅCñ≥éãÇ∑ÇÈ</span>
+<a name="l00027"></a>00027                         <span class="keywordflow">return</span>;
+<a name="l00028"></a>00028         }
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030         <span class="comment">//Specify process according to the state.</span>
+<a name="l00031"></a>00031         <span class="keywordflow">switch</span>(((<a class="code" href="class_arm_control.html" title="ArmControl State Class. Derived from Client.">ArmControl</a>*)<a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acc98d3c7d7a592c3889b206577abed7e" title="Pointer to Scene (World)">client</a>)-&gt;getState()){
+<a name="l00032"></a>00032         <span class="keywordflow">case</span> <a class="code" href="class_arm_control.html#a319f2731295d74ee4696deac9f3cf2e5a624da21514f484e2667ea3bf2adc40a1">ArmControl::null</a>:
+<a name="l00033"></a>00033                 <span class="keywordflow">break</span>;
+<a name="l00034"></a>00034         <span class="keywordflow">case</span> <a class="code" href="class_arm_control.html#a319f2731295d74ee4696deac9f3cf2e5a66d844c92f9a636ef78195fc4853505e">ArmControl::Stop</a>:
+<a name="l00035"></a>00035                 this-&gt;<a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a51904f8093f218298eb6742c8351fe53" title="Control Client of this Part.">pPhysXActor</a>-&gt;setAngularVelocity(NxVec3(0, 0, 0));
+<a name="l00036"></a>00036                 this-&gt;<a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a51904f8093f218298eb6742c8351fe53" title="Control Client of this Part.">pPhysXActor</a>-&gt;setLinearVelocity(NxVec3(0, 0, 0));
+<a name="l00037"></a>00037                 <span class="keywordflow">break</span>;
+<a name="l00038"></a>00038         <span class="keywordflow">case</span> <a class="code" href="class_arm_control.html#a319f2731295d74ee4696deac9f3cf2e5a13a607c9ad51a29cb5f9fb1c77e50675">ArmControl::Forward</a>:
+<a name="l00039"></a>00039                 this-&gt;<a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a51904f8093f218298eb6742c8351fe53" title="Control Client of this Part.">pPhysXActor</a>-&gt;addLocalTorque(NxVec3((<span class="keywordtype">double</span>(rand())/RAND_MAX) * <a class="code" href="class_tumbling_arm.html#a9f9fca55b27ea137250c48d1a09f9914">maxTorque</a> * 2 - <a class="code" href="class_tumbling_arm.html#a9f9fca55b27ea137250c48d1a09f9914">maxTorque</a>/2, 0, 0));
+<a name="l00040"></a>00040                 <span class="keywordflow">break</span>;
+<a name="l00041"></a>00041         <span class="keywordflow">default</span>:
+<a name="l00042"></a>00042                 <span class="keywordflow">break</span>;
+<a name="l00043"></a>00043         }
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045         <span class="keywordflow">return</span>;
+<a name="l00046"></a>00046 }
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_tumbling_arm_8cpp.html">TumblingArm.cpp</a>      </li>
-      <li class="footer">Generated on Thu Jun 2 2011 15:57:35 for Extended SA Collective Robot Environment by&#160;
+      <li class="footer">Generated on Fri Jun 3 2011 17:59:19 for Extended SA Collective Robot Environment by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_tumbling_robot.html#a5a803dce2895cbedb2fb810d836e6a73" title="TumblingRobot::Create" alt="" coords="303,117,489,149"/>
+<area shape="rect" id="node5" href="$class_s_r_e_1_1_extended_s_a_1_1_server.html#a14f7ebf3cc2d29eb749718321be0a5e8" title="addClient to Server" alt="" coords="543,5,833,37"/>
+<area shape="rect" id="node7" href="$class_s_r_e_1_1_extended_s_a_1_1_client.html#a45585c836a49356b15ab860cf2425712" title="Add Target Client to _target." alt="" coords="544,61,832,93"/>
+<area shape="rect" id="node9" href="$class_s_r_e_1_1_robot_1_1_part.html#ac2dcb546098a1f1df1f7ce0eb1a89230" title="SRE::Robot::Part::getActor" alt="" coords="579,117,797,149"/>
+<area shape="rect" id="node11" href="$class_s_r_e_1_1_robot_1_1_part.html#a7eef662112ef1d99e3efc8b1fc27f12d" title="SRE::Robot::Part::getLocalOrientation" alt="" coords="540,173,836,205"/>
+<area shape="rect" id="node13" href="$class_s_r_e_1_1_robot_1_1_part.html#a669771677c651f18ca54439f98d089b6" title="SRE::Robot::Part::setClient" alt="" coords="579,229,797,261"/>
+</map>

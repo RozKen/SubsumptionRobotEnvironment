@@ -16,7 +16,7 @@ namespace FSM{
 		virtual int Reset() = 0;							/** @brief each States can be reset by some signal */
 		virtual void setState(State state) {};	/** @brief each State must have Setter to some State by some signal */
 		//I want to make setState(State state) Purely Virtual Function. But for State
-		virtual int getState() = 0;						/** @brief each State must have Getter of Current State */
+		virtual int getState() const= 0;						/** @brief each State must have Getter of Current State */
 	protected:
 		State _currentState;			/** @brief each State must have Current State as private variable. */
 	};

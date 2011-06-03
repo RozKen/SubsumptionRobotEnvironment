@@ -1,3 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_s_r_e_1_1_world_1_1_world.html#adcd8e8bc6ea9d5a422027d4246d1ad78" title="SRE::World::World::myGLBox" alt="" coords="287,5,484,35"/>
+<area shape="rect" id="node3" href="$class_s_r_e_1_1_robot_1_1_robot.html#a1dea0db09d5a004ec98ba14accad9ef1" title="SRE::Robot::Robot::getParts" alt="" coords="352,5,581,37"/>
+<area shape="rect" id="node5" href="$class_s_r_e_1_1_world_1_1_world.html#adcd8e8bc6ea9d5a422027d4246d1ad78" title="SRE::World::World::myGLBox" alt="" coords="345,61,588,93"/>
+<area shape="rect" id="node7" href="$class_s_r_e_1_1_extended_s_a_1_1_server.html#a5c152e21d05e35295e27e3c4981fcb79" title="Process Messages send from Clients and dispatch Message to Clients." alt="" coords="341,117,592,149"/>
 </map>

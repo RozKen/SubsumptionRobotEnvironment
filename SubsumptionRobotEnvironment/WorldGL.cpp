@@ -202,6 +202,12 @@ namespace World{
 		if (isSimulate){
 			pScene->simulate(1.0f/FPS);	//time(NULL) - t);
 			host->Run();
+			for(int i = 0; i < robots.size(); i++){
+				SRE::Robot::Robot* robot = robots[i];
+				for(int j = 0; j < robot->getParts().size(); j++){
+					robot->getParts()[j]->update();
+				}
+			}
 			//t = time(NULL);
 		}
 	

@@ -64,7 +64,7 @@ var NAVTREE =
       [ "SubsumptionRobotEnvironment/TumblingBody.h", "_tumbling_body_8h.html", null ],
       [ "SubsumptionRobotEnvironment/TumblingRobot.cpp", "_tumbling_robot_8cpp.html", null ],
       [ "SubsumptionRobotEnvironment/TumblingRobot.h", "_tumbling_robot_8h.html", null ],
-      [ "SubsumptionRobotEnvironment/Walk.cpp", "_walk_8cpp.html", null ],
+      [ "SubsumptionRobotEnvironment/WalkControl.cpp", "_walk_control_8cpp.html", null ],
       [ "SubsumptionRobotEnvironment/WalkControl.hpp", "_walk_control_8hpp.html", null ],
       [ "SubsumptionRobotEnvironment/World.h", "_world_8h.html", null ],
       [ "SubsumptionRobotEnvironment/WorldGL.cpp", "_world_g_l_8cpp.html", null ],

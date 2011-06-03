@@ -120,8 +120,8 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#abdec214ac6125ad9639245e83657cea4">Client</a> (<a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_server.html">Server</a> *host)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a51f904a39dfe2588fb221551dc108e28">Execute</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute <a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html" title="This is a Client Object derived from States Object of Finite State Machine. This Object has Communica...">Client</a> Original Tasks.  <a href="#a51f904a39dfe2588fb221551dc108e28"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a9f80c31b991c2713a6064b3e96e1de7a">Execute</a> ()=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute <a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html" title="This is a Client Object derived from States Object of Finite State Machine. This Object has Communica...">Client</a> Original Tasks.  <a href="#a9f80c31b991c2713a6064b3e96e1de7a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a265e48fef4091995ae1c0f12f4ab863d">Reset</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set _currentState as null.  <a href="#a265e48fef4091995ae1c0f12f4ab863d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_message.html">Message</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a18aa4dd675e709715e591ac34bb555e1">createMessage</a> (<a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html">Client</a> *to, int message)</td></tr>
@@ -129,7 +129,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a536dd82847b19c6fff20bd37180eb431">sendMessage</a> (<a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_message.html">Message</a> *message)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#aa762b4a909a93c3868bd31bf32b73c61">sendMessage</a> (<a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html">Client</a> *to, int message)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a2f70b201b66a5e4ee4401df409007564">sendMessage</a> (std::string to, int message)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a131f1924b1ae8f812f5f49f46e008a62">getState</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a2b42f6c589315a944a0295bd45fbbfa5">getState</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">each State must have Setter to some State by some signal  <a href="#a2b42f6c589315a944a0295bd45fbbfa5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a31441e8e26c52f3fde998a8f8323ad27">setState</a> (<a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a073c41b96e24f218c81285b98f9b7bfa">State</a> state)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a50c56cb19674af8c5e4fd23653fa6509">setState</a> (int state)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_server.html">Server</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a68717a522772a28b0ae2f4af931da6a5">getHost</a> () const </td></tr>
@@ -276,6 +277,15 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_client_8h_source.html#l00157">157</a> of file <a class="el" href="_client_8h_source.html">Client.h</a>.</p>
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_r_e_1_1_extended_s_a_1_1_client_a45585c836a49356b15ab860cf2425712_icgraph.png" border="0" usemap="#class_s_r_e_1_1_extended_s_a_1_1_client_a45585c836a49356b15ab860cf2425712_icgraph" alt=""/></div>
+<map name="class_s_r_e_1_1_extended_s_a_1_1_client_a45585c836a49356b15ab860cf2425712_icgraph" id="class_s_r_e_1_1_extended_s_a_1_1_client_a45585c836a49356b15ab860cf2425712_icgraph">
+<area shape="rect" id="node3" href="class_tumbling_robot.html#a5a803dce2895cbedb2fb810d836e6a73" title="TumblingRobot::Create" alt="" coords="343,5,529,37"/><area shape="rect" id="node5" href="class_tumbling_robot.html#adf678c3640460e04e0cbb9431eacfb91" title="TumblingRobot::TumblingRobot" alt="" coords="580,5,825,37"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a18aa4dd675e709715e591ac34bb555e1"></a><!-- doxytag: member="SRE::ExtendedSA::Client::createMessage" ref="a18aa4dd675e709715e591ac34bb555e1" args="(Client *to, int message)" -->
@@ -354,7 +364,7 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a51f904a39dfe2588fb221551dc108e28"></a><!-- doxytag: member="SRE::ExtendedSA::Client::Execute" ref="a51f904a39dfe2588fb221551dc108e28" args="()" -->
+<a class="anchor" id="a9f80c31b991c2713a6064b3e96e1de7a"></a><!-- doxytag: member="SRE::ExtendedSA::Client::Execute" ref="a9f80c31b991c2713a6064b3e96e1de7a" args="()=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -362,7 +372,7 @@ Here is the call graph for this function:</div>
           <td class="memname">int SRE::ExtendedSA::Client::Execute </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [pure virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -373,7 +383,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_f_s_m_1_1_states.html#aaf4a9316badddaf4d846f7f1ecf32f69">SRE::ExtendedSA::FSM::States</a>.</p>
 
-<p>Reimplemented in <a class="el" href="class_arm_control.html#ad9d5f5ff8c2fa4042198b3d53ccf2f6e">ArmControl</a>, and <a class="el" href="class_walk_control.html#ac8a4f9193104561d2532ae2d9dc08556">WalkControl</a>.</p>
+<p>Implemented in <a class="el" href="class_arm_control.html#ad9d5f5ff8c2fa4042198b3d53ccf2f6e">ArmControl</a>, and <a class="el" href="class_walk_control.html#ac8a4f9193104561d2532ae2d9dc08556">WalkControl</a>.</p>
 
 <p>Definition at line <a class="el" href="_client_8cpp_source.html#l00020">20</a> of file <a class="el" href="_client_8cpp_source.html">Client.cpp</a>.</p>
 
@@ -466,7 +476,7 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a131f1924b1ae8f812f5f49f46e008a62"></a><!-- doxytag: member="SRE::ExtendedSA::Client::getState" ref="a131f1924b1ae8f812f5f49f46e008a62" args="() const " -->
+<a class="anchor" id="a2b42f6c589315a944a0295bd45fbbfa5"></a><!-- doxytag: member="SRE::ExtendedSA::Client::getState" ref="a2b42f6c589315a944a0295bd45fbbfa5" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -474,20 +484,26 @@ Here is the caller graph for this function:</div>
           <td class="memname">int SRE::ExtendedSA::Client::getState </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const<code> [inline, virtual]</code></td>
+          <td> const<code> [inline, pure virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>each State must have Setter to some State by some signal </p>
+
+<p>Implements <a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_f_s_m_1_1_states.html#a69ad8b656c20c5bdbc8d7186f8228142">SRE::ExtendedSA::FSM::States</a>.</p>
+
+<p>Implemented in <a class="el" href="class_arm_control.html#a0489c129606df8a078c2f83e04d560b4">ArmControl</a>, and <a class="el" href="class_walk_control.html#a1c7a57f3498a7144dd60e3ce0a6c1f6b">WalkControl</a>.</p>
 
 <p>Definition at line <a class="el" href="_client_8h_source.html#l00085">85</a> of file <a class="el" href="_client_8h_source.html">Client.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_s_r_e_1_1_extended_s_a_1_1_client_a131f1924b1ae8f812f5f49f46e008a62_icgraph.png" border="0" usemap="#class_s_r_e_1_1_extended_s_a_1_1_client_a131f1924b1ae8f812f5f49f46e008a62_icgraph" alt=""/></div>
-<map name="class_s_r_e_1_1_extended_s_a_1_1_client_a131f1924b1ae8f812f5f49f46e008a62_icgraph" id="class_s_r_e_1_1_extended_s_a_1_1_client_a131f1924b1ae8f812f5f49f46e008a62_icgraph">
-<area shape="rect" id="node3" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a8e4a2373d35816a1997bc654d8ad911f" title="SRE::ExtendedSA::Client::operator=" alt="" coords="283,5,517,35"/></map>
+<div class="center"><img src="class_s_r_e_1_1_extended_s_a_1_1_client_a2b42f6c589315a944a0295bd45fbbfa5_icgraph.png" border="0" usemap="#class_s_r_e_1_1_extended_s_a_1_1_client_a2b42f6c589315a944a0295bd45fbbfa5_icgraph" alt=""/></div>
+<map name="class_s_r_e_1_1_extended_s_a_1_1_client_a2b42f6c589315a944a0295bd45fbbfa5_icgraph" id="class_s_r_e_1_1_extended_s_a_1_1_client_a2b42f6c589315a944a0295bd45fbbfa5_icgraph">
+<area shape="rect" id="node3" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a8e4a2373d35816a1997bc654d8ad911f" title="SRE::ExtendedSA::Client::operator=" alt="" coords="329,5,615,37"/><area shape="rect" id="node5" href="class_s_r_e_1_1_robot_1_1_part.html#a294c216e530146a07027cf1a7f9fc614" title="Constructor." alt="" coords="369,61,575,93"/></map>
 </div>
 </p>
 
@@ -545,7 +561,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_s_r_e_1_1_extended_s_a_1_1_client_a8e4a2373d35816a1997bc654d8ad911f_cgraph.png" border="0" usemap="#class_s_r_e_1_1_extended_s_a_1_1_client_a8e4a2373d35816a1997bc654d8ad911f_cgraph" alt=""/></div>
 <map name="class_s_r_e_1_1_extended_s_a_1_1_client_a8e4a2373d35816a1997bc654d8ad911f_cgraph" id="class_s_r_e_1_1_extended_s_a_1_1_client_a8e4a2373d35816a1997bc654d8ad911f_cgraph">
-<area shape="rect" id="node3" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a68717a522772a28b0ae2f4af931da6a5" title="get Host (Server *)" alt="" coords="293,5,517,35"/><area shape="rect" id="node5" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a0b8b54f6f15d74566f0efc0d0168e441" title="SRE::ExtendedSA::Client::getInbox" alt="" coords="292,59,519,88"/><area shape="rect" id="node7" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#afc063121c1dcd6beb686944fa59812b2" title="Get _name." alt="" coords="291,112,520,141"/><area shape="rect" id="node9" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a131f1924b1ae8f812f5f49f46e008a62" title="SRE::ExtendedSA::Client::getState" alt="" coords="292,165,519,195"/><area shape="rect" id="node11" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a79ed72c030157c4c4f84e09c2e4f86d5" title="get _target for signal output" alt="" coords="289,219,521,248"/></map>
+<area shape="rect" id="node3" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a68717a522772a28b0ae2f4af931da6a5" title="get Host (Server *)" alt="" coords="348,5,617,37"/><area shape="rect" id="node5" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a0b8b54f6f15d74566f0efc0d0168e441" title="SRE::ExtendedSA::Client::getInbox" alt="" coords="345,61,620,93"/><area shape="rect" id="node7" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#afc063121c1dcd6beb686944fa59812b2" title="Get _name." alt="" coords="344,117,621,149"/><area shape="rect" id="node9" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a2b42f6c589315a944a0295bd45fbbfa5" title="each State must have Setter to some State by some signal" alt="" coords="345,173,620,205"/><area shape="rect" id="node11" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a79ed72c030157c4c4f84e09c2e4f86d5" title="get _target for signal output" alt="" coords="341,229,624,261"/></map>
 </div>
 </p>
 
@@ -899,7 +915,7 @@ Here is the call graph for this function:</div>
       <li class="navelem"><a class="el" href="namespace_s_r_e.html">SRE</a>      </li>
       <li class="navelem"><a class="el" href="namespace_s_r_e_1_1_extended_s_a.html">ExtendedSA</a>      </li>
       <li class="navelem"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html">Client</a>      </li>
-      <li class="footer">Generated on Thu Jun 2 2011 15:57:37 for Extended SA Collective Robot Environment by&#160;
+      <li class="footer">Generated on Fri Jun 3 2011 17:59:20 for Extended SA Collective Robot Environment by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

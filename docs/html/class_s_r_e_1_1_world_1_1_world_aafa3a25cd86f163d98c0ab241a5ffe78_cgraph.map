@@ -1,12 +1,14 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_s_r_e_1_1_world_1_1_world.html#aac561c09abfc14acbef50689a804c3a0" title="SRE::World::World::ArrowKeyCallback" alt="" coords="247,5,492,35"/>
-<area shape="rect" id="node5" href="$class_s_r_e_1_1_world_1_1_world.html#a80eae91d7f72a8f5da0d7e7b6d5ae2e9" title="SRE::World::World::KeyboardCallback" alt="" coords="543,32,788,61"/>
-<area shape="rect" id="node7" href="$class_s_r_e_1_1_world_1_1_world.html#a184a79ed810ef1dc13f142802309f38e" title="SRE::World::World::CleanUpNx" alt="" coords="267,109,472,139"/>
-<area shape="rect" id="node9" href="$class_s_r_e_1_1_world_1_1_world.html#aac482d8fe6699243c7ec97e215aa5262" title="SRE::World::World::IdleCallback" alt="" coords="264,163,475,192"/>
-<area shape="rect" id="node12" href="$class_s_r_e_1_1_world_1_1_world.html#a6a9cd12a4b81ca77d70a5a8eec756a66" title="SRE::World::World::MotionCallback" alt="" coords="255,216,484,245"/>
-<area shape="rect" id="node14" href="$class_s_r_e_1_1_world_1_1_world.html#a5fce2de86b53dee57a3b2659f6e73aac" title="SRE::World::World::MouseCallback" alt="" coords="255,269,484,299"/>
-<area shape="rect" id="node16" href="$class_s_r_e_1_1_world_1_1_world.html#ae6f53b782d8ce149d7d186ab7c678354" title="SRE::World::World::MyGLInit" alt="" coords="273,323,465,352"/>
-<area shape="rect" id="node18" href="$class_s_r_e_1_1_world_1_1_world.html#aefa19fb24e01f7c5f243c5f65f9eb5a9" title="SRE::World::World::RenderCallback" alt="" coords="253,376,485,405"/>
-<area shape="rect" id="node22" href="$class_s_r_e_1_1_world_1_1_world.html#a898630721415754c6337a8839f658195" title="SRE::World::World::ReshapeCallback" alt="" coords="248,429,491,459"/>
-<area shape="rect" id="node20" href="$class_s_r_e_1_1_world_1_1_world.html#adcd8e8bc6ea9d5a422027d4246d1ad78" title="SRE::World::World::myGLBox" alt="" coords="567,376,764,405"/>
+<area shape="rect" id="node3" href="$class_s_r_e_1_1_world_1_1_world.html#aac561c09abfc14acbef50689a804c3a0" title="SRE::World::World::ArrowKeyCallback" alt="" coords="291,5,597,37"/>
+<area shape="rect" id="node5" href="$class_s_r_e_1_1_world_1_1_world.html#a80eae91d7f72a8f5da0d7e7b6d5ae2e9" title="SRE::World::World::KeyboardCallback" alt="" coords="645,32,952,64"/>
+<area shape="rect" id="node7" href="$class_s_r_e_1_1_world_1_1_world.html#a184a79ed810ef1dc13f142802309f38e" title="SRE::World::World::CleanUpNx" alt="" coords="317,112,571,144"/>
+<area shape="rect" id="node9" href="$class_s_r_e_1_1_world_1_1_world.html#aac482d8fe6699243c7ec97e215aa5262" title="SRE::World::World::IdleCallback" alt="" coords="313,168,575,200"/>
+<area shape="rect" id="node12" href="$class_s_r_e_1_1_world_1_1_world.html#a6a9cd12a4b81ca77d70a5a8eec756a66" title="SRE::World::World::MotionCallback" alt="" coords="303,224,585,256"/>
+<area shape="rect" id="node14" href="$class_s_r_e_1_1_world_1_1_world.html#a5fce2de86b53dee57a3b2659f6e73aac" title="SRE::World::World::MouseCallback" alt="" coords="303,280,585,312"/>
+<area shape="rect" id="node16" href="$class_s_r_e_1_1_world_1_1_world.html#ae6f53b782d8ce149d7d186ab7c678354" title="SRE::World::World::MyGLInit" alt="" coords="325,336,563,368"/>
+<area shape="rect" id="node18" href="$class_s_r_e_1_1_world_1_1_world.html#aefa19fb24e01f7c5f243c5f65f9eb5a9" title="SRE::World::World::RenderCallback" alt="" coords="300,392,588,424"/>
+<area shape="rect" id="node26" href="$class_s_r_e_1_1_world_1_1_world.html#a898630721415754c6337a8839f658195" title="SRE::World::World::ReshapeCallback" alt="" coords="295,448,593,480"/>
+<area shape="rect" id="node20" href="$class_s_r_e_1_1_robot_1_1_robot.html#a1dea0db09d5a004ec98ba14accad9ef1" title="SRE::Robot::Robot::getParts" alt="" coords="684,336,913,368"/>
+<area shape="rect" id="node22" href="$class_s_r_e_1_1_world_1_1_world.html#adcd8e8bc6ea9d5a422027d4246d1ad78" title="SRE::World::World::myGLBox" alt="" coords="677,392,920,424"/>
+<area shape="rect" id="node24" href="$class_s_r_e_1_1_extended_s_a_1_1_server.html#a5c152e21d05e35295e27e3c4981fcb79" title="Process Messages send from Clients and dispatch Message to Clients." alt="" coords="673,448,924,480"/>
 </map>

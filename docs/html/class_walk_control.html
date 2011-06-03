@@ -120,8 +120,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_walk_control.html#a7220887235002c2a014e55575a8aebeb">WalkControl</a> (<a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_server.html">SRE::ExtendedSA::Server</a> *host)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_walk_control.html#ac8a4f9193104561d2532ae2d9dc08556">Execute</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute Client Original Tasks.  <a href="#ac8a4f9193104561d2532ae2d9dc08556"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_walk_control.html#a97ca49fb05243c08bce4c35c6f82109e">getState</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">return _currentState  <a href="#a97ca49fb05243c08bce4c35c6f82109e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_walk_control.html#a1c7a57f3498a7144dd60e3ce0a6c1f6b">getState</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Acquire current State as int.  <a href="#a1c7a57f3498a7144dd60e3ce0a6c1f6b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_walk_control.html#a845c064d103b519c75faa157aaf98d50">setState</a> (<a class="el" href="class_walk_control.html#a122e3c65fe98db77acf82a678fc397d2">State</a> state)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_walk_control.html#a311213276475cd1fa4588a1051448d7d">setState</a> (int state)</td></tr>
 </table>
@@ -217,9 +217,9 @@ Public Member Functions</h2></td></tr>
 <p><p>TODO どうやってArm::State::Stop == 1であることを知るか？ いっそのこと，messageもstringにしてしまって，受け渡すか？ </p>
 </p>
 
-<p>Reimplemented from <a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a51f904a39dfe2588fb221551dc108e28">SRE::ExtendedSA::Client</a>.</p>
+<p>Implements <a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a9f80c31b991c2713a6064b3e96e1de7a">SRE::ExtendedSA::Client</a>.</p>
 
-<p>Definition at line <a class="el" href="_walk_8cpp_source.html#l00017">17</a> of file <a class="el" href="_walk_8cpp_source.html">Walk.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_walk_control_8cpp_source.html#l00017">17</a> of file <a class="el" href="_walk_control_8cpp_source.html">WalkControl.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -232,7 +232,7 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a97ca49fb05243c08bce4c35c6f82109e"></a><!-- doxytag: member="WalkControl::getState" ref="a97ca49fb05243c08bce4c35c6f82109e" args="()" -->
+<a class="anchor" id="a1c7a57f3498a7144dd60e3ce0a6c1f6b"></a><!-- doxytag: member="WalkControl::getState" ref="a1c7a57f3498a7144dd60e3ce0a6c1f6b" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -240,16 +240,17 @@ Here is the call graph for this function:</div>
           <td class="memname">int WalkControl::getState </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [inline, virtual]</code></td>
+          <td> const<code> [inline, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>return _currentState </p>
+<p>Acquire current State as int. </p>
+<p>return _currentState</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>int _currentState </dd></dl>
 
-<p>Implements <a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_f_s_m_1_1_states.html#ab2c9dd91dbc60c682f3874d47d185463">SRE::ExtendedSA::FSM::States</a>.</p>
+<p>Implements <a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a2b42f6c589315a944a0295bd45fbbfa5">SRE::ExtendedSA::Client</a>.</p>
 
 <p>Definition at line <a class="el" href="_walk_control_8hpp_source.html#l00058">58</a> of file <a class="el" href="_walk_control_8hpp_source.html">WalkControl.hpp</a>.</p>
 
@@ -262,13 +263,15 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void WalkControl::setState </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_walk_control.html#a122e3c65fe98db77acf82a678fc397d2">State</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_walk_control.html#a122e3c65fe98db77acf82a678fc397d2">WalkControl::State</a>&#160;</td>
           <td class="paramname"><em>state</em></td><td>)</td>
-          <td></td>
+          <td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Definition at line <a class="el" href="_walk_control_8hpp_source.html#l00066">66</a> of file <a class="el" href="_walk_control_8hpp_source.html">WalkControl.hpp</a>.</p>
 
 </div>
 </div>
@@ -295,15 +298,16 @@ Here is the call graph for this function:</div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>SubsumptionRobotEnvironment/<a class="el" href="_walk_control_8hpp_source.html">WalkControl.hpp</a></li>
+<li>SubsumptionRobotEnvironment/<a class="el" href="_arm_control_8hpp_source.html">ArmControl.hpp</a></li>
 <li>SubsumptionRobotEnvironment/<a class="el" href="_client_8h_source.html">Client.h</a></li>
-<li>SubsumptionRobotEnvironment/<a class="el" href="_walk_8cpp_source.html">Walk.cpp</a></li>
+<li>SubsumptionRobotEnvironment/<a class="el" href="_walk_control_8cpp_source.html">WalkControl.cpp</a></li>
 </ul>
 </div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="class_walk_control.html">WalkControl</a>      </li>
-      <li class="footer">Generated on Thu Jun 2 2011 15:57:37 for Extended SA Collective Robot Environment by&#160;
+      <li class="footer">Generated on Fri Jun 3 2011 17:59:20 for Extended SA Collective Robot Environment by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

@@ -62,6 +62,9 @@ void TumblingRobot::Create(){
 	pHost->addClient(cWalk);
 	pHost->addClient(cLeftArm);
 	pHost->addClient(cRightArm);
+
+	leftArm->setClient(cLeftArm);
+	rightArm->setClient(cRightArm);
 	
 	return;
 }

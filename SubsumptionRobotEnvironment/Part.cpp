@@ -1,4 +1,5 @@
 #include "Part.h"
+#include "Client.h"
 
 namespace SRE{
 namespace Robot{
@@ -84,6 +85,26 @@ namespace Robot{
 	NxActor* Part::CreateBox(NxVec3 dimensions, NxVec3 pos){
 		return CreateBox(dimensions.x, dimensions.y, dimensions.z,
 			pos.x, pos.y, pos.z);
+	}
+
+	/**
+	 @fn Part::update
+	 @brief Partの力学的状態をコントロールする
+	 */
+	void Part::update(){
+		if(client == NULL){	//clientが指定されていないPartの場合は，無視する
+			return;
+		}
+
+		//Specify process according to the state.
+		switch(client->getState()){
+		case client->state1:
+		case client->state2:
+		case client->state3:
+		default:
+			break;
+		}
+		return;
 	}
 }
 }

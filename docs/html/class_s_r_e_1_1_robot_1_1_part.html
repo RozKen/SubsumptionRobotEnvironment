@@ -96,14 +96,22 @@ Inheritance diagram for SRE::Robot::Part:</div>
 <map name="_s_r_e_1_1_robot_1_1_part_inherit__map" id="_s_r_e_1_1_robot_1_1_part_inherit__map">
 <area shape="rect" id="node3" href="class_tumbling_arm.html" title="TumblingArm" alt="" coords="5,83,104,112"/><area shape="rect" id="node5" href="class_tumbling_body.html" title="TumblingBody" alt="" coords="128,83,232,112"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for SRE::Robot::Part:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_r_e_1_1_robot_1_1_part__coll__graph.png" border="0" usemap="#_s_r_e_1_1_robot_1_1_part_coll__map" alt="Collaboration graph"/></div>
+<map name="_s_r_e_1_1_robot_1_1_part_coll__map" id="_s_r_e_1_1_robot_1_1_part_coll__map">
+<area shape="rect" id="node2" href="class_s_r_e_1_1_extended_s_a_1_1_client.html" title="This is a Client Object derived from States Object of Finite State Machine. This Object has Communica..." alt="" coords="157,107,363,139"/><area shape="rect" id="node4" href="class_s_r_e_1_1_extended_s_a_1_1_f_s_m_1_1_states.html" title="This is a States Object, virtual Class. This object is inspired by Finite State Machine." alt="" coords="5,5,259,37"/><area shape="rect" id="node6" href="class_s_r_e_1_1_extended_s_a_1_1_server.html" title="This is a Server Object. Host Clients and process Messages." alt="" coords="283,5,493,37"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="class_s_r_e_1_1_robot_1_1_part-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#a4531e0b3adb52dabcf319265727d113b">Part</a> (NxScene *scene, NxVec3 <a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#ae35214905fd616acf83093d9e9b58e0c">robotPosition</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#a294c216e530146a07027cf1a7f9fc614">update</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a294c216e530146a07027cf1a7f9fc614"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">NxActor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#ae8c7ff41e2250ccf1b7b172de376ff06">CreateBox</a> (float w, float d, float h, float xInit, float yInit, float zInit)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ae8c7ff41e2250ccf1b7b172de376ff06"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">NxActor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#a52b539743cd9e0b16d3e81bc396d7da2">CreateBox</a> (NxVec3 dimensions, NxVec3 pos)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">NxActor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#acdbb97b1806317b27cbddd9b441fd02e">CreateSphere</a> (float r, float xInit, float yInit, float zInit)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">NxActor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#ab180bc006bb02cfe1d08e75aa98f65de">CreateSphere</a> (float r, NxVec3 pos)</td></tr>
@@ -115,14 +123,17 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#a85be8098d8944dc1e128fb7c3009583e">setLocalPosition</a> (NxVec3 position)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">NxQuat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#a7eef662112ef1d99e3efc8b1fc27f12d">getLocalOrientation</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#a31ea1690363e3fdcc999f1b2f7cddec1">setLocalOrientation</a> (NxQuat orientation)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#a669771677c651f18ca54439f98d089b6">setClient</a> (<a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html">SRE::ExtendedSA::Client</a> *controlClient)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#afda989579d31276abc06373cf53c18a5">Create</a> ()=0</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">NxScene *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#a7527e0e62a09056af1f34b9232c6159a">pScene</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html">ExtendedSA::Client</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#acc98d3c7d7a592c3889b206577abed7e">client</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to Scene (<a class="el" href="namespace_s_r_e_1_1_world.html">World</a>)  <a href="#acc98d3c7d7a592c3889b206577abed7e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">NxActor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#a51904f8093f218298eb6742c8351fe53">pPhysXActor</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to Scene (<a class="el" href="namespace_s_r_e_1_1_world.html">World</a>)  <a href="#a51904f8093f218298eb6742c8351fe53"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Control Client of this <a class="el" href="class_s_r_e_1_1_robot_1_1_part.html">Part</a>.  <a href="#a51904f8093f218298eb6742c8351fe53"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">NxShape *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#a6c2f7df40a2c4161a027d960ceedcd53">pPhysXShape</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Actor Object.  <a href="#a6c2f7df40a2c4161a027d960ceedcd53"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">NxVec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#a547e5a79acf17f78577bc07f441247db">localPosition</a></td></tr>
@@ -139,7 +150,7 @@ Protected Attributes</h2></td></tr>
 <dl class="author"><dt><b>Author:</b></dt><dd>Kenichi Yorozu </dd></dl>
 <dl class="date"><dt><b>Date:</b></dt><dd>30 May 2011 </dd></dl>
 
-<p>Definition at line <a class="el" href="_part_8h_source.html#l00017">17</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+<p>Definition at line <a class="el" href="_part_8h_source.html#l00020">20</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a4531e0b3adb52dabcf319265727d113b"></a><!-- doxytag: member="SRE::Robot::Part::Part" ref="a4531e0b3adb52dabcf319265727d113b" args="(NxScene *scene, NxVec3 robotPosition)" -->
 <div class="memitem">
@@ -166,7 +177,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_part_8h_source.html#l00051">51</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+<p>Definition at line <a class="el" href="_part_8h_source.html#l00058">58</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
 
 </div>
 </div>
@@ -186,44 +197,6 @@ Protected Attributes</h2></td></tr>
 <div class="memdoc">
 
 <p>Implemented in <a class="el" href="class_tumbling_arm.html#ae2db236740a892c4f8f09eff19c8b08b">TumblingArm</a>, and <a class="el" href="class_tumbling_body.html#a5a5f3f6224250adcff6aded18cb00184">TumblingBody</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a52b539743cd9e0b16d3e81bc396d7da2"></a><!-- doxytag: member="SRE::Robot::Part::CreateBox" ref="a52b539743cd9e0b16d3e81bc396d7da2" args="(NxVec3 dimensions, NxVec3 pos)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">NxActor * SRE::Robot::Part::CreateBox </td>
-          <td>(</td>
-          <td class="paramtype">NxVec3&#160;</td>
-          <td class="paramname"><em>dimensions</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">NxVec3&#160;</td>
-          <td class="paramname"><em>pos</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_part_8cpp_source.html#l00084">84</a> of file <a class="el" href="_part_8cpp_source.html">Part.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_s_r_e_1_1_robot_1_1_part_a52b539743cd9e0b16d3e81bc396d7da2_cgraph.png" border="0" usemap="#class_s_r_e_1_1_robot_1_1_part_a52b539743cd9e0b16d3e81bc396d7da2_cgraph" alt=""/></div>
-<map name="class_s_r_e_1_1_robot_1_1_part_a52b539743cd9e0b16d3e81bc396d7da2_cgraph" id="class_s_r_e_1_1_robot_1_1_part_a52b539743cd9e0b16d3e81bc396d7da2_cgraph">
-<area shape="rect" id="node3" href="class_s_r_e_1_1_robot_1_1_part.html#ae8c7ff41e2250ccf1b7b172de376ff06" title="Constructor." alt="" coords="245,5,437,35"/></map>
-</div>
-</p>
 
 </div>
 </div>
@@ -275,9 +248,7 @@ Here is the call graph for this function:</div>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Constructor. </p>
-<p><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#ae8c7ff41e2250ccf1b7b172de376ff06" title="Constructor.">CreateBox(float w, float d, float h,float xInit, float yInit, float zInit)</a> </p>
+<p><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#ae8c7ff41e2250ccf1b7b172de376ff06">CreateBox(float w, float d, float h,float xInit, float yInit, float zInit)</a> </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">w,:</td><td>width of the box </td></tr>
@@ -291,7 +262,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pActor: Pointer to Created Actor </dd></dl>
 
-<p>Definition at line <a class="el" href="_part_8cpp_source.html#l00049">49</a> of file <a class="el" href="_part_8cpp_source.html">Part.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_part_8cpp_source.html#l00050">50</a> of file <a class="el" href="_part_8cpp_source.html">Part.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -304,15 +275,15 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="ab180bc006bb02cfe1d08e75aa98f65de"></a><!-- doxytag: member="SRE::Robot::Part::CreateSphere" ref="ab180bc006bb02cfe1d08e75aa98f65de" args="(float r, NxVec3 pos)" -->
+<a class="anchor" id="a52b539743cd9e0b16d3e81bc396d7da2"></a><!-- doxytag: member="SRE::Robot::Part::CreateBox" ref="a52b539743cd9e0b16d3e81bc396d7da2" args="(NxVec3 dimensions, NxVec3 pos)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">NxActor * SRE::Robot::Part::CreateSphere </td>
+          <td class="memname">NxActor * SRE::Robot::Part::CreateBox </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>r</em>, </td>
+          <td class="paramtype">NxVec3&#160;</td>
+          <td class="paramname"><em>dimensions</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -329,14 +300,14 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_part_8cpp_source.html#l00036">36</a> of file <a class="el" href="_part_8cpp_source.html">Part.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_part_8cpp_source.html#l00085">85</a> of file <a class="el" href="_part_8cpp_source.html">Part.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_s_r_e_1_1_robot_1_1_part_ab180bc006bb02cfe1d08e75aa98f65de_cgraph.png" border="0" usemap="#class_s_r_e_1_1_robot_1_1_part_ab180bc006bb02cfe1d08e75aa98f65de_cgraph" alt=""/></div>
-<map name="class_s_r_e_1_1_robot_1_1_part_ab180bc006bb02cfe1d08e75aa98f65de_cgraph" id="class_s_r_e_1_1_robot_1_1_part_ab180bc006bb02cfe1d08e75aa98f65de_cgraph">
-<area shape="rect" id="node3" href="class_s_r_e_1_1_robot_1_1_part.html#acdbb97b1806317b27cbddd9b441fd02e" title="SRE::Robot::Part::CreateSphere" alt="" coords="264,5,475,35"/></map>
+<div class="center"><img src="class_s_r_e_1_1_robot_1_1_part_a52b539743cd9e0b16d3e81bc396d7da2_cgraph.png" border="0" usemap="#class_s_r_e_1_1_robot_1_1_part_a52b539743cd9e0b16d3e81bc396d7da2_cgraph" alt=""/></div>
+<map name="class_s_r_e_1_1_robot_1_1_part_a52b539743cd9e0b16d3e81bc396d7da2_cgraph" id="class_s_r_e_1_1_robot_1_1_part_a52b539743cd9e0b16d3e81bc396d7da2_cgraph">
+<area shape="rect" id="node3" href="class_s_r_e_1_1_robot_1_1_part.html#ae8c7ff41e2250ccf1b7b172de376ff06" title="SRE::Robot::Part::CreateBox" alt="" coords="289,5,521,37"/></map>
 </div>
 </p>
 
@@ -390,7 +361,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pActor: Pointer to Created Actor </dd></dl>
 
-<p>Definition at line <a class="el" href="_part_8cpp_source.html#l00013">13</a> of file <a class="el" href="_part_8cpp_source.html">Part.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_part_8cpp_source.html#l00014">14</a> of file <a class="el" href="_part_8cpp_source.html">Part.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -398,6 +369,44 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_s_r_e_1_1_robot_1_1_part_acdbb97b1806317b27cbddd9b441fd02e_icgraph.png" border="0" usemap="#class_s_r_e_1_1_robot_1_1_part_acdbb97b1806317b27cbddd9b441fd02e_icgraph" alt=""/></div>
 <map name="class_s_r_e_1_1_robot_1_1_part_acdbb97b1806317b27cbddd9b441fd02e_icgraph" id="class_s_r_e_1_1_robot_1_1_part_acdbb97b1806317b27cbddd9b441fd02e_icgraph">
 <area shape="rect" id="node3" href="class_s_r_e_1_1_robot_1_1_part.html#ab180bc006bb02cfe1d08e75aa98f65de" title="SRE::Robot::Part::CreateSphere" alt="" coords="264,5,475,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab180bc006bb02cfe1d08e75aa98f65de"></a><!-- doxytag: member="SRE::Robot::Part::CreateSphere" ref="ab180bc006bb02cfe1d08e75aa98f65de" args="(float r, NxVec3 pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NxActor * SRE::Robot::Part::CreateSphere </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NxVec3&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_part_8cpp_source.html#l00037">37</a> of file <a class="el" href="_part_8cpp_source.html">Part.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_r_e_1_1_robot_1_1_part_ab180bc006bb02cfe1d08e75aa98f65de_cgraph.png" border="0" usemap="#class_s_r_e_1_1_robot_1_1_part_ab180bc006bb02cfe1d08e75aa98f65de_cgraph" alt=""/></div>
+<map name="class_s_r_e_1_1_robot_1_1_part_ab180bc006bb02cfe1d08e75aa98f65de_cgraph" id="class_s_r_e_1_1_robot_1_1_part_ab180bc006bb02cfe1d08e75aa98f65de_cgraph">
+<area shape="rect" id="node3" href="class_s_r_e_1_1_robot_1_1_part.html#acdbb97b1806317b27cbddd9b441fd02e" title="SRE::Robot::Part::CreateSphere" alt="" coords="264,5,475,35"/></map>
 </div>
 </p>
 
@@ -417,14 +426,14 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_part_8h_source.html#l00054">54</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+<p>Definition at line <a class="el" href="_part_8h_source.html#l00061">61</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_s_r_e_1_1_robot_1_1_part_ac2dcb546098a1f1df1f7ce0eb1a89230_icgraph.png" border="0" usemap="#class_s_r_e_1_1_robot_1_1_part_ac2dcb546098a1f1df1f7ce0eb1a89230_icgraph" alt=""/></div>
 <map name="class_s_r_e_1_1_robot_1_1_part_ac2dcb546098a1f1df1f7ce0eb1a89230_icgraph" id="class_s_r_e_1_1_robot_1_1_part_ac2dcb546098a1f1df1f7ce0eb1a89230_icgraph">
-<area shape="rect" id="node3" href="class_tumbling_robot.html#a5a803dce2895cbedb2fb810d836e6a73" title="TumblingRobot::Create" alt="" coords="235,5,389,35"/><area shape="rect" id="node5" href="class_tumbling_robot.html#af3b2119a85765706829464fd5ce466fe" title="TumblingRobot::TumblingRobot" alt="" coords="437,5,640,35"/></map>
+<area shape="rect" id="node3" href="class_tumbling_robot.html#a5a803dce2895cbedb2fb810d836e6a73" title="TumblingRobot::Create" alt="" coords="273,5,460,37"/><area shape="rect" id="node5" href="class_tumbling_robot.html#adf678c3640460e04e0cbb9431eacfb91" title="TumblingRobot::TumblingRobot" alt="" coords="511,5,756,37"/></map>
 </div>
 </p>
 
@@ -444,14 +453,14 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_part_8h_source.html#l00075">75</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+<p>Definition at line <a class="el" href="_part_8h_source.html#l00082">82</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_s_r_e_1_1_robot_1_1_part_a7eef662112ef1d99e3efc8b1fc27f12d_icgraph.png" border="0" usemap="#class_s_r_e_1_1_robot_1_1_part_a7eef662112ef1d99e3efc8b1fc27f12d_icgraph" alt=""/></div>
 <map name="class_s_r_e_1_1_robot_1_1_part_a7eef662112ef1d99e3efc8b1fc27f12d_icgraph" id="class_s_r_e_1_1_robot_1_1_part_a7eef662112ef1d99e3efc8b1fc27f12d_icgraph">
-<area shape="rect" id="node3" href="class_tumbling_robot.html#a5a803dce2895cbedb2fb810d836e6a73" title="TumblingRobot::Create" alt="" coords="296,5,451,35"/><area shape="rect" id="node5" href="class_tumbling_robot.html#af3b2119a85765706829464fd5ce466fe" title="TumblingRobot::TumblingRobot" alt="" coords="499,5,701,35"/></map>
+<area shape="rect" id="node3" href="class_tumbling_robot.html#a5a803dce2895cbedb2fb810d836e6a73" title="TumblingRobot::Create" alt="" coords="353,5,540,37"/><area shape="rect" id="node5" href="class_tumbling_robot.html#adf678c3640460e04e0cbb9431eacfb91" title="TumblingRobot::TumblingRobot" alt="" coords="591,5,836,37"/></map>
 </div>
 </p>
 
@@ -471,7 +480,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_part_8h_source.html#l00068">68</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+<p>Definition at line <a class="el" href="_part_8h_source.html#l00075">75</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
 
 </div>
 </div>
@@ -489,7 +498,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_part_8h_source.html#l00061">61</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+<p>Definition at line <a class="el" href="_part_8h_source.html#l00068">68</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
 
 </div>
 </div>
@@ -508,7 +517,42 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_part_8h_source.html#l00057">57</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+<p>Definition at line <a class="el" href="_part_8h_source.html#l00064">64</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a669771677c651f18ca54439f98d089b6"></a><!-- doxytag: member="SRE::Robot::Part::setClient" ref="a669771677c651f18ca54439f98d089b6" args="(SRE::ExtendedSA::Client *controlClient)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SRE::Robot::Part::setClient </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html">SRE::ExtendedSA::Client</a> *&#160;</td>
+          <td class="paramname"><em>controlClient</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Partの制御を司るClientを指定する </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controlClient</td><td>このPartを操作するExtendedSAのClientへのポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_part_8h_source.html#l00093">93</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_r_e_1_1_robot_1_1_part_a669771677c651f18ca54439f98d089b6_icgraph.png" border="0" usemap="#class_s_r_e_1_1_robot_1_1_part_a669771677c651f18ca54439f98d089b6_icgraph" alt=""/></div>
+<map name="class_s_r_e_1_1_robot_1_1_part_a669771677c651f18ca54439f98d089b6_icgraph" id="class_s_r_e_1_1_robot_1_1_part_a669771677c651f18ca54439f98d089b6_icgraph">
+<area shape="rect" id="node3" href="class_tumbling_robot.html#a5a803dce2895cbedb2fb810d836e6a73" title="TumblingRobot::Create" alt="" coords="273,5,460,37"/><area shape="rect" id="node5" href="class_tumbling_robot.html#adf678c3640460e04e0cbb9431eacfb91" title="TumblingRobot::TumblingRobot" alt="" coords="511,5,756,37"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -527,7 +571,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_part_8h_source.html#l00078">78</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+<p>Definition at line <a class="el" href="_part_8h_source.html#l00085">85</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
 
 </div>
 </div>
@@ -546,7 +590,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_part_8h_source.html#l00071">71</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+<p>Definition at line <a class="el" href="_part_8h_source.html#l00078">78</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
 
 </div>
 </div>
@@ -565,11 +609,60 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_part_8h_source.html#l00064">64</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+<p>Definition at line <a class="el" href="_part_8h_source.html#l00071">71</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a294c216e530146a07027cf1a7f9fc614"></a><!-- doxytag: member="SRE::Robot::Part::update" ref="a294c216e530146a07027cf1a7f9fc614" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SRE::Robot::Part::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Constructor. </p>
+<p>Partの力学的状態をコントロールする </p>
+
+<p>Reimplemented in <a class="el" href="class_tumbling_arm.html#a409293bfae15457a613072a6bb36b7e8">TumblingArm</a>.</p>
+
+<p>Definition at line <a class="el" href="_part_8cpp_source.html#l00094">94</a> of file <a class="el" href="_part_8cpp_source.html">Part.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_r_e_1_1_robot_1_1_part_a294c216e530146a07027cf1a7f9fc614_cgraph.png" border="0" usemap="#class_s_r_e_1_1_robot_1_1_part_a294c216e530146a07027cf1a7f9fc614_cgraph" alt=""/></div>
+<map name="class_s_r_e_1_1_robot_1_1_part_a294c216e530146a07027cf1a7f9fc614_cgraph" id="class_s_r_e_1_1_robot_1_1_part_a294c216e530146a07027cf1a7f9fc614_cgraph">
+<area shape="rect" id="node3" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a2b42f6c589315a944a0295bd45fbbfa5" title="each State must have Setter to some State by some signal" alt="" coords="261,5,536,37"/></map>
+</div>
+</p>
 
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="acc98d3c7d7a592c3889b206577abed7e"></a><!-- doxytag: member="SRE::Robot::Part::client" ref="acc98d3c7d7a592c3889b206577abed7e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html">ExtendedSA::Client</a>* <a class="el" href="class_s_r_e_1_1_robot_1_1_part.html#acc98d3c7d7a592c3889b206577abed7e">SRE::Robot::Part::client</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Pointer to Scene (<a class="el" href="namespace_s_r_e_1_1_world.html">World</a>) </p>
+
+<p>Definition at line <a class="el" href="_part_8h_source.html#l00048">48</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a5b367ece347871720c455f641261283e"></a><!-- doxytag: member="SRE::Robot::Part::localOrientation" ref="a5b367ece347871720c455f641261283e" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -583,7 +676,7 @@ Here is the caller graph for this function:</div>
 
 <p>Local Position in <a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html">Robot</a>. </p>
 
-<p>Definition at line <a class="el" href="_part_8h_source.html#l00046">46</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+<p>Definition at line <a class="el" href="_part_8h_source.html#l00053">53</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
 
 </div>
 </div>
@@ -600,7 +693,7 @@ Here is the caller graph for this function:</div>
 
 <p>Shape of Actor. </p>
 
-<p>Definition at line <a class="el" href="_part_8h_source.html#l00045">45</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+<p>Definition at line <a class="el" href="_part_8h_source.html#l00052">52</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
 
 </div>
 </div>
@@ -615,9 +708,9 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Pointer to Scene (<a class="el" href="namespace_s_r_e_1_1_world.html">World</a>) </p>
+<p>Control Client of this <a class="el" href="class_s_r_e_1_1_robot_1_1_part.html">Part</a>. </p>
 
-<p>Definition at line <a class="el" href="_part_8h_source.html#l00043">43</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+<p>Definition at line <a class="el" href="_part_8h_source.html#l00050">50</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
 
 </div>
 </div>
@@ -634,7 +727,7 @@ Here is the caller graph for this function:</div>
 
 <p>Actor Object. </p>
 
-<p>Definition at line <a class="el" href="_part_8h_source.html#l00044">44</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+<p>Definition at line <a class="el" href="_part_8h_source.html#l00051">51</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
 
 </div>
 </div>
@@ -649,7 +742,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_part_8h_source.html#l00041">41</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+<p>Definition at line <a class="el" href="_part_8h_source.html#l00047">47</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
 
 </div>
 </div>
@@ -666,7 +759,7 @@ Here is the caller graph for this function:</div>
 
 <p>Position of Whole <a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html">Robot</a>. </p>
 
-<p>Definition at line <a class="el" href="_part_8h_source.html#l00048">48</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+<p>Definition at line <a class="el" href="_part_8h_source.html#l00055">55</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
 
 </div>
 </div>
@@ -683,7 +776,7 @@ Here is the caller graph for this function:</div>
 
 <p>Local Orientation in <a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html">Robot</a>. </p>
 
-<p>Definition at line <a class="el" href="_part_8h_source.html#l00047">47</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
+<p>Definition at line <a class="el" href="_part_8h_source.html#l00054">54</a> of file <a class="el" href="_part_8h_source.html">Part.h</a>.</p>
 
 </div>
 </div>
@@ -698,7 +791,7 @@ Here is the caller graph for this function:</div>
       <li class="navelem"><a class="el" href="namespace_s_r_e.html">SRE</a>      </li>
       <li class="navelem"><a class="el" href="namespace_s_r_e_1_1_robot.html">Robot</a>      </li>
       <li class="navelem"><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html">Part</a>      </li>
-      <li class="footer">Generated on Thu Jun 2 2011 15:57:38 for Extended SA Collective Robot Environment by&#160;
+      <li class="footer">Generated on Fri Jun 3 2011 17:59:20 for Extended SA Collective Robot Environment by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

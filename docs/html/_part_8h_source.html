@@ -91,82 +91,93 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00008"></a><a class="code" href="_part_8h.html#ad96793de0cc60529a6b01040c0cd8033">00008</a> <span class="preprocessor"></span><span class="preprocessor">#define MASS 1.0f               ///Default Mass</span>
 <a name="l00009"></a>00009 <span class="preprocessor"></span>
 <a name="l00010"></a>00010 <span class="keyword">namespace </span>SRE{
-<a name="l00011"></a>00011 <span class="keyword">namespace </span>Robot{
-<a name="l00017"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html">00017</a>         <span class="keyword">class </span><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html">Part</a>{
-<a name="l00018"></a>00018         <span class="keyword">public</span>:
-<a name="l00019"></a>00019                 <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a4531e0b3adb52dabcf319265727d113b">Part</a>(NxScene* scene, NxVec3 <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae35214905fd616acf83093d9e9b58e0c" title="Local Orientation in Robot.">robotPosition</a>);                     
-<a name="l00020"></a>00020                 <span class="comment">//virtual ~Part();              ///Destructor</span>
-<a name="l00021"></a>00021 
-<a name="l00022"></a>00022                 <span class="comment">//Utility Functions for PhysX</span>
-<a name="l00023"></a>00023                 NxActor* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae8c7ff41e2250ccf1b7b172de376ff06" title="Constructor.">CreateBox</a>(<span class="keywordtype">float</span> w, <span class="keywordtype">float</span> d, <span class="keywordtype">float</span> h,<span class="keywordtype">float</span> xInit, <span class="keywordtype">float</span> yInit, <span class="keywordtype">float</span> zInit);
-<a name="l00024"></a>00024                 NxActor* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae8c7ff41e2250ccf1b7b172de376ff06" title="Constructor.">CreateBox</a>(NxVec3 dimensions, NxVec3 pos);
-<a name="l00025"></a>00025                 NxActor* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acdbb97b1806317b27cbddd9b441fd02e">CreateSphere</a>(<span class="keywordtype">float</span> r, <span class="keywordtype">float</span> xInit, <span class="keywordtype">float</span> yInit, <span class="keywordtype">float</span> zInit);
-<a name="l00026"></a>00026                 NxActor* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acdbb97b1806317b27cbddd9b441fd02e">CreateSphere</a>(<span class="keywordtype">float</span> r, NxVec3 pos);
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028                 <span class="comment">//Getters and Setters</span>
-<a name="l00029"></a>00029                 NxActor*        <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ac2dcb546098a1f1df1f7ce0eb1a89230">getActor</a>();
-<a name="l00030"></a>00030                 <span class="keywordtype">void</span>            <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a0f6e4dc77eb59fd094ea0c81c6e5a7b2">setActor</a>(NxActor* actor);
-<a name="l00031"></a>00031                 NxShape*        <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a1843bc9024f4d1012d34de57049bfff0">getShape</a>();
-<a name="l00032"></a>00032                 <span class="keywordtype">void</span>            <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae325f67df773e1ae378da39a42d7817b">setShape</a>(NxShape* shape);
-<a name="l00033"></a>00033                 NxVec3          <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a9103e771067823f7d6c5c3530f03242b">getLocalPosition</a>();
-<a name="l00034"></a>00034                 <span class="keywordtype">void</span>            <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a85be8098d8944dc1e128fb7c3009583e">setLocalPosition</a>(NxVec3 position);
-<a name="l00035"></a>00035                 NxQuat          <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a7eef662112ef1d99e3efc8b1fc27f12d">getLocalOrientation</a>();
-<a name="l00036"></a>00036                 <span class="keywordtype">void</span>            <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a31ea1690363e3fdcc999f1b2f7cddec1">setLocalOrientation</a>(NxQuat orientation);
-<a name="l00037"></a>00037         <span class="keyword">protected</span>:
-<a name="l00038"></a>00038                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#afda989579d31276abc06373cf53c18a5">Create</a>() = 0;
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040                 <span class="comment">//Pointer to World</span>
-<a name="l00041"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a7527e0e62a09056af1f34b9232c6159a">00041</a>                 NxScene*        <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a7527e0e62a09056af1f34b9232c6159a">pScene</a>;                         
-<a name="l00042"></a>00042 
-<a name="l00043"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a51904f8093f218298eb6742c8351fe53">00043</a>                 NxActor*        <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a51904f8093f218298eb6742c8351fe53" title="Pointer to Scene (World)">pPhysXActor</a>;            
-<a name="l00044"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a6c2f7df40a2c4161a027d960ceedcd53">00044</a>                 NxShape*        <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a6c2f7df40a2c4161a027d960ceedcd53" title="Actor Object.">pPhysXShape</a>;            
-<a name="l00045"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a547e5a79acf17f78577bc07f441247db">00045</a>                 NxVec3          <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a547e5a79acf17f78577bc07f441247db" title="Shape of Actor.">localPosition</a>;          
-<a name="l00046"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a5b367ece347871720c455f641261283e">00046</a>                 NxQuat          <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a5b367ece347871720c455f641261283e" title="Local Position in Robot.">localOrientation</a>;       
-<a name="l00047"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae35214905fd616acf83093d9e9b58e0c">00047</a>                 NxVec3          <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae35214905fd616acf83093d9e9b58e0c" title="Local Orientation in Robot.">robotPosition</a>;          
-<a name="l00048"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a4a95adb2fc671051738814cb2c549d94">00048</a>                 NxQuat          <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a4a95adb2fc671051738814cb2c549d94" title="Position of Whole Robot.">robotOrientation</a>;       
-<a name="l00049"></a>00049         };
-<a name="l00050"></a>00050 
-<a name="l00051"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a4531e0b3adb52dabcf319265727d113b">00051</a>         <span class="keyword">inline</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a4531e0b3adb52dabcf319265727d113b">Part::Part</a>(NxScene* scene, NxVec3 robotPosition) : pScene(scene), robotPosition(robotPosition){
-<a name="l00052"></a>00052         }
-<a name="l00053"></a>00053 
-<a name="l00054"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ac2dcb546098a1f1df1f7ce0eb1a89230">00054</a>         <span class="keyword">inline</span> NxActor* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ac2dcb546098a1f1df1f7ce0eb1a89230">Part::getActor</a>(){
-<a name="l00055"></a>00055                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a51904f8093f218298eb6742c8351fe53" title="Pointer to Scene (World)">pPhysXActor</a>;
-<a name="l00056"></a>00056         }
-<a name="l00057"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a0f6e4dc77eb59fd094ea0c81c6e5a7b2">00057</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a0f6e4dc77eb59fd094ea0c81c6e5a7b2">Part::setActor</a>(NxActor* actor){
-<a name="l00058"></a>00058                 <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a51904f8093f218298eb6742c8351fe53" title="Pointer to Scene (World)">pPhysXActor</a> = actor;
-<a name="l00059"></a>00059                 <span class="keywordflow">return</span>;
-<a name="l00060"></a>00060         }
-<a name="l00061"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a1843bc9024f4d1012d34de57049bfff0">00061</a>         <span class="keyword">inline</span> NxShape* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a1843bc9024f4d1012d34de57049bfff0">Part::getShape</a>(){
-<a name="l00062"></a>00062                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a6c2f7df40a2c4161a027d960ceedcd53" title="Actor Object.">pPhysXShape</a>;
+<a name="l00011"></a>00011         <span class="keyword">namespace </span>ExtendedSA{
+<a name="l00012"></a>00012                 <span class="keyword">class </span>Client;                   <span class="comment">//Prototype Declaration</span>
+<a name="l00013"></a>00013         }
+<a name="l00014"></a>00014 <span class="keyword">namespace </span>Robot{
+<a name="l00020"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html">00020</a>         <span class="keyword">class </span><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html">Part</a>{
+<a name="l00021"></a>00021         <span class="keyword">public</span>:
+<a name="l00022"></a>00022                 <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a4531e0b3adb52dabcf319265727d113b">Part</a>(NxScene* scene, NxVec3 <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae35214905fd616acf83093d9e9b58e0c" title="Local Orientation in Robot.">robotPosition</a>);                     
+<a name="l00023"></a>00023                 <span class="comment">//virtual ~Part();              ///Destructor</span>
+<a name="l00024"></a>00024                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a294c216e530146a07027cf1a7f9fc614" title="Constructor.">update</a>();
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026                 <span class="comment">//Utility Functions for PhysX</span>
+<a name="l00027"></a>00027                 NxActor* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae8c7ff41e2250ccf1b7b172de376ff06">CreateBox</a>(<span class="keywordtype">float</span> w, <span class="keywordtype">float</span> d, <span class="keywordtype">float</span> h,<span class="keywordtype">float</span> xInit, <span class="keywordtype">float</span> yInit, <span class="keywordtype">float</span> zInit);
+<a name="l00028"></a>00028                 NxActor* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae8c7ff41e2250ccf1b7b172de376ff06">CreateBox</a>(NxVec3 dimensions, NxVec3 pos);
+<a name="l00029"></a>00029                 NxActor* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acdbb97b1806317b27cbddd9b441fd02e">CreateSphere</a>(<span class="keywordtype">float</span> r, <span class="keywordtype">float</span> xInit, <span class="keywordtype">float</span> yInit, <span class="keywordtype">float</span> zInit);
+<a name="l00030"></a>00030                 NxActor* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acdbb97b1806317b27cbddd9b441fd02e">CreateSphere</a>(<span class="keywordtype">float</span> r, NxVec3 pos);
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032                 <span class="comment">//Getters and Setters</span>
+<a name="l00033"></a>00033                 NxActor*        <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ac2dcb546098a1f1df1f7ce0eb1a89230">getActor</a>();
+<a name="l00034"></a>00034                 <span class="keywordtype">void</span>            <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a0f6e4dc77eb59fd094ea0c81c6e5a7b2">setActor</a>(NxActor* actor);
+<a name="l00035"></a>00035                 NxShape*        <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a1843bc9024f4d1012d34de57049bfff0">getShape</a>();
+<a name="l00036"></a>00036                 <span class="keywordtype">void</span>            <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae325f67df773e1ae378da39a42d7817b">setShape</a>(NxShape* shape);
+<a name="l00037"></a>00037                 NxVec3          <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a9103e771067823f7d6c5c3530f03242b">getLocalPosition</a>();
+<a name="l00038"></a>00038                 <span class="keywordtype">void</span>            <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a85be8098d8944dc1e128fb7c3009583e">setLocalPosition</a>(NxVec3 position);
+<a name="l00039"></a>00039                 NxQuat          <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a7eef662112ef1d99e3efc8b1fc27f12d">getLocalOrientation</a>();
+<a name="l00040"></a>00040                 <span class="keywordtype">void</span>            <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a31ea1690363e3fdcc999f1b2f7cddec1">setLocalOrientation</a>(NxQuat orientation);
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042                 <span class="keywordtype">void</span>            <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a669771677c651f18ca54439f98d089b6">setClient</a>(<a class="code" href="class_s_r_e_1_1_extended_s_a_1_1_client.html" title="This is a Client Object derived from States Object of Finite State Machine. This Object has Communica...">SRE::ExtendedSA::Client</a>* controlClient);
+<a name="l00043"></a>00043         <span class="keyword">protected</span>:
+<a name="l00044"></a>00044                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#afda989579d31276abc06373cf53c18a5">Create</a>() = 0;
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046                 <span class="comment">//Pointer to World</span>
+<a name="l00047"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a7527e0e62a09056af1f34b9232c6159a">00047</a>                 NxScene*        <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a7527e0e62a09056af1f34b9232c6159a">pScene</a>;                         
+<a name="l00048"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acc98d3c7d7a592c3889b206577abed7e">00048</a>                 <a class="code" href="class_s_r_e_1_1_extended_s_a_1_1_client.html" title="This is a Client Object derived from States Object of Finite State Machine. This Object has Communica...">ExtendedSA::Client</a>* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acc98d3c7d7a592c3889b206577abed7e" title="Pointer to Scene (World)">client</a>;             
+<a name="l00049"></a>00049 
+<a name="l00050"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a51904f8093f218298eb6742c8351fe53">00050</a>                 NxActor*        <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a51904f8093f218298eb6742c8351fe53" title="Control Client of this Part.">pPhysXActor</a>;            
+<a name="l00051"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a6c2f7df40a2c4161a027d960ceedcd53">00051</a>                 NxShape*        <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a6c2f7df40a2c4161a027d960ceedcd53" title="Actor Object.">pPhysXShape</a>;            
+<a name="l00052"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a547e5a79acf17f78577bc07f441247db">00052</a>                 NxVec3          <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a547e5a79acf17f78577bc07f441247db" title="Shape of Actor.">localPosition</a>;          
+<a name="l00053"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a5b367ece347871720c455f641261283e">00053</a>                 NxQuat          <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a5b367ece347871720c455f641261283e" title="Local Position in Robot.">localOrientation</a>;       
+<a name="l00054"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae35214905fd616acf83093d9e9b58e0c">00054</a>                 NxVec3          <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae35214905fd616acf83093d9e9b58e0c" title="Local Orientation in Robot.">robotPosition</a>;          
+<a name="l00055"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a4a95adb2fc671051738814cb2c549d94">00055</a>                 NxQuat          <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a4a95adb2fc671051738814cb2c549d94" title="Position of Whole Robot.">robotOrientation</a>;       
+<a name="l00056"></a>00056         };
+<a name="l00057"></a>00057 
+<a name="l00058"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a4531e0b3adb52dabcf319265727d113b">00058</a>         <span class="keyword">inline</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a4531e0b3adb52dabcf319265727d113b">Part::Part</a>(NxScene* scene, NxVec3 robotPosition) : pScene(scene), robotPosition(robotPosition), client(NULL){
+<a name="l00059"></a>00059         }
+<a name="l00060"></a>00060 
+<a name="l00061"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ac2dcb546098a1f1df1f7ce0eb1a89230">00061</a>         <span class="keyword">inline</span> NxActor* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ac2dcb546098a1f1df1f7ce0eb1a89230">Part::getActor</a>(){
+<a name="l00062"></a>00062                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a51904f8093f218298eb6742c8351fe53" title="Control Client of this Part.">pPhysXActor</a>;
 <a name="l00063"></a>00063         }
-<a name="l00064"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae325f67df773e1ae378da39a42d7817b">00064</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae325f67df773e1ae378da39a42d7817b">Part::setShape</a>(NxShape* shape){
-<a name="l00065"></a>00065                 <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a6c2f7df40a2c4161a027d960ceedcd53" title="Actor Object.">pPhysXShape</a> = shape;
+<a name="l00064"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a0f6e4dc77eb59fd094ea0c81c6e5a7b2">00064</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a0f6e4dc77eb59fd094ea0c81c6e5a7b2">Part::setActor</a>(NxActor* actor){
+<a name="l00065"></a>00065                 <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a51904f8093f218298eb6742c8351fe53" title="Control Client of this Part.">pPhysXActor</a> = actor;
 <a name="l00066"></a>00066                 <span class="keywordflow">return</span>;
 <a name="l00067"></a>00067         }
-<a name="l00068"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a9103e771067823f7d6c5c3530f03242b">00068</a>         <span class="keyword">inline</span> NxVec3 <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a9103e771067823f7d6c5c3530f03242b">Part::getLocalPosition</a>(){
-<a name="l00069"></a>00069                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a547e5a79acf17f78577bc07f441247db" title="Shape of Actor.">localPosition</a>;
+<a name="l00068"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a1843bc9024f4d1012d34de57049bfff0">00068</a>         <span class="keyword">inline</span> NxShape* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a1843bc9024f4d1012d34de57049bfff0">Part::getShape</a>(){
+<a name="l00069"></a>00069                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a6c2f7df40a2c4161a027d960ceedcd53" title="Actor Object.">pPhysXShape</a>;
 <a name="l00070"></a>00070         }
-<a name="l00071"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a85be8098d8944dc1e128fb7c3009583e">00071</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a85be8098d8944dc1e128fb7c3009583e">Part::setLocalPosition</a>(NxVec3 position){
-<a name="l00072"></a>00072                 <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a547e5a79acf17f78577bc07f441247db" title="Shape of Actor.">localPosition</a> = position;
+<a name="l00071"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae325f67df773e1ae378da39a42d7817b">00071</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae325f67df773e1ae378da39a42d7817b">Part::setShape</a>(NxShape* shape){
+<a name="l00072"></a>00072                 <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a6c2f7df40a2c4161a027d960ceedcd53" title="Actor Object.">pPhysXShape</a> = shape;
 <a name="l00073"></a>00073                 <span class="keywordflow">return</span>;
 <a name="l00074"></a>00074         }
-<a name="l00075"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a7eef662112ef1d99e3efc8b1fc27f12d">00075</a>         <span class="keyword">inline</span> NxQuat <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a7eef662112ef1d99e3efc8b1fc27f12d">Part::getLocalOrientation</a>(){
-<a name="l00076"></a>00076                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a5b367ece347871720c455f641261283e" title="Local Position in Robot.">localOrientation</a>;
+<a name="l00075"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a9103e771067823f7d6c5c3530f03242b">00075</a>         <span class="keyword">inline</span> NxVec3 <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a9103e771067823f7d6c5c3530f03242b">Part::getLocalPosition</a>(){
+<a name="l00076"></a>00076                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a547e5a79acf17f78577bc07f441247db" title="Shape of Actor.">localPosition</a>;
 <a name="l00077"></a>00077         }
-<a name="l00078"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a31ea1690363e3fdcc999f1b2f7cddec1">00078</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a31ea1690363e3fdcc999f1b2f7cddec1">Part::setLocalOrientation</a>(NxQuat orientation){
-<a name="l00079"></a>00079                 <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a5b367ece347871720c455f641261283e" title="Local Position in Robot.">localOrientation</a> = orientation;
+<a name="l00078"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a85be8098d8944dc1e128fb7c3009583e">00078</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a85be8098d8944dc1e128fb7c3009583e">Part::setLocalPosition</a>(NxVec3 position){
+<a name="l00079"></a>00079                 <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a547e5a79acf17f78577bc07f441247db" title="Shape of Actor.">localPosition</a> = position;
 <a name="l00080"></a>00080                 <span class="keywordflow">return</span>;
 <a name="l00081"></a>00081         }
-<a name="l00082"></a>00082 }       <span class="comment">//namespace Robot</span>
-<a name="l00083"></a>00083 }       <span class="comment">//namespace SRE</span>
-<a name="l00084"></a>00084 
-<a name="l00085"></a>00085 <span class="preprocessor">#endif  //SRE_Robot_Part_H_</span>
+<a name="l00082"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a7eef662112ef1d99e3efc8b1fc27f12d">00082</a>         <span class="keyword">inline</span> NxQuat <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a7eef662112ef1d99e3efc8b1fc27f12d">Part::getLocalOrientation</a>(){
+<a name="l00083"></a>00083                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a5b367ece347871720c455f641261283e" title="Local Position in Robot.">localOrientation</a>;
+<a name="l00084"></a>00084         }
+<a name="l00085"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a31ea1690363e3fdcc999f1b2f7cddec1">00085</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a31ea1690363e3fdcc999f1b2f7cddec1">Part::setLocalOrientation</a>(NxQuat orientation){
+<a name="l00086"></a>00086                 <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a5b367ece347871720c455f641261283e" title="Local Position in Robot.">localOrientation</a> = orientation;
+<a name="l00087"></a>00087                 <span class="keywordflow">return</span>;
+<a name="l00088"></a>00088         }
+<a name="l00093"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a669771677c651f18ca54439f98d089b6">00093</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span>     <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a669771677c651f18ca54439f98d089b6">Part::setClient</a>(<a class="code" href="class_s_r_e_1_1_extended_s_a_1_1_client.html" title="This is a Client Object derived from States Object of Finite State Machine. This Object has Communica...">ExtendedSA::Client</a>* controlClient){
+<a name="l00094"></a>00094                 <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acc98d3c7d7a592c3889b206577abed7e" title="Pointer to Scene (World)">client</a> = controlClient;
+<a name="l00095"></a>00095                 <span class="keywordflow">return</span>;
+<a name="l00096"></a>00096         }
+<a name="l00097"></a>00097 }       <span class="comment">//namespace Robot</span>
+<a name="l00098"></a>00098 }       <span class="comment">//namespace SRE</span>
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100 <span class="preprocessor">#endif  //SRE_Robot_Part_H_</span>
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_part_8h.html">Part.h</a>      </li>
-      <li class="footer">Generated on Thu Jun 2 2011 15:57:35 for Extended SA Collective Robot Environment by&#160;
+      <li class="footer">Generated on Fri Jun 3 2011 17:59:19 for Extended SA Collective Robot Environment by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

@@ -26,6 +26,8 @@ namespace Robot{
 		NxQuat		getOrientation() const;
 		void		setOrientation(NxQuat orientation);
 
+		void setClientToParts(ExtendedSA::Client* controlClient, Part* part);
+
 	protected:
 		virtual void Create() = 0;
 		//Pointer to World
@@ -78,6 +80,10 @@ namespace Robot{
 	}
 	inline void		Robot::setOrientation(NxQuat orientation){
 		this->orientation = orientation;
+	}
+
+	inline void Robot::setClientToParts(ExtendedSA::Client* controlClient, Part* part){
+		
 	}
 
 }	//namespace Robot

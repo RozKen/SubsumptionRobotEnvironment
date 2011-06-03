@@ -1,15 +1,11 @@
-﻿2011/06/03 12:32:28 にビルドを開始しました。
+﻿2011/06/03 17:55:14 にビルドを開始しました。
      1>ノード 2 上のプロジェクト "C:\Users\RozKen\Documents\Dropbox\Development\cpp\subsumption\SubsumptionRobotEnvironment\SubsumptionRobotEnvironment\SubsumptionRobotEnvironment.vcxproj" (build ターゲット)。
      1>InitializeBuildStatus:
          "AlwaysCreate" が指定されたため "Debug\SubsumptionRobotEnvironment.unsuccessfulbuild" を作成しています。
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt WalkControl.cpp WorldGL.cpp
-         WorldGL.cpp
-     1>c:\users\rozken\documents\dropbox\development\cpp\subsumption\subsumptionrobotenvironment\subsumptionrobotenvironment\worldgl.cpp(108): warning C4018: '<' : signed と unsigned の数値を比較しようとしました。
-     1>c:\users\rozken\documents\dropbox\development\cpp\subsumption\subsumptionrobotenvironment\subsumptionrobotenvironment\worldgl.cpp(114): warning C4018: '<' : signed と unsigned の数値を比較しようとしました。
-     1>c:\users\rozken\documents\dropbox\development\cpp\subsumption\subsumptionrobotenvironment\subsumptionrobotenvironment\worldgl.cpp(120): warning C4018: '<' : signed と unsigned の数値を比較しようとしました。
-         WalkControl.cpp
-         コードを生成中...
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt TumblingArm.cpp
+         TumblingArm.cpp
+     1>c:\users\rozken\documents\dropbox\development\cpp\subsumption\subsumptionrobotenvironment\subsumptionrobotenvironment\tumblingarm.cpp(39): warning C4244: '引数' : 'double' から 'NxReal' への変換です。データが失われる可能性があります。
        ManifestResourceCompile:
          すべての出力が最新のものです。
        Link:
@@ -38,4 +34,4 @@
 
 ビルドに成功しました。
 
-経過時間 00:00:04.16
+経過時間 00:00:02.75

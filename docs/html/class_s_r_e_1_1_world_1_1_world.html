@@ -81,7 +81,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pro-static-attribs">Static Protected Attributes</a>  </div>
   <div class="headertitle">
@@ -103,12 +104,6 @@ Collaboration diagram for SRE::World::World:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a4518a0fdf179be9faa6a63d68d51dc18">World</a> (int argc, char **argv)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#aa74dccf07683f112bf7364be792639b8">InitWorld</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a7d4af5f4cfe14ce9b39f4cbf75c1bc48">InitNx</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a7cb9fc5084797b035ee1e8cc6ab50ad2">InitScene</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a7380c1bc19c485d18041a39d151a7040">CreateGroundPlane</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#aafa3a25cd86f163d98c0ab241a5ffe78">InitGLUT</a> (int argc, char **argv)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#ae6f53b782d8ce149d7d186ab7c678354">MyGLInit</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">NxPhysicsSDK *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a0789ac3fc145c0e0bb4bd2cc299e4de3">getPhysicsSDK</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">NxScene *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#af0a83db632f2436e70d7e6256ca07971">getScene</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">NxVec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a99620ae398394e406f79b7895f710f2a">getGravity</a> ()</td></tr>
@@ -116,8 +111,15 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a0bb79153836412ba17d0290f02652eea">getIsSimulate</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a7da2ecaeceb8cb1b5e1aeae701f7334a">setIsSimulate</a> (bool flag)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a8c5e31b0eca2f1ab0bed771c686e3065">switchIsSimulate</a> ()</td></tr>
-<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a7d4af5f4cfe14ce9b39f4cbf75c1bc48">InitNx</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a7cb9fc5084797b035ee1e8cc6ab50ad2">InitScene</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a7380c1bc19c485d18041a39d151a7040">CreateGroundPlane</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#aafa3a25cd86f163d98c0ab241a5ffe78">InitGLUT</a> (int argc, char **argv)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#ae6f53b782d8ce149d7d186ab7c678354">MyGLInit</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a184a79ed810ef1dc13f142802309f38e">CleanUpNx</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a80eae91d7f72a8f5da0d7e7b6d5ae2e9">KeyboardCallback</a> (unsigned char key, int x, int y)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#aac561c09abfc14acbef50689a804c3a0">ArrowKeyCallback</a> (int key, int x, int y)</td></tr>
@@ -133,10 +135,6 @@ Static Public Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">NxVec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a25112a5bed1f97e2b93cb6d1ca1b24d2">DefaultGravity</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Scene.  <a href="#a25112a5bed1f97e2b93cb6d1ca1b24d2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html">SRE::Robot::Robot</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a1ae85b66fbf4ae98f8e2363c7e68fbca">robots</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for Simulation.  <a href="#a1ae85b66fbf4ae98f8e2363c7e68fbca"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_server.html">SRE::ExtendedSA::Server</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a407482dd84f9f9f0662b98900240ed34">host</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">StoreRobots.  <a href="#a407482dd84f9f9f0662b98900240ed34"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static NxPhysicsSDK *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a6105cfa6fe972e8f913cb7dcd39236b0">pPhysicsSDK</a> = NULL</td></tr>
@@ -150,6 +148,11 @@ Static Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#ab328002ea316edcfdb82849375745c06">gMouseY</a> = 0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a78cac06e79e85f6a10f29b6513e5c77e">gMouseButton</a> [3] = {0}</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#ab6f67a8a147b572e94c7ed0067c70f3c">isSimulate</a> = false</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static std::vector<br class="typebreak"/>
+&lt; <a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html">SRE::Robot::Robot</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#ac6039c77342cce651338daf2e15d27be">robots</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for Simulation.  <a href="#ac6039c77342cce651338daf2e15d27be"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_server.html">SRE::ExtendedSA::Server</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a9895926a45a67075048f45579e1943d4">host</a> = NULL</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">StoreRobots.  <a href="#a9895926a45a67075048f45579e1943d4"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -187,7 +190,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_s_r_e_1_1_world_1_1_world_a4518a0fdf179be9faa6a63d68d51dc18_cgraph.png" border="0" usemap="#class_s_r_e_1_1_world_1_1_world_a4518a0fdf179be9faa6a63d68d51dc18_cgraph" alt=""/></div>
 <map name="class_s_r_e_1_1_world_1_1_world_a4518a0fdf179be9faa6a63d68d51dc18_cgraph" id="class_s_r_e_1_1_world_1_1_world_a4518a0fdf179be9faa6a63d68d51dc18_cgraph">
-<area shape="rect" id="node3" href="class_s_r_e_1_1_world_1_1_world.html#a7380c1bc19c485d18041a39d151a7040" title="SRE::World::World::CreateGroundPlane" alt="" coords="231,163,484,192"/><area shape="rect" id="node5" href="class_s_r_e_1_1_world_1_1_world.html#aafa3a25cd86f163d98c0ab241a5ffe78" title="SRE::World::World::InitGLUT" alt="" coords="263,216,452,245"/><area shape="rect" id="node28" href="class_s_r_e_1_1_world_1_1_world.html#a7d4af5f4cfe14ce9b39f4cbf75c1bc48" title="SRE::World::World::InitNx" alt="" coords="271,269,444,299"/><area shape="rect" id="node30" href="class_s_r_e_1_1_world_1_1_world.html#a7cb9fc5084797b035ee1e8cc6ab50ad2" title="SRE::World::World::InitScene" alt="" coords="260,323,455,352"/><area shape="rect" id="node7" href="class_s_r_e_1_1_world_1_1_world.html#aac561c09abfc14acbef50689a804c3a0" title="SRE::World::World::ArrowKeyCallback" alt="" coords="535,5,780,35"/><area shape="rect" id="node9" href="class_s_r_e_1_1_world_1_1_world.html#a80eae91d7f72a8f5da0d7e7b6d5ae2e9" title="SRE::World::World::KeyboardCallback" alt="" coords="831,32,1076,61"/><area shape="rect" id="node11" href="class_s_r_e_1_1_world_1_1_world.html#a184a79ed810ef1dc13f142802309f38e" title="SRE::World::World::CleanUpNx" alt="" coords="555,109,760,139"/><area shape="rect" id="node13" href="class_s_r_e_1_1_world_1_1_world.html#aac482d8fe6699243c7ec97e215aa5262" title="SRE::World::World::IdleCallback" alt="" coords="552,163,763,192"/><area shape="rect" id="node16" href="class_s_r_e_1_1_world_1_1_world.html#a6a9cd12a4b81ca77d70a5a8eec756a66" title="SRE::World::World::MotionCallback" alt="" coords="543,216,772,245"/><area shape="rect" id="node18" href="class_s_r_e_1_1_world_1_1_world.html#a5fce2de86b53dee57a3b2659f6e73aac" title="SRE::World::World::MouseCallback" alt="" coords="543,269,772,299"/><area shape="rect" id="node20" href="class_s_r_e_1_1_world_1_1_world.html#ae6f53b782d8ce149d7d186ab7c678354" title="SRE::World::World::MyGLInit" alt="" coords="561,323,753,352"/><area shape="rect" id="node22" href="class_s_r_e_1_1_world_1_1_world.html#aefa19fb24e01f7c5f243c5f65f9eb5a9" title="SRE::World::World::RenderCallback" alt="" coords="541,376,773,405"/><area shape="rect" id="node26" href="class_s_r_e_1_1_world_1_1_world.html#a898630721415754c6337a8839f658195" title="SRE::World::World::ReshapeCallback" alt="" coords="536,429,779,459"/><area shape="rect" id="node24" href="class_s_r_e_1_1_world_1_1_world.html#adcd8e8bc6ea9d5a422027d4246d1ad78" title="SRE::World::World::myGLBox" alt="" coords="855,376,1052,405"/></map>
+<area shape="rect" id="node3" href="class_s_r_e_1_1_world_1_1_world.html#a7380c1bc19c485d18041a39d151a7040" title="SRE::World::World::CreateGroundPlane" alt="" coords="272,168,589,200"/><area shape="rect" id="node5" href="class_s_r_e_1_1_world_1_1_world.html#aafa3a25cd86f163d98c0ab241a5ffe78" title="SRE::World::World::InitGLUT" alt="" coords="313,224,548,256"/><area shape="rect" id="node32" href="class_s_r_e_1_1_world_1_1_world.html#a7d4af5f4cfe14ce9b39f4cbf75c1bc48" title="SRE::World::World::InitNx" alt="" coords="324,280,537,312"/><area shape="rect" id="node34" href="class_s_r_e_1_1_world_1_1_world.html#a7cb9fc5084797b035ee1e8cc6ab50ad2" title="SRE::World::World::InitScene" alt="" coords="309,336,552,368"/><area shape="rect" id="node7" href="class_s_r_e_1_1_world_1_1_world.html#aac561c09abfc14acbef50689a804c3a0" title="SRE::World::World::ArrowKeyCallback" alt="" coords="637,5,944,37"/><area shape="rect" id="node9" href="class_s_r_e_1_1_world_1_1_world.html#a80eae91d7f72a8f5da0d7e7b6d5ae2e9" title="SRE::World::World::KeyboardCallback" alt="" coords="992,32,1299,64"/><area shape="rect" id="node11" href="class_s_r_e_1_1_world_1_1_world.html#a184a79ed810ef1dc13f142802309f38e" title="SRE::World::World::CleanUpNx" alt="" coords="664,112,917,144"/><area shape="rect" id="node13" href="class_s_r_e_1_1_world_1_1_world.html#aac482d8fe6699243c7ec97e215aa5262" title="SRE::World::World::IdleCallback" alt="" coords="660,168,921,200"/><area shape="rect" id="node16" href="class_s_r_e_1_1_world_1_1_world.html#a6a9cd12a4b81ca77d70a5a8eec756a66" title="SRE::World::World::MotionCallback" alt="" coords="649,224,932,256"/><area shape="rect" id="node18" href="class_s_r_e_1_1_world_1_1_world.html#a5fce2de86b53dee57a3b2659f6e73aac" title="SRE::World::World::MouseCallback" alt="" coords="649,280,932,312"/><area shape="rect" id="node20" href="class_s_r_e_1_1_world_1_1_world.html#ae6f53b782d8ce149d7d186ab7c678354" title="SRE::World::World::MyGLInit" alt="" coords="672,336,909,368"/><area shape="rect" id="node22" href="class_s_r_e_1_1_world_1_1_world.html#aefa19fb24e01f7c5f243c5f65f9eb5a9" title="SRE::World::World::RenderCallback" alt="" coords="647,392,935,424"/><area shape="rect" id="node30" href="class_s_r_e_1_1_world_1_1_world.html#a898630721415754c6337a8839f658195" title="SRE::World::World::ReshapeCallback" alt="" coords="641,448,940,480"/><area shape="rect" id="node24" href="class_s_r_e_1_1_robot_1_1_robot.html#a1dea0db09d5a004ec98ba14accad9ef1" title="SRE::Robot::Robot::getParts" alt="" coords="1031,336,1260,368"/><area shape="rect" id="node26" href="class_s_r_e_1_1_world_1_1_world.html#adcd8e8bc6ea9d5a422027d4246d1ad78" title="SRE::World::World::myGLBox" alt="" coords="1024,392,1267,424"/><area shape="rect" id="node28" href="class_s_r_e_1_1_extended_s_a_1_1_server.html#a5c152e21d05e35295e27e3c4981fcb79" title="Process Messages send from Clients and dispatch Message to Clients." alt="" coords="1020,448,1271,480"/></map>
 </div>
 </p>
 
@@ -208,8 +211,15 @@ Here is the call graph for this function:</div>
       </table>
 </div>
 <div class="memdoc">
+<p>Add a <a class="el" href="namespace_s_r_e_1_1_robot.html">Robot</a> to <a class="el" href="class_s_r_e_1_1_world_1_1_world.html">World</a> Stack </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">robot</td><td>ìoò^Ç∑ÇÈObject - subclass of <a class="el" href="namespace_s_r_e_1_1_robot.html">Robot</a> class </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="_world_8h_source.html#l00124">124</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
+<p>Definition at line <a class="el" href="_world_8h_source.html#l00127">127</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
 
 </div>
 </div>
@@ -238,13 +248,13 @@ Here is the call graph for this function:</div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td><code> [static]</code></td>
+          <td></td><td><code> [static, protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_world_g_l_8cpp_source.html#l00126">126</a> of file <a class="el" href="_world_g_l_8cpp_source.html">WorldGL.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_world_g_l_8cpp_source.html#l00139">139</a> of file <a class="el" href="_world_g_l_8cpp_source.html">WorldGL.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -274,7 +284,7 @@ Here is the caller graph for this function:</div>
           <td class="memname">void SRE::World::World::CleanUpNx </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [static]</code></td>
+          <td><code> [static, protected]</code></td>
         </tr>
       </table>
 </div>
@@ -302,7 +312,7 @@ Here is the caller graph for this function:</div>
           <td class="memname">void SRE::World::World::CreateGroundPlane </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -337,7 +347,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_world_8h_source.html#l00120">120</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
+<p>Definition at line <a class="el" href="_world_8h_source.html#l00119">119</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
 
 </div>
 </div>
@@ -355,7 +365,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_world_8h_source.html#l00128">128</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
+<p>Definition at line <a class="el" href="_world_8h_source.html#l00131">131</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
 
 </div>
 </div>
@@ -373,7 +383,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_world_8h_source.html#l00113">113</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
+<p>Definition at line <a class="el" href="_world_8h_source.html#l00112">112</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
 
 </div>
 </div>
@@ -391,7 +401,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_world_8h_source.html#l00117">117</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
+<p>Definition at line <a class="el" href="_world_8h_source.html#l00116">116</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
 
 </div>
 </div>
@@ -403,13 +413,13 @@ Here is the caller graph for this function:</div>
           <td class="memname">void SRE::World::World::IdleCallback </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [static]</code></td>
+          <td><code> [static, protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_world_g_l_8cpp_source.html#l00522">522</a> of file <a class="el" href="_world_g_l_8cpp_source.html">WorldGL.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_world_g_l_8cpp_source.html#l00475">475</a> of file <a class="el" href="_world_g_l_8cpp_source.html">WorldGL.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -441,7 +451,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -463,7 +473,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_s_r_e_1_1_world_1_1_world_aafa3a25cd86f163d98c0ab241a5ffe78_cgraph.png" border="0" usemap="#class_s_r_e_1_1_world_1_1_world_aafa3a25cd86f163d98c0ab241a5ffe78_cgraph" alt=""/></div>
 <map name="class_s_r_e_1_1_world_1_1_world_aafa3a25cd86f163d98c0ab241a5ffe78_cgraph" id="class_s_r_e_1_1_world_1_1_world_aafa3a25cd86f163d98c0ab241a5ffe78_cgraph">
-<area shape="rect" id="node3" href="class_s_r_e_1_1_world_1_1_world.html#aac561c09abfc14acbef50689a804c3a0" title="SRE::World::World::ArrowKeyCallback" alt="" coords="247,5,492,35"/><area shape="rect" id="node5" href="class_s_r_e_1_1_world_1_1_world.html#a80eae91d7f72a8f5da0d7e7b6d5ae2e9" title="SRE::World::World::KeyboardCallback" alt="" coords="543,32,788,61"/><area shape="rect" id="node7" href="class_s_r_e_1_1_world_1_1_world.html#a184a79ed810ef1dc13f142802309f38e" title="SRE::World::World::CleanUpNx" alt="" coords="267,109,472,139"/><area shape="rect" id="node9" href="class_s_r_e_1_1_world_1_1_world.html#aac482d8fe6699243c7ec97e215aa5262" title="SRE::World::World::IdleCallback" alt="" coords="264,163,475,192"/><area shape="rect" id="node12" href="class_s_r_e_1_1_world_1_1_world.html#a6a9cd12a4b81ca77d70a5a8eec756a66" title="SRE::World::World::MotionCallback" alt="" coords="255,216,484,245"/><area shape="rect" id="node14" href="class_s_r_e_1_1_world_1_1_world.html#a5fce2de86b53dee57a3b2659f6e73aac" title="SRE::World::World::MouseCallback" alt="" coords="255,269,484,299"/><area shape="rect" id="node16" href="class_s_r_e_1_1_world_1_1_world.html#ae6f53b782d8ce149d7d186ab7c678354" title="SRE::World::World::MyGLInit" alt="" coords="273,323,465,352"/><area shape="rect" id="node18" href="class_s_r_e_1_1_world_1_1_world.html#aefa19fb24e01f7c5f243c5f65f9eb5a9" title="SRE::World::World::RenderCallback" alt="" coords="253,376,485,405"/><area shape="rect" id="node22" href="class_s_r_e_1_1_world_1_1_world.html#a898630721415754c6337a8839f658195" title="SRE::World::World::ReshapeCallback" alt="" coords="248,429,491,459"/><area shape="rect" id="node20" href="class_s_r_e_1_1_world_1_1_world.html#adcd8e8bc6ea9d5a422027d4246d1ad78" title="SRE::World::World::myGLBox" alt="" coords="567,376,764,405"/></map>
+<area shape="rect" id="node3" href="class_s_r_e_1_1_world_1_1_world.html#aac561c09abfc14acbef50689a804c3a0" title="SRE::World::World::ArrowKeyCallback" alt="" coords="291,5,597,37"/><area shape="rect" id="node5" href="class_s_r_e_1_1_world_1_1_world.html#a80eae91d7f72a8f5da0d7e7b6d5ae2e9" title="SRE::World::World::KeyboardCallback" alt="" coords="645,32,952,64"/><area shape="rect" id="node7" href="class_s_r_e_1_1_world_1_1_world.html#a184a79ed810ef1dc13f142802309f38e" title="SRE::World::World::CleanUpNx" alt="" coords="317,112,571,144"/><area shape="rect" id="node9" href="class_s_r_e_1_1_world_1_1_world.html#aac482d8fe6699243c7ec97e215aa5262" title="SRE::World::World::IdleCallback" alt="" coords="313,168,575,200"/><area shape="rect" id="node12" href="class_s_r_e_1_1_world_1_1_world.html#a6a9cd12a4b81ca77d70a5a8eec756a66" title="SRE::World::World::MotionCallback" alt="" coords="303,224,585,256"/><area shape="rect" id="node14" href="class_s_r_e_1_1_world_1_1_world.html#a5fce2de86b53dee57a3b2659f6e73aac" title="SRE::World::World::MouseCallback" alt="" coords="303,280,585,312"/><area shape="rect" id="node16" href="class_s_r_e_1_1_world_1_1_world.html#ae6f53b782d8ce149d7d186ab7c678354" title="SRE::World::World::MyGLInit" alt="" coords="325,336,563,368"/><area shape="rect" id="node18" href="class_s_r_e_1_1_world_1_1_world.html#aefa19fb24e01f7c5f243c5f65f9eb5a9" title="SRE::World::World::RenderCallback" alt="" coords="300,392,588,424"/><area shape="rect" id="node26" href="class_s_r_e_1_1_world_1_1_world.html#a898630721415754c6337a8839f658195" title="SRE::World::World::ReshapeCallback" alt="" coords="295,448,593,480"/><area shape="rect" id="node20" href="class_s_r_e_1_1_robot_1_1_robot.html#a1dea0db09d5a004ec98ba14accad9ef1" title="SRE::Robot::Robot::getParts" alt="" coords="684,336,913,368"/><area shape="rect" id="node22" href="class_s_r_e_1_1_world_1_1_world.html#adcd8e8bc6ea9d5a422027d4246d1ad78" title="SRE::World::World::myGLBox" alt="" coords="677,392,920,424"/><area shape="rect" id="node24" href="class_s_r_e_1_1_extended_s_a_1_1_server.html#a5c152e21d05e35295e27e3c4981fcb79" title="Process Messages send from Clients and dispatch Message to Clients." alt="" coords="673,448,924,480"/></map>
 </div>
 </p>
 
@@ -486,7 +496,7 @@ Here is the caller graph for this function:</div>
           <td class="memname">bool SRE::World::World::InitNx </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -515,7 +525,7 @@ Here is the caller graph for this function:</div>
           <td class="memname">bool SRE::World::World::InitScene </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -533,22 +543,6 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node3" href="class_s_r_e_1_1_world_1_1_world.html#a4518a0fdf179be9faa6a63d68d51dc18" title="SRE::World::World::World" alt="" coords="249,5,423,35"/></map>
 </div>
 </p>
-
-</div>
-</div>
-<a class="anchor" id="aa74dccf07683f112bf7364be792639b8"></a><!-- doxytag: member="SRE::World::World::InitWorld" ref="aa74dccf07683f112bf7364be792639b8" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SRE::World::World::InitWorld </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
 
 </div>
 </div>
@@ -577,7 +571,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td><code> [static]</code></td>
+          <td></td><td><code> [static, protected]</code></td>
         </tr>
       </table>
 </div>
@@ -615,13 +609,13 @@ Here is the caller graph for this function:</div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td><code> [static]</code></td>
+          <td></td><td><code> [static, protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_world_g_l_8cpp_source.html#l00151">151</a> of file <a class="el" href="_world_g_l_8cpp_source.html">WorldGL.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_world_g_l_8cpp_source.html#l00164">164</a> of file <a class="el" href="_world_g_l_8cpp_source.html">WorldGL.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -665,13 +659,13 @@ Here is the caller graph for this function:</div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td><code> [static]</code></td>
+          <td></td><td><code> [static, protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_world_g_l_8cpp_source.html#l00131">131</a> of file <a class="el" href="_world_g_l_8cpp_source.html">WorldGL.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_world_g_l_8cpp_source.html#l00144">144</a> of file <a class="el" href="_world_g_l_8cpp_source.html">WorldGL.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -679,34 +673,6 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_s_r_e_1_1_world_1_1_world_a5fce2de86b53dee57a3b2659f6e73aac_icgraph.png" border="0" usemap="#class_s_r_e_1_1_world_1_1_world_a5fce2de86b53dee57a3b2659f6e73aac_icgraph" alt=""/></div>
 <map name="class_s_r_e_1_1_world_1_1_world_a5fce2de86b53dee57a3b2659f6e73aac_icgraph" id="class_s_r_e_1_1_world_1_1_world_a5fce2de86b53dee57a3b2659f6e73aac_icgraph">
 <area shape="rect" id="node3" href="class_s_r_e_1_1_world_1_1_world.html#aafa3a25cd86f163d98c0ab241a5ffe78" title="SRE::World::World::InitGLUT" alt="" coords="287,5,476,35"/><area shape="rect" id="node5" href="class_s_r_e_1_1_world_1_1_world.html#a4518a0fdf179be9faa6a63d68d51dc18" title="SRE::World::World::World" alt="" coords="527,5,700,35"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a0a04a4fb6a5ab326f7ce039f35fc96bc"></a><!-- doxytag: member="SRE::World::World::myGLBox" ref="a0a04a4fb6a5ab326f7ce039f35fc96bc" args="(NxVec3 dimensions)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SRE::World::World::myGLBox </td>
-          <td>(</td>
-          <td class="paramtype">NxVec3&#160;</td>
-          <td class="paramname"><em>dimensions</em></td><td>)</td>
-          <td><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_world_g_l_8cpp_source.html#l00640">640</a> of file <a class="el" href="_world_g_l_8cpp_source.html">WorldGL.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_s_r_e_1_1_world_1_1_world_a0a04a4fb6a5ab326f7ce039f35fc96bc_cgraph.png" border="0" usemap="#class_s_r_e_1_1_world_1_1_world_a0a04a4fb6a5ab326f7ce039f35fc96bc_cgraph" alt=""/></div>
-<map name="class_s_r_e_1_1_world_1_1_world_a0a04a4fb6a5ab326f7ce039f35fc96bc_cgraph" id="class_s_r_e_1_1_world_1_1_world_a0a04a4fb6a5ab326f7ce039f35fc96bc_cgraph">
-<area shape="rect" id="node3" href="class_s_r_e_1_1_world_1_1_world.html#adcd8e8bc6ea9d5a422027d4246d1ad78" title="SRE::World::World::myGLBox" alt="" coords="255,5,452,35"/></map>
 </div>
 </p>
 
@@ -737,7 +703,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td><code> [static]</code></td>
+          <td></td><td><code> [static, protected]</code></td>
         </tr>
       </table>
 </div>
@@ -753,7 +719,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>Definition at line <a class="el" href="_world_g_l_8cpp_source.html#l00597">597</a> of file <a class="el" href="_world_g_l_8cpp_source.html">WorldGL.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_world_g_l_8cpp_source.html#l00491">491</a> of file <a class="el" href="_world_g_l_8cpp_source.html">WorldGL.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -761,6 +727,34 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_s_r_e_1_1_world_1_1_world_adcd8e8bc6ea9d5a422027d4246d1ad78_icgraph.png" border="0" usemap="#class_s_r_e_1_1_world_1_1_world_adcd8e8bc6ea9d5a422027d4246d1ad78_icgraph" alt=""/></div>
 <map name="class_s_r_e_1_1_world_1_1_world_adcd8e8bc6ea9d5a422027d4246d1ad78_icgraph" id="class_s_r_e_1_1_world_1_1_world_adcd8e8bc6ea9d5a422027d4246d1ad78_icgraph">
 <area shape="rect" id="node3" href="class_s_r_e_1_1_world_1_1_world.html#a0a04a4fb6a5ab326f7ce039f35fc96bc" title="SRE::World::World::myGLBox" alt="" coords="271,5,468,35"/><area shape="rect" id="node5" href="class_s_r_e_1_1_world_1_1_world.html#aefa19fb24e01f7c5f243c5f65f9eb5a9" title="SRE::World::World::RenderCallback" alt="" coords="253,59,485,88"/><area shape="rect" id="node7" href="class_s_r_e_1_1_world_1_1_world.html#aafa3a25cd86f163d98c0ab241a5ffe78" title="SRE::World::World::InitGLUT" alt="" coords="535,59,724,88"/><area shape="rect" id="node9" href="class_s_r_e_1_1_world_1_1_world.html#a4518a0fdf179be9faa6a63d68d51dc18" title="SRE::World::World::World" alt="" coords="775,59,948,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0a04a4fb6a5ab326f7ce039f35fc96bc"></a><!-- doxytag: member="SRE::World::World::myGLBox" ref="a0a04a4fb6a5ab326f7ce039f35fc96bc" args="(NxVec3 dimensions)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SRE::World::World::myGLBox </td>
+          <td>(</td>
+          <td class="paramtype">NxVec3&#160;</td>
+          <td class="paramname"><em>dimensions</em></td><td>)</td>
+          <td><code> [static, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_world_g_l_8cpp_source.html#l00534">534</a> of file <a class="el" href="_world_g_l_8cpp_source.html">WorldGL.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_r_e_1_1_world_1_1_world_a0a04a4fb6a5ab326f7ce039f35fc96bc_cgraph.png" border="0" usemap="#class_s_r_e_1_1_world_1_1_world_a0a04a4fb6a5ab326f7ce039f35fc96bc_cgraph" alt=""/></div>
+<map name="class_s_r_e_1_1_world_1_1_world_a0a04a4fb6a5ab326f7ce039f35fc96bc_cgraph" id="class_s_r_e_1_1_world_1_1_world_a0a04a4fb6a5ab326f7ce039f35fc96bc_cgraph">
+<area shape="rect" id="node3" href="class_s_r_e_1_1_world_1_1_world.html#adcd8e8bc6ea9d5a422027d4246d1ad78" title="SRE::World::World::myGLBox" alt="" coords="255,5,452,35"/></map>
 </div>
 </p>
 
@@ -791,7 +785,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td><code> [static]</code></td>
+          <td></td><td><code> [static, protected]</code></td>
         </tr>
       </table>
 </div>
@@ -807,7 +801,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>Definition at line <a class="el" href="_world_g_l_8cpp_source.html#l00651">651</a> of file <a class="el" href="_world_g_l_8cpp_source.html">WorldGL.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_world_g_l_8cpp_source.html#l00545">545</a> of file <a class="el" href="_world_g_l_8cpp_source.html">WorldGL.cpp</a>.</p>
 
 </div>
 </div>
@@ -819,7 +813,7 @@ Here is the caller graph for this function:</div>
           <td class="memname">void SRE::World::World::MyGLInit </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -846,20 +840,20 @@ Here is the caller graph for this function:</div>
           <td class="memname">void SRE::World::World::RenderCallback </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [static]</code></td>
+          <td><code> [static, protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_world_g_l_8cpp_source.html#l00179">179</a> of file <a class="el" href="_world_g_l_8cpp_source.html">WorldGL.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_world_g_l_8cpp_source.html#l00192">192</a> of file <a class="el" href="_world_g_l_8cpp_source.html">WorldGL.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_s_r_e_1_1_world_1_1_world_aefa19fb24e01f7c5f243c5f65f9eb5a9_cgraph.png" border="0" usemap="#class_s_r_e_1_1_world_1_1_world_aefa19fb24e01f7c5f243c5f65f9eb5a9_cgraph" alt=""/></div>
 <map name="class_s_r_e_1_1_world_1_1_world_aefa19fb24e01f7c5f243c5f65f9eb5a9_cgraph" id="class_s_r_e_1_1_world_1_1_world_aefa19fb24e01f7c5f243c5f65f9eb5a9_cgraph">
-<area shape="rect" id="node3" href="class_s_r_e_1_1_world_1_1_world.html#adcd8e8bc6ea9d5a422027d4246d1ad78" title="SRE::World::World::myGLBox" alt="" coords="287,5,484,35"/></map>
+<area shape="rect" id="node3" href="class_s_r_e_1_1_robot_1_1_robot.html#a1dea0db09d5a004ec98ba14accad9ef1" title="SRE::Robot::Robot::getParts" alt="" coords="352,5,581,37"/><area shape="rect" id="node5" href="class_s_r_e_1_1_world_1_1_world.html#adcd8e8bc6ea9d5a422027d4246d1ad78" title="SRE::World::World::myGLBox" alt="" coords="345,61,588,93"/><area shape="rect" id="node7" href="class_s_r_e_1_1_extended_s_a_1_1_server.html#a5c152e21d05e35295e27e3c4981fcb79" title="Process Messages send from Clients and dispatch Message to Clients." alt="" coords="341,117,592,149"/></map>
 </div>
 </p>
 
@@ -893,13 +887,13 @@ Here is the caller graph for this function:</div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td><code> [static]</code></td>
+          <td></td><td><code> [static, protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_world_g_l_8cpp_source.html#l00517">517</a> of file <a class="el" href="_world_g_l_8cpp_source.html">WorldGL.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_world_g_l_8cpp_source.html#l00470">470</a> of file <a class="el" href="_world_g_l_8cpp_source.html">WorldGL.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -927,7 +921,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_world_8h_source.html#l00131">131</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
+<p>Definition at line <a class="el" href="_world_8h_source.html#l00134">134</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
 
 </div>
 </div>
@@ -945,7 +939,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_world_8h_source.html#l00135">135</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
+<p>Definition at line <a class="el" href="_world_8h_source.html#l00138">138</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
 
 </div>
 </div>
@@ -963,7 +957,7 @@ Here is the caller graph for this function:</div>
 
 <p>Scene. </p>
 
-<p>Definition at line <a class="el" href="_world_8h_source.html#l00087">87</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
+<p>Definition at line <a class="el" href="_world_8h_source.html#l00088">88</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
 
 </div>
 </div>
@@ -978,7 +972,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_world_8h_source.html#l00091">91</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
+<p>Definition at line <a class="el" href="_world_8h_source.html#l00092">92</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
 
 </div>
 </div>
@@ -995,7 +989,7 @@ Here is the caller graph for this function:</div>
 
 <p>Gravity. </p>
 
-<p>Definition at line <a class="el" href="_world_8h_source.html#l00090">90</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
+<p>Definition at line <a class="el" href="_world_8h_source.html#l00091">91</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
 
 </div>
 </div>
@@ -1010,7 +1004,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_world_8h_source.html#l00095">95</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
+<p>Definition at line <a class="el" href="_world_8h_source.html#l00096">96</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
 
 </div>
 </div>
@@ -1025,7 +1019,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_world_8h_source.html#l00093">93</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
+<p>Definition at line <a class="el" href="_world_8h_source.html#l00094">94</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
 
 </div>
 </div>
@@ -1040,7 +1034,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_world_8h_source.html#l00094">94</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
+<p>Definition at line <a class="el" href="_world_8h_source.html#l00095">95</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
 
 </div>
 </div>
@@ -1055,16 +1049,16 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_world_8h_source.html#l00092">92</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
+<p>Definition at line <a class="el" href="_world_8h_source.html#l00093">93</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a407482dd84f9f9f0662b98900240ed34"></a><!-- doxytag: member="SRE::World::World::host" ref="a407482dd84f9f9f0662b98900240ed34" args="" -->
+<a class="anchor" id="a9895926a45a67075048f45579e1943d4"></a><!-- doxytag: member="SRE::World::World::host" ref="a9895926a45a67075048f45579e1943d4" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_server.html">SRE::ExtendedSA::Server</a>* <a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a407482dd84f9f9f0662b98900240ed34">SRE::World::World::host</a><code> [protected]</code></td>
+          <td class="memname"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_server.html">SRE::ExtendedSA::Server</a> * <a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a9895926a45a67075048f45579e1943d4">World::World::host</a> = NULL<code> [static, protected]</code></td>
         </tr>
       </table>
 </div>
@@ -1072,7 +1066,7 @@ Here is the caller graph for this function:</div>
 
 <p>StoreRobots. </p>
 
-<p>Definition at line <a class="el" href="_world_8h_source.html#l00109">109</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
+<p>Definition at line <a class="el" href="_world_8h_source.html#l00108">108</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
 
 </div>
 </div>
@@ -1087,7 +1081,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_world_8h_source.html#l00098">98</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
+<p>Definition at line <a class="el" href="_world_8h_source.html#l00099">99</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
 
 </div>
 </div>
@@ -1102,7 +1096,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_world_8h_source.html#l00085">85</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
+<p>Definition at line <a class="el" href="_world_8h_source.html#l00086">86</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
 
 </div>
 </div>
@@ -1119,16 +1113,16 @@ Here is the caller graph for this function:</div>
 
 <p>PhysX. </p>
 
-<p>Definition at line <a class="el" href="_world_8h_source.html#l00086">86</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
+<p>Definition at line <a class="el" href="_world_8h_source.html#l00087">87</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a1ae85b66fbf4ae98f8e2363c7e68fbca"></a><!-- doxytag: member="SRE::World::World::robots" ref="a1ae85b66fbf4ae98f8e2363c7e68fbca" args="" -->
+<a class="anchor" id="ac6039c77342cce651338daf2e15d27be"></a><!-- doxytag: member="SRE::World::World::robots" ref="ac6039c77342cce651338daf2e15d27be" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html">SRE::Robot::Robot</a>*&gt; <a class="el" href="class_s_r_e_1_1_world_1_1_world.html#a1ae85b66fbf4ae98f8e2363c7e68fbca">SRE::World::World::robots</a><code> [protected]</code></td>
+          <td class="memname">std::vector&lt; <a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html">SRE::Robot::Robot</a> * &gt; <a class="el" href="class_s_r_e_1_1_world_1_1_world.html#ac6039c77342cce651338daf2e15d27be">SRE::World::World::robots</a><code> [static, protected]</code></td>
         </tr>
       </table>
 </div>
@@ -1136,7 +1130,7 @@ Here is the caller graph for this function:</div>
 
 <p>Flag for Simulation. </p>
 
-<p>Definition at line <a class="el" href="_world_8h_source.html#l00106">106</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
+<p>Definition at line <a class="el" href="_world_8h_source.html#l00105">105</a> of file <a class="el" href="_world_8h_source.html">World.h</a>.</p>
 
 </div>
 </div>
@@ -1153,7 +1147,7 @@ Here is the caller graph for this function:</div>
       <li class="navelem"><a class="el" href="namespace_s_r_e.html">SRE</a>      </li>
       <li class="navelem"><a class="el" href="namespace_s_r_e_1_1_world.html">World</a>      </li>
       <li class="navelem"><a class="el" href="class_s_r_e_1_1_world_1_1_world.html">World</a>      </li>
-      <li class="footer">Generated on Thu Jun 2 2011 15:57:38 for Extended SA Collective Robot Environment by&#160;
+      <li class="footer">Generated on Fri Jun 3 2011 17:59:20 for Extended SA Collective Robot Environment by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

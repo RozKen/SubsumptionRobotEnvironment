@@ -27,7 +27,7 @@ public:
 	//void sendMessage(Client *to, int message);		//Use Default
 	//void sendMessage(std::string to, int message);	//Use Default
 	//Getters and Setters
-	int getState();
+	int getState() const;
 	//void setHost(Server *host);						//Use Default
 	void setState(State state);
 	void setState(int state);
@@ -55,7 +55,7 @@ inline WalkControl::WalkControl(SRE::ExtendedSA::Server *host) : _currentState(W
  @brief Acquire current State as int
  @return int _currentState
  */
-inline int WalkControl::getState(){
+inline int WalkControl::getState() const{
 	return (int)_currentState;
 }
 /**

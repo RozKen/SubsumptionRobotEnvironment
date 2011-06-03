@@ -96,12 +96,19 @@ Inheritance diagram for SRE::Robot::Robot:</div>
 <map name="_s_r_e_1_1_robot_1_1_robot_inherit__map" id="_s_r_e_1_1_robot_1_1_robot_inherit__map">
 <area shape="rect" id="node3" href="class_tumbling_robot.html" title="TumblingRobot" alt="" coords="19,83,125,112"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for SRE::Robot::Robot:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_r_e_1_1_robot_1_1_robot__coll__graph.png" border="0" usemap="#_s_r_e_1_1_robot_1_1_robot_coll__map" alt="Collaboration graph"/></div>
+<map name="_s_r_e_1_1_robot_1_1_robot_coll__map" id="_s_r_e_1_1_robot_1_1_robot_coll__map">
+<area shape="rect" id="node2" href="class_s_r_e_1_1_extended_s_a_1_1_server.html" title="This is a Server Object. Host Clients and process Messages." alt="" coords="5,5,216,37"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="class_s_r_e_1_1_robot_1_1_robot-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#a274145dab6aadb4764ff8fa7f9099f3d">Robot</a> (NxScene *scene, NxVec3 <a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#a4ef421513b65d212cbb6e6ee2ad72c6b">position</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#a17f9da5f47c7f1fc1d550394386402ee">Robot</a> (NxScene *scene, <a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_server.html">SRE::ExtendedSA::Server</a> *host, NxVec3 <a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#a4ef421513b65d212cbb6e6ee2ad72c6b">position</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#a6ff4cac9b5db7cd45932cb2d7a9d6eef">~Robot</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html">ExtendedSA::Client</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#aaea70af3f990f8a2623ea37e85f6e6a1">getClients</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_s_r_e_1_1_robot_1_1_part.html">Part</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#a1dea0db09d5a004ec98ba14accad9ef1">getParts</a> () const </td></tr>
@@ -109,12 +116,15 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#ab19e19cbb7fe94f3f0b88ffabcf3f0ed">setPosition</a> (NxVec3 <a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#a4ef421513b65d212cbb6e6ee2ad72c6b">position</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">NxQuat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#a0f260294d8a726c7f564aa4002cd963f">getOrientation</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#ac05226125a89883c19facd79a4341b50">setOrientation</a> (NxQuat <a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#a9f24f29745351cef2b1d56f869e4efac">orientation</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#a384f37e2759138114695b21e57ba99f0">setClientToParts</a> (<a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html">ExtendedSA::Client</a> *controlClient, <a class="el" href="class_s_r_e_1_1_robot_1_1_part.html">Part</a> *part)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#a80d3eeb0c88daff93d2f0c8522014d96">Create</a> ()=0</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">NxScene *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#a8c4fc5eb65d80a640686ce7a695e0cf2">pScene</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_server.html">SRE::ExtendedSA::Server</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#ad650c6875f64a4ee765a9031798a597c">pHost</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html">SRE::Robot::Robot</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#af99cf00502689fb254b615b10c883193">pRobots</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html">ExtendedSA::Client</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#a0f9f9671fa26cfae85c67d9415eea4f7">clients</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_s_r_e_1_1_robot_1_1_part.html">Part</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#adb3ce191d12143e2eebf8fcb28ad6792">parts</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; NxJoint * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#aa56023d58e5e401d8010053d69efce7e">joints</a></td></tr>
@@ -124,9 +134,9 @@ Protected Attributes</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_robot_8h_source.html#l00013">13</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
+<p>Definition at line <a class="el" href="_robot_8h_source.html#l00015">15</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a274145dab6aadb4764ff8fa7f9099f3d"></a><!-- doxytag: member="SRE::Robot::Robot::Robot" ref="a274145dab6aadb4764ff8fa7f9099f3d" args="(NxScene *scene, NxVec3 position)" -->
+<a class="anchor" id="a17f9da5f47c7f1fc1d550394386402ee"></a><!-- doxytag: member="SRE::Robot::Robot::Robot" ref="a17f9da5f47c7f1fc1d550394386402ee" args="(NxScene *scene, SRE::ExtendedSA::Server *host, NxVec3 position)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -135,6 +145,12 @@ Protected Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype">NxScene *&#160;</td>
           <td class="paramname"><em>scene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_server.html">SRE::ExtendedSA::Server</a> *&#160;</td>
+          <td class="paramname"><em>host</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -154,7 +170,7 @@ Protected Attributes</h2></td></tr>
 <p><p>Existence of Copy Constructor of NxPhysicsSDK and NxScene should be confirmed </p>
 </p>
 
-<p>Definition at line <a class="el" href="_robot_8h_source.html#l00047">47</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
+<p>Definition at line <a class="el" href="_robot_8h_source.html#l00053">53</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
 
 </div>
 </div>
@@ -172,7 +188,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_robot_8h_source.html#l00052">52</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
+<p>Definition at line <a class="el" href="_robot_8h_source.html#l00058">58</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -218,7 +234,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_robot_8h_source.html#l00060">60</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
+<p>Definition at line <a class="el" href="_robot_8h_source.html#l00066">66</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
 
 </div>
 </div>
@@ -236,7 +252,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_robot_8h_source.html#l00072">72</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
+<p>Definition at line <a class="el" href="_robot_8h_source.html#l00078">78</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
 
 </div>
 </div>
@@ -254,7 +270,16 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_robot_8h_source.html#l00063">63</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
+<p>Definition at line <a class="el" href="_robot_8h_source.html#l00069">69</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_r_e_1_1_robot_1_1_robot_a1dea0db09d5a004ec98ba14accad9ef1_icgraph.png" border="0" usemap="#class_s_r_e_1_1_robot_1_1_robot_a1dea0db09d5a004ec98ba14accad9ef1_icgraph" alt=""/></div>
+<map name="class_s_r_e_1_1_robot_1_1_robot_a1dea0db09d5a004ec98ba14accad9ef1_icgraph" id="class_s_r_e_1_1_robot_1_1_robot_a1dea0db09d5a004ec98ba14accad9ef1_icgraph">
+<area shape="rect" id="node3" href="class_s_r_e_1_1_world_1_1_world.html#aefa19fb24e01f7c5f243c5f65f9eb5a9" title="SRE::World::World::RenderCallback" alt="" coords="283,5,571,37"/><area shape="rect" id="node5" href="class_s_r_e_1_1_world_1_1_world.html#aafa3a25cd86f163d98c0ab241a5ffe78" title="SRE::World::World::InitGLUT" alt="" coords="620,5,855,37"/><area shape="rect" id="node7" href="class_s_r_e_1_1_world_1_1_world.html#a4518a0fdf179be9faa6a63d68d51dc18" title="SRE::World::World::World" alt="" coords="905,5,1121,37"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -272,7 +297,36 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_robot_8h_source.html#l00066">66</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
+<p>Definition at line <a class="el" href="_robot_8h_source.html#l00072">72</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a384f37e2759138114695b21e57ba99f0"></a><!-- doxytag: member="SRE::Robot::Robot::setClientToParts" ref="a384f37e2759138114695b21e57ba99f0" args="(ExtendedSA::Client *controlClient, Part *part)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SRE::Robot::Robot::setClientToParts </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_client.html">ExtendedSA::Client</a> *&#160;</td>
+          <td class="paramname"><em>controlClient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_s_r_e_1_1_robot_1_1_part.html">Part</a> *&#160;</td>
+          <td class="paramname"><em>part</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_robot_8h_source.html#l00085">85</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
 
 </div>
 </div>
@@ -291,7 +345,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_robot_8h_source.html#l00075">75</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
+<p>Definition at line <a class="el" href="_robot_8h_source.html#l00081">81</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
 
 </div>
 </div>
@@ -310,7 +364,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_robot_8h_source.html#l00069">69</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
+<p>Definition at line <a class="el" href="_robot_8h_source.html#l00075">75</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
 
 </div>
 </div>
@@ -326,7 +380,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_robot_8h_source.html#l00033">33</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
+<p>Definition at line <a class="el" href="_robot_8h_source.html#l00039">39</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
 
 </div>
 </div>
@@ -341,7 +395,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_robot_8h_source.html#l00039">39</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
+<p>Definition at line <a class="el" href="_robot_8h_source.html#l00045">45</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
 
 </div>
 </div>
@@ -358,7 +412,7 @@ Here is the caller graph for this function:</div>
 
 <p>Robot's Global Position. </p>
 
-<p>Definition at line <a class="el" href="_robot_8h_source.html#l00044">44</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
+<p>Definition at line <a class="el" href="_robot_8h_source.html#l00050">50</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
 
 </div>
 </div>
@@ -373,7 +427,22 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_robot_8h_source.html#l00036">36</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
+<p>Definition at line <a class="el" href="_robot_8h_source.html#l00042">42</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad650c6875f64a4ee765a9031798a597c"></a><!-- doxytag: member="SRE::Robot::Robot::pHost" ref="ad650c6875f64a4ee765a9031798a597c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_s_r_e_1_1_extended_s_a_1_1_server.html">SRE::ExtendedSA::Server</a>* <a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#ad650c6875f64a4ee765a9031798a597c">SRE::Robot::Robot::pHost</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_robot_8h_source.html#l00035">35</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
 
 </div>
 </div>
@@ -388,7 +457,22 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_robot_8h_source.html#l00043">43</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
+<p>Definition at line <a class="el" href="_robot_8h_source.html#l00049">49</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af99cf00502689fb254b615b10c883193"></a><!-- doxytag: member="SRE::Robot::Robot::pRobots" ref="af99cf00502689fb254b615b10c883193" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html">SRE::Robot::Robot</a>*&gt; <a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html#af99cf00502689fb254b615b10c883193">SRE::Robot::Robot::pRobots</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_robot_8h_source.html#l00036">36</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
 
 </div>
 </div>
@@ -403,7 +487,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_robot_8h_source.html#l00030">30</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
+<p>Definition at line <a class="el" href="_robot_8h_source.html#l00034">34</a> of file <a class="el" href="_robot_8h_source.html">Robot.h</a>.</p>
 
 </div>
 </div>
@@ -417,7 +501,7 @@ Here is the caller graph for this function:</div>
       <li class="navelem"><a class="el" href="namespace_s_r_e.html">SRE</a>      </li>
       <li class="navelem"><a class="el" href="namespace_s_r_e_1_1_robot.html">Robot</a>      </li>
       <li class="navelem"><a class="el" href="class_s_r_e_1_1_robot_1_1_robot.html">Robot</a>      </li>
-      <li class="footer">Generated on Thu Jun 2 2011 15:57:38 for Extended SA Collective Robot Environment by&#160;
+      <li class="footer">Generated on Fri Jun 3 2011 17:59:20 for Extended SA Collective Robot Environment by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

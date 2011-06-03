@@ -1,4 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_s_r_e_1_1_robot_1_1_part.html#ac2dcb546098a1f1df1f7ce0eb1a89230" title="SRE::Robot::Part::getActor" alt="" coords="240,5,419,35"/>
-<area shape="rect" id="node5" href="$class_s_r_e_1_1_robot_1_1_part.html#a7eef662112ef1d99e3efc8b1fc27f12d" title="SRE::Robot::Part::getLocalOrientation" alt="" coords="208,59,451,88"/>
+<area shape="rect" id="node3" href="$class_s_r_e_1_1_extended_s_a_1_1_server.html#a14f7ebf3cc2d29eb749718321be0a5e8" title="addClient to Server" alt="" coords="247,5,537,37"/>
+<area shape="rect" id="node5" href="$class_s_r_e_1_1_extended_s_a_1_1_client.html#a45585c836a49356b15ab860cf2425712" title="Add Target Client to _target." alt="" coords="248,61,536,93"/>
+<area shape="rect" id="node7" href="$class_s_r_e_1_1_robot_1_1_part.html#ac2dcb546098a1f1df1f7ce0eb1a89230" title="SRE::Robot::Part::getActor" alt="" coords="283,117,501,149"/>
+<area shape="rect" id="node9" href="$class_s_r_e_1_1_robot_1_1_part.html#a7eef662112ef1d99e3efc8b1fc27f12d" title="SRE::Robot::Part::getLocalOrientation" alt="" coords="244,173,540,205"/>
+<area shape="rect" id="node11" href="$class_s_r_e_1_1_robot_1_1_part.html#a669771677c651f18ca54439f98d089b6" title="SRE::Robot::Part::setClient" alt="" coords="283,229,501,261"/>
 </map>

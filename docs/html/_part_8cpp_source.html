@@ -82,82 +82,99 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <a href="_part_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="_part_8h.html">Part.h</a>&quot;</span>
-<a name="l00002"></a>00002 
-<a name="l00003"></a>00003 <span class="keyword">namespace </span>SRE{
-<a name="l00004"></a><a class="code" href="namespace_s_r_e_1_1_robot.html">00004</a> <span class="keyword">namespace </span><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html">Robot</a>{
-<a name="l00013"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acdbb97b1806317b27cbddd9b441fd02e">00013</a>         NxActor* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acdbb97b1806317b27cbddd9b441fd02e">Part::CreateSphere</a>(<span class="keywordtype">float</span> r, <span class="keywordtype">float</span> xInit, <span class="keywordtype">float</span> yInit, <span class="keywordtype">float</span> zInit){
-<a name="l00014"></a>00014                 NxActorDesc actorDesc;
-<a name="l00015"></a>00015                 NxBodyDesc bodyDesc;
-<a name="l00016"></a>00016                 NxSphereShapeDesc sphereDesc;
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018                 <span class="comment">//デフォルト値で初期化 (クリア)</span>
-<a name="l00019"></a>00019                 actorDesc.setToDefault();
-<a name="l00020"></a>00020                 bodyDesc.setToDefault();
-<a name="l00021"></a>00021                 sphereDesc.setToDefault();
-<a name="l00022"></a>00022                 <span class="comment">//bodyDesc.angularDamping = 0.5f;       //転がり摩擦係数</span>
-<a name="l00023"></a>00023 
-<a name="l00024"></a>00024                 sphereDesc.radius = r;                                                                  <span class="comment">//球の半径を指定</span>
-<a name="l00025"></a>00025                 <span class="comment">//sphereDesc.userData = (void *)(&amp;sphereDesc);</span>
-<a name="l00026"></a>00026                 <span class="comment">//sphereDesc.userData = (void *)(&amp;sphereDesc.radius);</span>
-<a name="l00027"></a>00027                 actorDesc.shapes.pushBack(&amp;sphereDesc); <span class="comment">//球をアクターに追加</span>
-<a name="l00028"></a>00028                 actorDesc.body = &amp;bodyDesc;     <span class="comment">//動的情報を指定</span>
-<a name="l00029"></a>00029                 actorDesc.density = <a class="code" href="_part_8h.html#a8653167a303d0c18dd3260d76c622da4">DENSITY</a>;<span class="comment">//7874.0f;          //密度7874 kg/m^3 : 鉄の密度</span>
-<a name="l00030"></a>00030                 actorDesc.globalPose.t = NxVec3(xInit, yInit, zInit);   <span class="comment">//Scene上の位置</span>
-<a name="l00031"></a>00031                 <span class="comment">//Set userData to NULL if you are not doing anyting with it.</span>
-<a name="l00032"></a>00032                 NxActor* pActor = <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a7527e0e62a09056af1f34b9232c6159a">pScene</a>-&gt;createActor( actorDesc );
-<a name="l00033"></a>00033                 <span class="keywordflow">return</span> pActor;
-<a name="l00034"></a>00034         }
-<a name="l00035"></a>00035 
-<a name="l00036"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ab180bc006bb02cfe1d08e75aa98f65de">00036</a>         NxActor* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acdbb97b1806317b27cbddd9b441fd02e">Part::CreateSphere</a>(<span class="keywordtype">float</span> r, NxVec3 pos){
-<a name="l00037"></a>00037                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acdbb97b1806317b27cbddd9b441fd02e">CreateSphere</a>(r, pos.x, pos.y, pos.z);
-<a name="l00038"></a>00038         }
-<a name="l00049"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae8c7ff41e2250ccf1b7b172de376ff06">00049</a>         NxActor* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae8c7ff41e2250ccf1b7b172de376ff06" title="Constructor.">Part::CreateBox</a>(<span class="keywordtype">float</span> w, <span class="keywordtype">float</span> d, <span class="keywordtype">float</span> h,<span class="keywordtype">float</span> xInit, <span class="keywordtype">float</span> yInit, <span class="keywordtype">float</span> zInit){
-<a name="l00050"></a>00050                 <span class="comment">/*</span>
-<a name="l00051"></a>00051 <span class="comment">                 *      Create a Box Actor</span>
-<a name="l00052"></a>00052 <span class="comment">                 * Dynamic Actor: Rigid Bodies</span>
-<a name="l00053"></a>00053 <span class="comment">                 */</span>
-<a name="l00054"></a>00054                 <span class="comment">//Create a Body Descriptor</span>
-<a name="l00055"></a>00055                 NxBodyDesc bodyDesc;                                    <span class="comment">//Box用 Body Descriptor</span>
-<a name="l00056"></a>00056         
-<a name="l00057"></a>00057                 <span class="comment">//The Actor Descriptor</span>
-<a name="l00058"></a>00058                 NxActorDesc actorDesc;
-<a name="l00059"></a>00059         
-<a name="l00060"></a>00060                 <span class="comment">//Box Shape Descriptor</span>
-<a name="l00061"></a>00061                 NxBoxShapeDesc boxDesc;
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063                 <span class="comment">//デフォルト値で初期化 (クリア)</span>
-<a name="l00064"></a>00064                 actorDesc.setToDefault();
-<a name="l00065"></a>00065                 bodyDesc.setToDefault();
-<a name="l00066"></a>00066                 boxDesc.setToDefault();
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068                 <span class="comment">//bodyDesc.angularDamping = 0.5f;       //回転減衰係数????</span>
-<a name="l00069"></a>00069                 <span class="comment">//bodyDesc.linearVelocity = NxVec3 (-30, -10, -10); //初期速度はX軸方向に1</span>
-<a name="l00070"></a>00070                 bodyDesc.linearDamping = 0.1f;
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072                 actorDesc.body = &amp;bodyDesc;
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074                 boxDesc.dimensions = NxVec3( w, d, h ); <span class="comment">//20.0 x 20.0 x 20.0の直方体</span>
-<a name="l00075"></a>00075                 actorDesc.shapes.pushBack( &amp;boxDesc );  <span class="comment">//ActorにBodyを登録</span>
-<a name="l00076"></a>00076                 actorDesc.density = <a class="code" href="_part_8h.html#a8653167a303d0c18dd3260d76c622da4">DENSITY</a>;<span class="comment">//7874.0f;  //密度7874 kg/m^3 　g/cm3 : 鉄の密度</span>
-<a name="l00077"></a>00077                 actorDesc.globalPose.t = NxVec3( xInit, yInit, zInit);          <span class="comment">//初期位置(10.0, 10.0, 10.0)</span>
-<a name="l00078"></a>00078         
-<a name="l00079"></a>00079                 <span class="comment">//Set userData to NULL if you are not doing anyting with it.</span>
-<a name="l00080"></a>00080                 NxActor* pActor = <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a7527e0e62a09056af1f34b9232c6159a">pScene</a>-&gt;createActor( actorDesc );
-<a name="l00081"></a>00081                 <span class="keywordflow">return</span> pActor;
-<a name="l00082"></a>00082         }
-<a name="l00083"></a>00083 
-<a name="l00084"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a52b539743cd9e0b16d3e81bc396d7da2">00084</a>         NxActor* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae8c7ff41e2250ccf1b7b172de376ff06" title="Constructor.">Part::CreateBox</a>(NxVec3 dimensions, NxVec3 pos){
-<a name="l00085"></a>00085                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae8c7ff41e2250ccf1b7b172de376ff06" title="Constructor.">CreateBox</a>(dimensions.x, dimensions.y, dimensions.z,
-<a name="l00086"></a>00086                         pos.x, pos.y, pos.z);
-<a name="l00087"></a>00087         }
-<a name="l00088"></a>00088 }
-<a name="l00089"></a>00089 }
+<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;<a class="code" href="_client_8h.html">Client.h</a>&quot;</span>
+<a name="l00003"></a>00003 
+<a name="l00004"></a>00004 <span class="keyword">namespace </span>SRE{
+<a name="l00005"></a><a class="code" href="namespace_s_r_e_1_1_robot.html">00005</a> <span class="keyword">namespace </span><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html">Robot</a>{
+<a name="l00014"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acdbb97b1806317b27cbddd9b441fd02e">00014</a>         NxActor* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acdbb97b1806317b27cbddd9b441fd02e">Part::CreateSphere</a>(<span class="keywordtype">float</span> r, <span class="keywordtype">float</span> xInit, <span class="keywordtype">float</span> yInit, <span class="keywordtype">float</span> zInit){
+<a name="l00015"></a>00015                 NxActorDesc actorDesc;
+<a name="l00016"></a>00016                 NxBodyDesc bodyDesc;
+<a name="l00017"></a>00017                 NxSphereShapeDesc sphereDesc;
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019                 <span class="comment">//デフォルト値で初期化 (クリア)</span>
+<a name="l00020"></a>00020                 actorDesc.setToDefault();
+<a name="l00021"></a>00021                 bodyDesc.setToDefault();
+<a name="l00022"></a>00022                 sphereDesc.setToDefault();
+<a name="l00023"></a>00023                 <span class="comment">//bodyDesc.angularDamping = 0.5f;       //転がり摩擦係数</span>
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025                 sphereDesc.radius = r;                                                                  <span class="comment">//球の半径を指定</span>
+<a name="l00026"></a>00026                 <span class="comment">//sphereDesc.userData = (void *)(&amp;sphereDesc);</span>
+<a name="l00027"></a>00027                 <span class="comment">//sphereDesc.userData = (void *)(&amp;sphereDesc.radius);</span>
+<a name="l00028"></a>00028                 actorDesc.shapes.pushBack(&amp;sphereDesc); <span class="comment">//球をアクターに追加</span>
+<a name="l00029"></a>00029                 actorDesc.body = &amp;bodyDesc;     <span class="comment">//動的情報を指定</span>
+<a name="l00030"></a>00030                 actorDesc.density = <a class="code" href="_part_8h.html#a8653167a303d0c18dd3260d76c622da4">DENSITY</a>;<span class="comment">//7874.0f;          //密度7874 kg/m^3 : 鉄の密度</span>
+<a name="l00031"></a>00031                 actorDesc.globalPose.t = NxVec3(xInit, yInit, zInit);   <span class="comment">//Scene上の位置</span>
+<a name="l00032"></a>00032                 <span class="comment">//Set userData to NULL if you are not doing anyting with it.</span>
+<a name="l00033"></a>00033                 NxActor* pActor = <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a7527e0e62a09056af1f34b9232c6159a">pScene</a>-&gt;createActor( actorDesc );
+<a name="l00034"></a>00034                 <span class="keywordflow">return</span> pActor;
+<a name="l00035"></a>00035         }
+<a name="l00036"></a>00036 
+<a name="l00037"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ab180bc006bb02cfe1d08e75aa98f65de">00037</a>         NxActor* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acdbb97b1806317b27cbddd9b441fd02e">Part::CreateSphere</a>(<span class="keywordtype">float</span> r, NxVec3 pos){
+<a name="l00038"></a>00038                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acdbb97b1806317b27cbddd9b441fd02e">CreateSphere</a>(r, pos.x, pos.y, pos.z);
+<a name="l00039"></a>00039         }
+<a name="l00050"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae8c7ff41e2250ccf1b7b172de376ff06">00050</a>         NxActor* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae8c7ff41e2250ccf1b7b172de376ff06">Part::CreateBox</a>(<span class="keywordtype">float</span> w, <span class="keywordtype">float</span> d, <span class="keywordtype">float</span> h,<span class="keywordtype">float</span> xInit, <span class="keywordtype">float</span> yInit, <span class="keywordtype">float</span> zInit){
+<a name="l00051"></a>00051                 <span class="comment">/*</span>
+<a name="l00052"></a>00052 <span class="comment">                 *      Create a Box Actor</span>
+<a name="l00053"></a>00053 <span class="comment">                 * Dynamic Actor: Rigid Bodies</span>
+<a name="l00054"></a>00054 <span class="comment">                 */</span>
+<a name="l00055"></a>00055                 <span class="comment">//Create a Body Descriptor</span>
+<a name="l00056"></a>00056                 NxBodyDesc bodyDesc;                                    <span class="comment">//Box用 Body Descriptor</span>
+<a name="l00057"></a>00057         
+<a name="l00058"></a>00058                 <span class="comment">//The Actor Descriptor</span>
+<a name="l00059"></a>00059                 NxActorDesc actorDesc;
+<a name="l00060"></a>00060         
+<a name="l00061"></a>00061                 <span class="comment">//Box Shape Descriptor</span>
+<a name="l00062"></a>00062                 NxBoxShapeDesc boxDesc;
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064                 <span class="comment">//デフォルト値で初期化 (クリア)</span>
+<a name="l00065"></a>00065                 actorDesc.setToDefault();
+<a name="l00066"></a>00066                 bodyDesc.setToDefault();
+<a name="l00067"></a>00067                 boxDesc.setToDefault();
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069                 <span class="comment">//bodyDesc.angularDamping = 0.5f;       //回転減衰係数????</span>
+<a name="l00070"></a>00070                 <span class="comment">//bodyDesc.linearVelocity = NxVec3 (-30, -10, -10); //初期速度はX軸方向に1</span>
+<a name="l00071"></a>00071                 bodyDesc.linearDamping = 0.1f;
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073                 actorDesc.body = &amp;bodyDesc;
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075                 boxDesc.dimensions = NxVec3( w, d, h ); <span class="comment">//20.0 x 20.0 x 20.0の直方体</span>
+<a name="l00076"></a>00076                 actorDesc.shapes.pushBack( &amp;boxDesc );  <span class="comment">//ActorにBodyを登録</span>
+<a name="l00077"></a>00077                 actorDesc.density = <a class="code" href="_part_8h.html#a8653167a303d0c18dd3260d76c622da4">DENSITY</a>;<span class="comment">//7874.0f;  //密度7874 kg/m^3 　g/cm3 : 鉄の密度</span>
+<a name="l00078"></a>00078                 actorDesc.globalPose.t = NxVec3( xInit, yInit, zInit);          <span class="comment">//初期位置(10.0, 10.0, 10.0)</span>
+<a name="l00079"></a>00079         
+<a name="l00080"></a>00080                 <span class="comment">//Set userData to NULL if you are not doing anyting with it.</span>
+<a name="l00081"></a>00081                 NxActor* pActor = <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a7527e0e62a09056af1f34b9232c6159a">pScene</a>-&gt;createActor( actorDesc );
+<a name="l00082"></a>00082                 <span class="keywordflow">return</span> pActor;
+<a name="l00083"></a>00083         }
+<a name="l00084"></a>00084 
+<a name="l00085"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a52b539743cd9e0b16d3e81bc396d7da2">00085</a>         NxActor* <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae8c7ff41e2250ccf1b7b172de376ff06">Part::CreateBox</a>(NxVec3 dimensions, NxVec3 pos){
+<a name="l00086"></a>00086                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#ae8c7ff41e2250ccf1b7b172de376ff06">CreateBox</a>(dimensions.x, dimensions.y, dimensions.z,
+<a name="l00087"></a>00087                         pos.x, pos.y, pos.z);
+<a name="l00088"></a>00088         }
+<a name="l00089"></a>00089 
+<a name="l00094"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a294c216e530146a07027cf1a7f9fc614">00094</a>         <span class="keywordtype">void</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#a294c216e530146a07027cf1a7f9fc614" title="Constructor.">Part::update</a>(){
+<a name="l00095"></a>00095                 <span class="keywordflow">if</span>(<a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acc98d3c7d7a592c3889b206577abed7e" title="Pointer to Scene (World)">client</a> == NULL){     <span class="comment">//clientが指定されていないPartの場合は，無視する</span>
+<a name="l00096"></a>00096                         <span class="keywordflow">return</span>;
+<a name="l00097"></a>00097                 }
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099                 <span class="comment">//Specify process according to the state.</span>
+<a name="l00100"></a>00100                 <span class="keywordflow">switch</span>(<a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acc98d3c7d7a592c3889b206577abed7e" title="Pointer to Scene (World)">client</a>-&gt;<a class="code" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a2b42f6c589315a944a0295bd45fbbfa5" title="each State must have Setter to some State by some signal">getState</a>()){
+<a name="l00101"></a>00101                 <span class="keywordflow">case</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acc98d3c7d7a592c3889b206577abed7e" title="Pointer to Scene (World)">client</a>-&gt;<a class="code" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a073c41b96e24f218c81285b98f9b7bfaa64252c35c443c7ba4fa18110cf1083b7">state1</a>:
+<a name="l00102"></a>00102                 <span class="keywordflow">case</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acc98d3c7d7a592c3889b206577abed7e" title="Pointer to Scene (World)">client</a>-&gt;<a class="code" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a073c41b96e24f218c81285b98f9b7bfaa36384c6f6982ee5aebf3d7d54180db53">state2</a>:
+<a name="l00103"></a>00103                 <span class="keywordflow">case</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html#acc98d3c7d7a592c3889b206577abed7e" title="Pointer to Scene (World)">client</a>-&gt;<a class="code" href="class_s_r_e_1_1_extended_s_a_1_1_client.html#a073c41b96e24f218c81285b98f9b7bfaa4aebf6f7f0338ad7fc3abed1a0b4b33c">state3</a>:
+<a name="l00104"></a>00104                 <span class="keywordflow">default</span>:
+<a name="l00105"></a>00105                         <span class="keywordflow">break</span>;
+<a name="l00106"></a>00106                 }
+<a name="l00107"></a>00107                 <span class="keywordflow">return</span>;
+<a name="l00108"></a>00108         }
+<a name="l00109"></a>00109 }
+<a name="l00110"></a>00110 }
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_part_8cpp.html">Part.cpp</a>      </li>
-      <li class="footer">Generated on Thu Jun 2 2011 15:57:35 for Extended SA Collective Robot Environment by&#160;
+      <li class="footer">Generated on Fri Jun 3 2011 17:59:19 for Extended SA Collective Robot Environment by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

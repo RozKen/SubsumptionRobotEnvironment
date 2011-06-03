@@ -90,86 +90,96 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00007"></a>00007 <span class="keyword">namespace </span>SRE{
 <a name="l00008"></a>00008         <span class="keyword">namespace </span>ExtendedSA{
 <a name="l00009"></a>00009                 <span class="keyword">class </span>Client;           <span class="comment">//Prototype Declaration</span>
-<a name="l00010"></a>00010         }
-<a name="l00011"></a>00011 <span class="keyword">namespace </span>Robot{
-<a name="l00012"></a>00012         <span class="keyword">class </span>Part;                             <span class="comment">//Prototype Declaration</span>
-<a name="l00013"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html">00013</a>         <span class="keyword">class </span><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html">Robot</a>{
-<a name="l00014"></a>00014         <span class="keyword">public</span>:
-<a name="l00015"></a>00015                 <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a274145dab6aadb4764ff8fa7f9099f3d">Robot</a>(NxScene* scene, NxVec3 <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a4ef421513b65d212cbb6e6ee2ad72c6b">position</a>);
-<a name="l00016"></a>00016                 <span class="keyword">virtual</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a6ff4cac9b5db7cd45932cb2d7a9d6eef">~Robot</a>();
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018                 <span class="comment">//Getters</span>
-<a name="l00019"></a>00019                 std::vector&lt;ExtendedSA::Client *&gt;       <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#aaea70af3f990f8a2623ea37e85f6e6a1">getClients</a>() <span class="keyword">const</span>;
-<a name="l00020"></a>00020                 std::vector&lt;Part *&gt;             <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a1dea0db09d5a004ec98ba14accad9ef1">getParts</a>() <span class="keyword">const</span>;
-<a name="l00021"></a>00021                 <span class="comment">//Getters and Setters</span>
-<a name="l00022"></a>00022                 NxVec3          <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a73d14f8eabafd625e53608b1a90dbc0b">getPosition</a>() <span class="keyword">const</span>;
-<a name="l00023"></a>00023                 <span class="keywordtype">void</span>            <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#ab19e19cbb7fe94f3f0b88ffabcf3f0ed">setPosition</a>(NxVec3 position);
-<a name="l00024"></a>00024                 NxQuat          <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a0f260294d8a726c7f564aa4002cd963f">getOrientation</a>() <span class="keyword">const</span>;
-<a name="l00025"></a>00025                 <span class="keywordtype">void</span>            <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#ac05226125a89883c19facd79a4341b50">setOrientation</a>(NxQuat <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a9f24f29745351cef2b1d56f869e4efac" title="Robot&#39;s Global Position.">orientation</a>);
-<a name="l00026"></a>00026 
-<a name="l00027"></a>00027         <span class="keyword">protected</span>:
-<a name="l00028"></a>00028                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a80d3eeb0c88daff93d2f0c8522014d96">Create</a>() = 0;
-<a name="l00029"></a>00029                 <span class="comment">//Pointer to World</span>
-<a name="l00030"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a8c4fc5eb65d80a640686ce7a695e0cf2">00030</a>                 NxScene*                <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a8c4fc5eb65d80a640686ce7a695e0cf2">pScene</a>;
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032                 <span class="comment">//Control Systems</span>
-<a name="l00033"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a0f9f9671fa26cfae85c67d9415eea4f7">00033</a>                 std::vector&lt;ExtendedSA::Client *&gt; <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a0f9f9671fa26cfae85c67d9415eea4f7">clients</a>;      <span class="comment">//&quot;Client&quot; Derivative Classes</span>
-<a name="l00034"></a>00034 
-<a name="l00035"></a>00035                 <span class="comment">//Parts</span>
-<a name="l00036"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#adb3ce191d12143e2eebf8fcb28ad6792">00036</a>                 std::vector&lt;Part *&gt; <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#adb3ce191d12143e2eebf8fcb28ad6792">parts</a>;                      <span class="comment">//&quot;Part&quot; Derivative Classes</span>
+<a name="l00010"></a>00010                 <span class="keyword">class </span>Server;           <span class="comment">//Prototype Declaration</span>
+<a name="l00011"></a>00011         }
+<a name="l00012"></a>00012 <span class="keyword">namespace </span>Robot{
+<a name="l00013"></a>00013         <span class="keyword">class </span>Part;                             <span class="comment">//Prototype Declaration</span>
+<a name="l00014"></a>00014         <span class="keyword">class </span>Robot;
+<a name="l00015"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html">00015</a>         <span class="keyword">class </span><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html">Robot</a>{
+<a name="l00016"></a>00016         <span class="keyword">public</span>:
+<a name="l00017"></a>00017                 <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a17f9da5f47c7f1fc1d550394386402ee">Robot</a>(NxScene* scene,<a class="code" href="class_s_r_e_1_1_extended_s_a_1_1_server.html" title="This is a Server Object. Host Clients and process Messages.">SRE::ExtendedSA::Server</a>* host, NxVec3 <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a4ef421513b65d212cbb6e6ee2ad72c6b">position</a>);
+<a name="l00018"></a>00018                 <span class="keyword">virtual</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a6ff4cac9b5db7cd45932cb2d7a9d6eef">~Robot</a>();
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020                 <span class="comment">//Getters</span>
+<a name="l00021"></a>00021                 std::vector&lt;ExtendedSA::Client *&gt;       <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#aaea70af3f990f8a2623ea37e85f6e6a1">getClients</a>() <span class="keyword">const</span>;
+<a name="l00022"></a>00022                 std::vector&lt;Part *&gt;             <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a1dea0db09d5a004ec98ba14accad9ef1">getParts</a>() <span class="keyword">const</span>;
+<a name="l00023"></a>00023                 <span class="comment">//Getters and Setters</span>
+<a name="l00024"></a>00024                 NxVec3          <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a73d14f8eabafd625e53608b1a90dbc0b">getPosition</a>() <span class="keyword">const</span>;
+<a name="l00025"></a>00025                 <span class="keywordtype">void</span>            <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#ab19e19cbb7fe94f3f0b88ffabcf3f0ed">setPosition</a>(NxVec3 position);
+<a name="l00026"></a>00026                 NxQuat          <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a0f260294d8a726c7f564aa4002cd963f">getOrientation</a>() <span class="keyword">const</span>;
+<a name="l00027"></a>00027                 <span class="keywordtype">void</span>            <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#ac05226125a89883c19facd79a4341b50">setOrientation</a>(NxQuat <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a9f24f29745351cef2b1d56f869e4efac" title="Robot&#39;s Global Position.">orientation</a>);
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029                 <span class="keywordtype">void</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a384f37e2759138114695b21e57ba99f0">setClientToParts</a>(<a class="code" href="class_s_r_e_1_1_extended_s_a_1_1_client.html" title="This is a Client Object derived from States Object of Finite State Machine. This Object has Communica...">ExtendedSA::Client</a>* controlClient, <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html">Part</a>* part);
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031         <span class="keyword">protected</span>:
+<a name="l00032"></a>00032                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a80d3eeb0c88daff93d2f0c8522014d96">Create</a>() = 0;
+<a name="l00033"></a>00033                 <span class="comment">//Pointer to World</span>
+<a name="l00034"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a8c4fc5eb65d80a640686ce7a695e0cf2">00034</a>                 NxScene*                <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a8c4fc5eb65d80a640686ce7a695e0cf2">pScene</a>;
+<a name="l00035"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#ad650c6875f64a4ee765a9031798a597c">00035</a>                 <a class="code" href="class_s_r_e_1_1_extended_s_a_1_1_server.html" title="This is a Server Object. Host Clients and process Messages.">SRE::ExtendedSA::Server</a>* <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#ad650c6875f64a4ee765a9031798a597c">pHost</a>;
+<a name="l00036"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#af99cf00502689fb254b615b10c883193">00036</a>                 std::vector&lt;SRE::Robot::Robot*&gt; <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#af99cf00502689fb254b615b10c883193">pRobots</a>;
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038                 <span class="comment">//Joints</span>
-<a name="l00039"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#aa56023d58e5e401d8010053d69efce7e">00039</a>                 std::vector&lt;NxJoint *&gt; <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#aa56023d58e5e401d8010053d69efce7e">joints</a>;          <span class="comment">//NxJoint Classes</span>
-<a name="l00040"></a>00040                         <span class="comment">//Joints are specific to each Robot Type</span>
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042                 <span class="comment">//Other Robot-Specific Elements</span>
-<a name="l00043"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a4ef421513b65d212cbb6e6ee2ad72c6b">00043</a>                 NxVec3  <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a4ef421513b65d212cbb6e6ee2ad72c6b">position</a>;                       
-<a name="l00044"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a9f24f29745351cef2b1d56f869e4efac">00044</a>                 NxQuat  <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a9f24f29745351cef2b1d56f869e4efac" title="Robot&#39;s Global Position.">orientation</a>;            
-<a name="l00045"></a>00045         
-<a name="l00046"></a>00046         };
-<a name="l00047"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a274145dab6aadb4764ff8fa7f9099f3d">00047</a>         <span class="keyword">inline</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a274145dab6aadb4764ff8fa7f9099f3d">Robot::Robot</a>(NxScene* scene, NxVec3 position) : pScene(scene), position(position){
-<a name="l00049"></a>00049                 <span class="keywordflow">return</span>;
-<a name="l00050"></a>00050         }
-<a name="l00051"></a>00051 
-<a name="l00052"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a6ff4cac9b5db7cd45932cb2d7a9d6eef">00052</a>         <span class="keyword">inline</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a6ff4cac9b5db7cd45932cb2d7a9d6eef">Robot::~Robot</a>(){
-<a name="l00053"></a>00053                 <span class="comment">//delete pScene;</span>
-<a name="l00054"></a>00054                 <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a0f9f9671fa26cfae85c67d9415eea4f7">clients</a>.clear();
-<a name="l00055"></a>00055                 <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#adb3ce191d12143e2eebf8fcb28ad6792">parts</a>.clear();
-<a name="l00056"></a>00056                 <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#aa56023d58e5e401d8010053d69efce7e">joints</a>.clear();
-<a name="l00057"></a>00057                 <span class="keywordflow">return</span>;
-<a name="l00058"></a>00058         }
-<a name="l00059"></a>00059 
-<a name="l00060"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#aaea70af3f990f8a2623ea37e85f6e6a1">00060</a>         <span class="keyword">inline</span> std::vector&lt;ExtendedSA::Client *&gt;        <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#aaea70af3f990f8a2623ea37e85f6e6a1">Robot::getClients</a>()<span class="keyword"> const</span>{
-<a name="l00061"></a>00061                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a0f9f9671fa26cfae85c67d9415eea4f7">clients</a>;
-<a name="l00062"></a>00062         }
-<a name="l00063"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a1dea0db09d5a004ec98ba14accad9ef1">00063</a>         <span class="keyword">inline</span> std::vector&lt;Part *&gt;              <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a1dea0db09d5a004ec98ba14accad9ef1">Robot::getParts</a>()<span class="keyword"> const</span>{
-<a name="l00064"></a>00064                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#adb3ce191d12143e2eebf8fcb28ad6792">parts</a>;
-<a name="l00065"></a>00065         }
-<a name="l00066"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a73d14f8eabafd625e53608b1a90dbc0b">00066</a>         <span class="keyword">inline</span> NxVec3   <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a73d14f8eabafd625e53608b1a90dbc0b">Robot::getPosition</a>()<span class="keyword"> const</span>{
-<a name="l00067"></a>00067                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a4ef421513b65d212cbb6e6ee2ad72c6b">position</a>;
+<a name="l00038"></a>00038                 <span class="comment">//Control Systems</span>
+<a name="l00039"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a0f9f9671fa26cfae85c67d9415eea4f7">00039</a>                 std::vector&lt;ExtendedSA::Client *&gt; <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a0f9f9671fa26cfae85c67d9415eea4f7">clients</a>;      <span class="comment">//&quot;Client&quot; Derivative Classes</span>
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041                 <span class="comment">//Parts</span>
+<a name="l00042"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#adb3ce191d12143e2eebf8fcb28ad6792">00042</a>                 std::vector&lt;Part *&gt; <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#adb3ce191d12143e2eebf8fcb28ad6792">parts</a>;                      <span class="comment">//&quot;Part&quot; Derivative Classes</span>
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044                 <span class="comment">//Joints</span>
+<a name="l00045"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#aa56023d58e5e401d8010053d69efce7e">00045</a>                 std::vector&lt;NxJoint *&gt; <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#aa56023d58e5e401d8010053d69efce7e">joints</a>;          <span class="comment">//NxJoint Classes</span>
+<a name="l00046"></a>00046                         <span class="comment">//Joints are specific to each Robot Type</span>
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048                 <span class="comment">//Other Robot-Specific Elements</span>
+<a name="l00049"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a4ef421513b65d212cbb6e6ee2ad72c6b">00049</a>                 NxVec3  <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a4ef421513b65d212cbb6e6ee2ad72c6b">position</a>;                       
+<a name="l00050"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a9f24f29745351cef2b1d56f869e4efac">00050</a>                 NxQuat  <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a9f24f29745351cef2b1d56f869e4efac" title="Robot&#39;s Global Position.">orientation</a>;            
+<a name="l00051"></a>00051         
+<a name="l00052"></a>00052         };
+<a name="l00053"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a17f9da5f47c7f1fc1d550394386402ee">00053</a>         <span class="keyword">inline</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a17f9da5f47c7f1fc1d550394386402ee">Robot::Robot</a>(NxScene* scene, <a class="code" href="class_s_r_e_1_1_extended_s_a_1_1_server.html" title="This is a Server Object. Host Clients and process Messages.">SRE::ExtendedSA::Server</a>* host, NxVec3 position) : pScene(scene), pHost(host), position(position){
+<a name="l00055"></a>00055                 <span class="keywordflow">return</span>;
+<a name="l00056"></a>00056         }
+<a name="l00057"></a>00057 
+<a name="l00058"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a6ff4cac9b5db7cd45932cb2d7a9d6eef">00058</a>         <span class="keyword">inline</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a6ff4cac9b5db7cd45932cb2d7a9d6eef">Robot::~Robot</a>(){
+<a name="l00059"></a>00059                 <span class="comment">//delete pScene;</span>
+<a name="l00060"></a>00060                 <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a0f9f9671fa26cfae85c67d9415eea4f7">clients</a>.clear();
+<a name="l00061"></a>00061                 <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#adb3ce191d12143e2eebf8fcb28ad6792">parts</a>.clear();
+<a name="l00062"></a>00062                 <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#aa56023d58e5e401d8010053d69efce7e">joints</a>.clear();
+<a name="l00063"></a>00063                 <span class="keywordflow">return</span>;
+<a name="l00064"></a>00064         }
+<a name="l00065"></a>00065 
+<a name="l00066"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#aaea70af3f990f8a2623ea37e85f6e6a1">00066</a>         <span class="keyword">inline</span> std::vector&lt;ExtendedSA::Client *&gt;        <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#aaea70af3f990f8a2623ea37e85f6e6a1">Robot::getClients</a>()<span class="keyword"> const</span>{
+<a name="l00067"></a>00067                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a0f9f9671fa26cfae85c67d9415eea4f7">clients</a>;
 <a name="l00068"></a>00068         }
-<a name="l00069"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#ab19e19cbb7fe94f3f0b88ffabcf3f0ed">00069</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span>             <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#ab19e19cbb7fe94f3f0b88ffabcf3f0ed">Robot::setPosition</a>(NxVec3 position){
-<a name="l00070"></a>00070                 this-&gt;position = <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a4ef421513b65d212cbb6e6ee2ad72c6b">position</a>;
+<a name="l00069"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a1dea0db09d5a004ec98ba14accad9ef1">00069</a>         <span class="keyword">inline</span> std::vector&lt;Part *&gt;              <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a1dea0db09d5a004ec98ba14accad9ef1">Robot::getParts</a>()<span class="keyword"> const</span>{
+<a name="l00070"></a>00070                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#adb3ce191d12143e2eebf8fcb28ad6792">parts</a>;
 <a name="l00071"></a>00071         }
-<a name="l00072"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a0f260294d8a726c7f564aa4002cd963f">00072</a>         <span class="keyword">inline</span> NxQuat   <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a0f260294d8a726c7f564aa4002cd963f">Robot::getOrientation</a>()<span class="keyword"> const</span>{
-<a name="l00073"></a>00073                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a9f24f29745351cef2b1d56f869e4efac" title="Robot&#39;s Global Position.">orientation</a>;
+<a name="l00072"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a73d14f8eabafd625e53608b1a90dbc0b">00072</a>         <span class="keyword">inline</span> NxVec3   <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a73d14f8eabafd625e53608b1a90dbc0b">Robot::getPosition</a>()<span class="keyword"> const</span>{
+<a name="l00073"></a>00073                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a4ef421513b65d212cbb6e6ee2ad72c6b">position</a>;
 <a name="l00074"></a>00074         }
-<a name="l00075"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#ac05226125a89883c19facd79a4341b50">00075</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span>             <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#ac05226125a89883c19facd79a4341b50">Robot::setOrientation</a>(NxQuat orientation){
-<a name="l00076"></a>00076                 this-&gt;orientation = <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a9f24f29745351cef2b1d56f869e4efac" title="Robot&#39;s Global Position.">orientation</a>;
+<a name="l00075"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#ab19e19cbb7fe94f3f0b88ffabcf3f0ed">00075</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span>             <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#ab19e19cbb7fe94f3f0b88ffabcf3f0ed">Robot::setPosition</a>(NxVec3 position){
+<a name="l00076"></a>00076                 this-&gt;position = <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a4ef421513b65d212cbb6e6ee2ad72c6b">position</a>;
 <a name="l00077"></a>00077         }
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079 }       <span class="comment">//namespace Robot</span>
-<a name="l00080"></a>00080 }       <span class="comment">//namespace SRE</span>
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084 <span class="preprocessor">#endif  //SRE_Robot_Robot_H_</span>
+<a name="l00078"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a0f260294d8a726c7f564aa4002cd963f">00078</a>         <span class="keyword">inline</span> NxQuat   <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a0f260294d8a726c7f564aa4002cd963f">Robot::getOrientation</a>()<span class="keyword"> const</span>{
+<a name="l00079"></a>00079                 <span class="keywordflow">return</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a9f24f29745351cef2b1d56f869e4efac" title="Robot&#39;s Global Position.">orientation</a>;
+<a name="l00080"></a>00080         }
+<a name="l00081"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#ac05226125a89883c19facd79a4341b50">00081</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span>             <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#ac05226125a89883c19facd79a4341b50">Robot::setOrientation</a>(NxQuat orientation){
+<a name="l00082"></a>00082                 this-&gt;orientation = <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a9f24f29745351cef2b1d56f869e4efac" title="Robot&#39;s Global Position.">orientation</a>;
+<a name="l00083"></a>00083         }
+<a name="l00084"></a>00084 
+<a name="l00085"></a><a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a384f37e2759138114695b21e57ba99f0">00085</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_r_e_1_1_robot_1_1_robot.html#a384f37e2759138114695b21e57ba99f0">Robot::setClientToParts</a>(<a class="code" href="class_s_r_e_1_1_extended_s_a_1_1_client.html" title="This is a Client Object derived from States Object of Finite State Machine. This Object has Communica...">ExtendedSA::Client</a>* controlClient, <a class="code" href="class_s_r_e_1_1_robot_1_1_part.html">Part</a>* part){
+<a name="l00086"></a>00086                 
+<a name="l00087"></a>00087         }
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089 }       <span class="comment">//namespace Robot</span>
+<a name="l00090"></a>00090 }       <span class="comment">//namespace SRE</span>
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 <span class="preprocessor">#endif  //SRE_Robot_Robot_H_</span>
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_robot_8h.html">Robot.h</a>      </li>
-      <li class="footer">Generated on Thu Jun 2 2011 15:57:35 for Extended SA Collective Robot Environment by&#160;
+      <li class="footer">Generated on Fri Jun 3 2011 17:59:19 for Extended SA Collective Robot Environment by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

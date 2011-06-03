@@ -99,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00027"></a>00027         <span class="comment">//void sendMessage(Client *to, int message);            //Use Default</span>
 <a name="l00028"></a>00028         <span class="comment">//void sendMessage(std::string to, int message);        //Use Default</span>
 <a name="l00029"></a>00029         <span class="comment">//Getters and Setters</span>
-<a name="l00030"></a>00030         <span class="keywordtype">int</span> <a class="code" href="class_walk_control.html#a97ca49fb05243c08bce4c35c6f82109e" title="return _currentState">getState</a>();
+<a name="l00030"></a>00030         <span class="keywordtype">int</span> <a class="code" href="class_walk_control.html#a1c7a57f3498a7144dd60e3ce0a6c1f6b" title="Acquire current State as int.">getState</a>() <span class="keyword">const</span>;
 <a name="l00031"></a>00031         <span class="comment">//void setHost(Server *host);                                           //Use Default</span>
 <a name="l00032"></a>00032         <span class="keywordtype">void</span> <a class="code" href="class_walk_control.html#a845c064d103b519c75faa157aaf98d50">setState</a>(<a class="code" href="class_walk_control.html#a122e3c65fe98db77acf82a678fc397d2">State</a> state);
 <a name="l00033"></a>00033         <span class="keywordtype">void</span> <a class="code" href="class_walk_control.html#a845c064d103b519c75faa157aaf98d50">setState</a>(<span class="keywordtype">int</span> state);
@@ -111,17 +111,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00043"></a><a class="code" href="class_walk_control.html#a605104c9980ad54e94c21ac29f68b3b6">00043</a> <span class="keyword">inline</span> <a class="code" href="class_walk_control.html#a605104c9980ad54e94c21ac29f68b3b6">WalkControl::WalkControl</a>() : _currentState(<a class="code" href="class_walk_control.html" title="WalkControl State Class. Derived from Client.">WalkControl</a>::null), Client(){
 <a name="l00044"></a>00044 }
 <a name="l00045"></a>00045 
-<a name="l00051"></a><a class="code" href="class_walk_control.html#a7220887235002c2a014e55575a8aebeb">00051</a> <span class="keyword">inline</span> <a class="code" href="class_walk_control.html#a605104c9980ad54e94c21ac29f68b3b6">WalkControl::WalkControl</a>(<a class="code" href="class_s_r_e_1_1_extended_s_a_1_1_server.html" title="This is a Server Object. Host Clients and process Messages.">SRE::ExtendedSA::Server</a> *host) : _currentState(Walk::null), Client(host){
+<a name="l00051"></a><a class="code" href="class_walk_control.html#a7220887235002c2a014e55575a8aebeb">00051</a> <span class="keyword">inline</span> <a class="code" href="class_walk_control.html#a605104c9980ad54e94c21ac29f68b3b6">WalkControl::WalkControl</a>(<a class="code" href="class_s_r_e_1_1_extended_s_a_1_1_server.html" title="This is a Server Object. Host Clients and process Messages.">SRE::ExtendedSA::Server</a> *host) : _currentState(<a class="code" href="class_walk_control.html" title="WalkControl State Class. Derived from Client.">WalkControl</a>::null), Client(host){
 <a name="l00052"></a>00052 }
-<a name="l00058"></a><a class="code" href="class_walk_control.html#a97ca49fb05243c08bce4c35c6f82109e">00058</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="class_walk_control.html#a97ca49fb05243c08bce4c35c6f82109e" title="return _currentState">WalkControl::getState</a>(){
+<a name="l00058"></a><a class="code" href="class_walk_control.html#a1c7a57f3498a7144dd60e3ce0a6c1f6b">00058</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="class_walk_control.html#a1c7a57f3498a7144dd60e3ce0a6c1f6b" title="Acquire current State as int.">WalkControl::getState</a>()<span class="keyword"> const</span>{
 <a name="l00059"></a>00059         <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)_currentState;
 <a name="l00060"></a>00060 }
-<a name="l00066"></a>00066 <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_walk_control.html#a845c064d103b519c75faa157aaf98d50">WalkControl::setState</a>(Walk::State state){
+<a name="l00066"></a><a class="code" href="class_walk_control.html#a845c064d103b519c75faa157aaf98d50">00066</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_walk_control.html#a845c064d103b519c75faa157aaf98d50">WalkControl::setState</a>(<a class="code" href="class_walk_control.html#a122e3c65fe98db77acf82a678fc397d2">WalkControl::State</a> state){
 <a name="l00067"></a>00067         _currentState = state;
 <a name="l00068"></a>00068         <span class="keywordflow">return</span>;
 <a name="l00069"></a>00069 }
 <a name="l00075"></a><a class="code" href="class_walk_control.html#a311213276475cd1fa4588a1051448d7d">00075</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_walk_control.html#a845c064d103b519c75faa157aaf98d50">WalkControl::setState</a>(<span class="keywordtype">int</span> state){
-<a name="l00076"></a>00076         _currentState = (<a class="code" href="class_walk_control.html#a122e3c65fe98db77acf82a678fc397d2">Walk::State</a>)state;
+<a name="l00076"></a>00076         _currentState = (<a class="code" href="class_walk_control.html#a122e3c65fe98db77acf82a678fc397d2">WalkControl::State</a>)state;
 <a name="l00077"></a>00077         <span class="keywordflow">return</span>;
 <a name="l00078"></a>00078 }
 <a name="l00079"></a>00079 
@@ -131,7 +131,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_walk_control_8hpp.html">WalkControl.hpp</a>      </li>
-      <li class="footer">Generated on Thu Jun 2 2011 15:57:35 for Extended SA Collective Robot Environment by&#160;
+      <li class="footer">Generated on Fri Jun 3 2011 17:59:19 for Extended SA Collective Robot Environment by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

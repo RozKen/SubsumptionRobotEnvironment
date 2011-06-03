@@ -1,4 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$_arm_control_8cpp.html" title="This file containes ArmControl State Definition." alt="" coords="5,83,301,112"/>
-<area shape="rect" id="node5" href="$_tumbling_robot_8cpp.html" title="SubsumptionRobotEnvironment/TumblingRobot.cpp" alt="" coords="325,83,643,112"/>
+<area shape="rect" id="node3" href="$_arm_control_8cpp.html" title="This file containes ArmControl State Definition." alt="" coords="5,85,371,117"/>
+<area shape="rect" id="node5" href="$_tumbling_arm_8cpp.html" title="SubsumptionRobotEnvironment/TumblingArm.cpp" alt="" coords="395,85,773,117"/>
+<area shape="rect" id="node7" href="$_tumbling_robot_8cpp.html" title="SubsumptionRobotEnvironment/TumblingRobot.cpp" alt="" coords="797,85,1189,117"/>
 </map>
