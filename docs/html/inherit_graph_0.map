@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$class_s_r_e_1_1_extended_s_a_1_1_f_s_m_1_1_states.html" title="This is a States Object, virtual Class. This object is inspired by Finite State Machine." alt="" coords="7,32,217,61"/>
+<area shape="rect" id="node3" href="$class_s_r_e_1_1_extended_s_a_1_1_client.html" title="This is a Client Object derived from States Object of Finite State Machine. This Object has Communica..." alt="" coords="267,32,437,61"/>
+<area shape="rect" id="node5" href="$class_arm_control.html" title="ArmControl State Class. Derived from Client." alt="" coords="489,5,575,35"/>
+<area shape="rect" id="node7" href="$class_walk_control.html" title="WalkControl State Class. Derived from Client." alt="" coords="485,59,579,88"/>
+</map>

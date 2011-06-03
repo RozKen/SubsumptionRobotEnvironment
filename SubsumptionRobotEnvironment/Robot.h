@@ -7,12 +7,14 @@
 namespace SRE{
 	namespace ExtendedSA{
 		class Client;		//Prototype Declaration
+		class Server;		//Prototype Declaration
 	}
 namespace Robot{
 	class Part;				//Prototype Declaration
+	class Robot;
 	class Robot{
 	public:
-		Robot(NxScene* scene, NxVec3 position);
+		Robot(NxScene* scene,SRE::ExtendedSA::Server* host, NxVec3 position);
 		virtual ~Robot();
 
 		//Getters
@@ -28,12 +30,14 @@ namespace Robot{
 		virtual void Create() = 0;
 		//Pointer to World
 		NxScene*		pScene;
+		SRE::ExtendedSA::Server* pHost;
+		std::vector<SRE::Robot::Robot*> pRobots;
 
 		//Control Systems
 		std::vector<ExtendedSA::Client *> clients;	//"Client" Derivative Classes
 
 		//Parts
-		std::vector<Part *> parts;		//"Part" Derivative Classes
+		std::vector<Part *> parts;			//"Part" Derivative Classes
 
 		//Joints
 		std::vector<NxJoint *> joints;		//NxJoint Classes
@@ -44,7 +48,7 @@ namespace Robot{
 		NxQuat	orientation;		///Robot's Global Orientation
 	
 	};
-	inline Robot::Robot(NxScene* scene, NxVec3 position) : pScene(scene), position(position){
+	inline Robot::Robot(NxScene* scene, SRE::ExtendedSA::Server* host, NxVec3 position) : pScene(scene), pHost(host), position(position){
 		///Existence of Copy Constructor of NxPhysicsSDK and NxScene should be confirmed
 		return;
 	}
@@ -53,6 +57,7 @@ namespace Robot{
 		//delete pScene;
 		clients.clear();
 		parts.clear();
+		joints.clear();
 		return;
 	}
 

@@ -75,6 +75,7 @@ namespace World{
 	void World::KeyboardCallback(unsigned char key, int x, int y)
 	{
 		//int n = robots.size();
+		SRE::Robot::Robot* newRobot = NULL;
 		switch(key)
 		{
 			case 27:			//ESCキーが押されたら
@@ -95,7 +96,7 @@ namespace World{
 			case 't':
 				//CreateTumblingRobot(NxVec3(-20, 30, -20));
 				//TumblingRobot* robot = new TumblingRobot(pScene, NxVec3(0, 0, 0));
-				TumblingRobot(pScene, NxVec3(0, 10, 0));
+				newRobot = new TumblingRobot(pScene, host, NxVec3(0, 10, 0));
 				//TODO : register to World
 				//robots->push_back(robot);
 				break;
@@ -104,12 +105,21 @@ namespace World{
 				break;
 			//////////Parameter調整中///////////////////
 			case '0':
+				for(int i = 0; i < robots.size(); i++){
+					robots[i]->getClients()[0]->setState(0);		//Set WalkControl to Null;
+				}
 				//walk->Reset();
 				break;
 			case '1':
+				for(int i = 0; i < robots.size(); i++){
+					robots[i]->getClients()[0]->setState(1);		//Set WalkControl to Sotp;
+				}
 				//walk->setMessage(1);
 				break;
 			case '2':
+				for(int i = 0; i < robots.size(); i++){
+					robots[i]->getClients()[0]->setState(2);		//Set WalkControl to Walk;
+				}
 				//walk->setMessage(2);
 			case 'w':
 				//isWalk = !isWalk;
@@ -120,6 +130,9 @@ namespace World{
 			case 'h':
 				//isShrink = !isShrink;
 				break;
+		}
+		if(newRobot != NULL){
+			robots.push_back(newRobot);
 		}
 	}
 
@@ -188,6 +201,7 @@ namespace World{
 		// Start simulation
 		if (isSimulate){
 			pScene->simulate(1.0f/FPS);	//time(NULL) - t);
+			host->Run();
 			//t = time(NULL);
 		}
 	
@@ -438,73 +452,6 @@ namespace World{
 			}
 		}
 
-		//Render Spring
-
-		//int nbSpRobots = spRobots.size();
-		//SpringRobot spRobot;
-		//NxVec3 posActor0, posActor1;
-		//float ver[2][3];
-		//for( int i = 0; i < nbSpRobots; i++){
-		//	spRobot = spRobots[i];
-		//	int nbSpRoboV = spRobot.vertices.size();
-		//	for(int j = 0; j < nbSpRoboV - 1; j++){
-		//		for( int k = j + 1; k < nbSpRoboV; k++){
-		//			posActor0 = spRobot.vertices[j]->getGlobalPosition();
-		//			posActor1 = spRobot.vertices[k]->getGlobalPosition();
-		//			ver[0][0] = posActor0.x; ver[0][1] = posActor0.y; ver[0][2] = posActor0.z;
-		//			ver[1][0] = posActor1.x; ver[1][1] = posActor1.y; ver[1][2] = posActor1.z;
-		//			glEnableClientState(GL_VERTEX_ARRAY);
-		//			glVertexPointer(3, GL_FLOAT, 0, ver);
-		//			glDisable(GL_LIGHTING);
-		//			glColor4f(0.0f, 0.7f, 0.0f, 1.0f);
-		//			glDrawArrays(GL_LINES, 0, 2);
-		//			glEnable(GL_LIGHTING);
-		//		}
-		//	}
-		//}
-
-		//int adj[][3] = {
-		//	{2, 4, 5},
-		//	{1, 6, 3},
-		//	{2, 7, 4},
-		//	{1, 3, 8},
-		//	{1, 8, 6},
-		//	{2, 5, 7},
-		//	{3, 6, 8},
-		//	{4, 7, 5}
-		//};
-		//float glMat[16];
-		//float glMat2[16];
-		//for(int i = 0; i < nbSpRobots; i++){
-		//	SpringRobot spRobot = spRobots[i];
-		//	// Render actor
-		//	glPushMatrix();
-		//	{
-		//		spRobot.centerOfMass;
-		//		actor->getGlobalPose().getColumnMajor44(glMat);
-		//		glMultMatrixf(glMat);
-		//		shape->getLocalPose().getColumnMajor44(glMat2);
-		//		glMultMatrixf(glMat2);
-		//		glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
-		//		glutSolidSphere((GLdouble)((shape->isSphere())->getRadius()),16, 16);
-		//	}
-		//	glPopMatrix();
-
-		//	// Render shadow
-		//	glPushMatrix();
-		//	{
-		//		const static float shadowMat[]={ 1,0,0,0, 0,0,0,0, 0,0,1,0, 0,0,0,1 };
-		//		glMultMatrixf(shadowMat);
-		//		glMultMatrixf(glMat);
-		//		glMultMatrixf(glMat2);
-		//		glDisable(GL_LIGHTING);
-		//		glColor4f(0.1f, 0.2f, 0.3f, 1.0f);
-		//		glutSolidSphere((GLdouble)((shape->isSphere())->getRadius()),16, 16);
-		//		glEnable(GL_LIGHTING);
-		//	}
-		//	glPopMatrix();
-		//}
-
 		// Acquire simulation results
 		if(isSimulate){
 			pScene->flushStream();
@@ -521,65 +468,6 @@ namespace World{
 
 	void World::IdleCallback()
 	{
-		//if(isWalk){
-		//	////Random Walk
-		//	//int n = robots.size();
-		//	//NxReal max = 7500;
-		//	//for(int i = 0; i < n; i++){
-		//	//	robots[i].leftArm->addLocalTorque(NxVec3((double(rand())/RAND_MAX) * max * 2 - max/2, 0, 0));
-		//	//	robots[i].rightArm->addLocalTorque(NxVec3((double(rand())/RAND_MAX) * max * 2 - max/2, 0, 0));
-		//	//}
-		//	host->Run();
-
-		//	NxReal max = 7500;
-		//	std::cout << "Number of Robots : " << robots.size() << std::endl;
-		//	if(leftArm->getState() == leftArm->Forward){
-		//		//robots[0].leftArm->addLocalTorque(NxVec3((double(rand())/RAND_MAX) * max * 2 - max/2, 0, 0));
-		//		robots[0].leftArm->addLocalTorque(NxVec3(max, 0, 0));
-		//	}
-		//	if(rightArm->getState() == rightArm->Forward){
-		//		robots[0].rightArm->addLocalTorque(NxVec3(max, 0, 0));
-		//	}
-		//	///TODO : Keyboardなどを用いて，Walk　State Machineの状態を'Forward'にする必要がある．
-		//
-		//}
-		//if(isVibrate){
-		//	int n = spRobots.size();
-		//	double max = 350;
-		//	for(int i = 0; i < n; i++){
-		//		std::vector<NxActor *> vertex = spRobots[i].vertices;
-		//		vertex[vertex.size() - 1]->addForce(NxVec3(((double)rand()/RAND_MAX) * max * 2 - max,
-		//			(((double)rand()/RAND_MAX) * max * 2 - max) * 0.1, ((double)rand()/RAND_MAX) * max * 2 - max));
-		//		//addLocalForce(NxVec3(0, 10000, 0));
-		//	}
-		//}
-
-		//if(isShrink){
-		//	int n = spRobots.size();
-		//	std::vector<NxActor *> vertices;
-		//	double max = 200;//100;//250;
-		//	NxVec3 orientation;
-		//	double force;
-		//	for(int i = 0; i < n; i++){
-		//		vertices = spRobots[i].vertices;
-		//		for(int j = 0; j < vertices.size() - 1; j++){
-		//			for(int k = j+1 ; k < vertices.size()-1; k++){
-		//				force = ((double)rand()/RAND_MAX) * max;
-		//				orientation = vertices[j]->getGlobalPosition() - vertices[k]->getGlobalPosition();
-		//				orientation = orientation / orientation.magnitude();
-		//				vertices[j]->addForce(-force * orientation);
-		//				vertices[k]->addForce(force * orientation);
-		//				//vertices[j]->setLinearVelocity(-force * orientation);
-		//				//vertices[k]->setLinearVelocity(force * orientation);
-		//			}
-		//		}
-		//	}
-		//
-		//}
-
-		//for(int i = 0; i < spRobots.size(); i++){
-		//	spRobots[i].vertices[spRobots[i].vertices.size() - 1]->setAngularMomentum(NxVec3(0.0, 0.0, 0.0));	
-		//}
 		glutPostRedisplay();
 	}
 

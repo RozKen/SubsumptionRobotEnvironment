@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_s_r_e_1_1_extended_s_a_1_1_client.html#a68717a522772a28b0ae2f4af931da6a5" title="get Host (Server *)" alt="" coords="293,5,517,35"/>
+<area shape="rect" id="node5" href="$class_s_r_e_1_1_extended_s_a_1_1_client.html#a0b8b54f6f15d74566f0efc0d0168e441" title="SRE::ExtendedSA::Client::getInbox" alt="" coords="292,59,519,88"/>
+<area shape="rect" id="node7" href="$class_s_r_e_1_1_extended_s_a_1_1_client.html#afc063121c1dcd6beb686944fa59812b2" title="Get _name." alt="" coords="291,112,520,141"/>
+<area shape="rect" id="node9" href="$class_s_r_e_1_1_extended_s_a_1_1_client.html#a131f1924b1ae8f812f5f49f46e008a62" title="SRE::ExtendedSA::Client::getState" alt="" coords="292,165,519,195"/>
+<area shape="rect" id="node11" href="$class_s_r_e_1_1_extended_s_a_1_1_client.html#a79ed72c030157c4c4f84e09c2e4f86d5" title="get _target for signal output" alt="" coords="289,219,521,248"/>
+</map>

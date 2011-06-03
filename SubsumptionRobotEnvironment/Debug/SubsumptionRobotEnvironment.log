@@ -1,14 +1,20 @@
-﻿2011/06/02 2:50:47 にビルドを開始しました。
+﻿2011/06/03 12:32:28 にビルドを開始しました。
      1>ノード 2 上のプロジェクト "C:\Users\RozKen\Documents\Dropbox\Development\cpp\subsumption\SubsumptionRobotEnvironment\SubsumptionRobotEnvironment\SubsumptionRobotEnvironment.vcxproj" (build ターゲット)。
      1>InitializeBuildStatus:
          "AlwaysCreate" が指定されたため "Debug\SubsumptionRobotEnvironment.unsuccessfulbuild" を作成しています。
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt WorldGL.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt WalkControl.cpp WorldGL.cpp
          WorldGL.cpp
+     1>c:\users\rozken\documents\dropbox\development\cpp\subsumption\subsumptionrobotenvironment\subsumptionrobotenvironment\worldgl.cpp(108): warning C4018: '<' : signed と unsigned の数値を比較しようとしました。
+     1>c:\users\rozken\documents\dropbox\development\cpp\subsumption\subsumptionrobotenvironment\subsumptionrobotenvironment\worldgl.cpp(114): warning C4018: '<' : signed と unsigned の数値を比較しようとしました。
+     1>c:\users\rozken\documents\dropbox\development\cpp\subsumption\subsumptionrobotenvironment\subsumptionrobotenvironment\worldgl.cpp(120): warning C4018: '<' : signed と unsigned の数値を比較しようとしました。
+         WalkControl.cpp
+         コードを生成中...
        ManifestResourceCompile:
          すべての出力が最新のものです。
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\RozKen\Documents\Dropbox\Development\cpp\subsumption\SubsumptionRobotEnvironment\Debug\SubsumptionRobotEnvironment.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\SubsumptionRobotEnvironment.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\RozKen\Documents\Dropbox\Development\cpp\subsumption\SubsumptionRobotEnvironment\Debug\SubsumptionRobotEnvironment.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\RozKen\Documents\Dropbox\Development\cpp\subsumption\SubsumptionRobotEnvironment\Debug\SubsumptionRobotEnvironment.lib" /MACHINE:X86 Debug\SubsumptionRobotEnvironment.exe.embed.manifest.res
+         Debug\ArmControl.obj
          Debug\Client.obj
          Debug\Part.obj
          Debug\Server.obj
@@ -16,6 +22,7 @@
          Debug\TumblingArm.obj
          Debug\TumblingBody.obj
          Debug\TumblingRobot.obj
+         Debug\WalkControl.obj
          Debug\WorldGL.obj
          Debug\WorldPhysX.obj
        Manifest:
@@ -31,4 +38,4 @@
 
 ビルドに成功しました。
 
-経過時間 00:00:02.86
+経過時間 00:00:04.16

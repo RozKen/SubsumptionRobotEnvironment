@@ -1,10 +1,13 @@
 #include "TumblingRobot.h"
 #include "TumblingBody.h"
 #include "TumblingArm.h"
+#include "WalkControl.hpp"
+#include "ArmControl.hpp"
+#include "Server.h"
 #include <iostream>
 
-TumblingRobot::TumblingRobot(NxScene* scene, const NxVec3 position)
-	: Robot(scene, position){
+TumblingRobot::TumblingRobot(NxScene* scene, SRE::ExtendedSA::Server* host, const NxVec3 position)
+	: Robot(scene, host, position){
 	Create();
 }
 
@@ -45,5 +48,20 @@ void TumblingRobot::Create(){
 	this->joints.push_back(leftJoint);
 	this->joints.push_back(rightJoint);
 
+	WalkControl*		cWalk = new WalkControl(pHost);
+	ArmControl*			cLeftArm = new ArmControl(pHost);
+	ArmControl*			cRightArm = new ArmControl(pHost);
+
+	cWalk->addTarget(cLeftArm);
+	cWalk->addTarget(cRightArm);
+
+	clients.push_back(cWalk);
+	clients.push_back(cLeftArm);
+	clients.push_back(cRightArm);
+
+	pHost->addClient(cWalk);
+	pHost->addClient(cLeftArm);
+	pHost->addClient(cRightArm);
+	
 	return;
 }

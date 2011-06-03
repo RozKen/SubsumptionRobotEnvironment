@@ -16,6 +16,10 @@ using namespace SRE;
 NxPhysicsSDK* World::World::pPhysicsSDK = NULL;
 NxScene* World::World::pScene = NULL;
 bool World::World::isSimulate = false;
+SRE::ExtendedSA::Server* World::World::host = NULL;
+
+std::vector<SRE::Robot::Robot*>	SRE::World::World::robots;
+
 NxVec3 World::World::gEye = NxVec3(50.0f, 50.0f, 50.0f);
 NxVec3 World::World::gDir = NxVec3(-1.0f, -1.0f, -1.0f);
 NxVec3 World::World::gViewY = NxVec3();

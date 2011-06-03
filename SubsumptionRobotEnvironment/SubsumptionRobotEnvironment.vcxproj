@@ -74,6 +74,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ArmControl.hpp" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="ExtendedSA.h" />
     <ClInclude Include="Message.hpp" />
@@ -82,9 +83,11 @@
     <ClInclude Include="Server.h" />
     <ClInclude Include="States.h" />
     <ClInclude Include="TumblingRobot.h" />
+    <ClInclude Include="WalkControl.hpp" />
     <ClInclude Include="World.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ArmControl.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="Part.cpp" />
     <ClCompile Include="Server.cpp" />
@@ -93,6 +96,7 @@
     <ClCompile Include="TumblingBody.cpp" />
     <ClInclude Include="TumblingBody.h" />
     <ClCompile Include="TumblingRobot.cpp" />
+    <ClCompile Include="WalkControl.cpp" />
     <ClCompile Include="WorldGL.cpp" />
     <ClCompile Include="WorldPhysX.cpp" />
   </ItemGroup>

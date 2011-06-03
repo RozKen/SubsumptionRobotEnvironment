@@ -35,7 +35,19 @@ namespace World{
 	class World{
 	public:
 		World(int argc, char **argv);	//Constructor
-		void InitWorld();
+
+		//Getters and Setters
+		NxPhysicsSDK*	getPhysicsSDK();
+		NxScene*		getScene();
+		NxVec3			getGravity();
+
+		void			addRobot(SRE::Robot::Robot* robot);
+
+		bool			getIsSimulate();
+		void			setIsSimulate(bool flag);
+		void			switchIsSimulate();
+
+	protected:
 		/*
 		 * for PhysX
 		 */
@@ -67,18 +79,7 @@ namespace World{
 		static void myGLBox(NxVec3 dimensions);
 		static void myGLCylinder(double radius, double height, int sides);
 
-		//Getters and Setters
-		NxPhysicsSDK*	getPhysicsSDK();
-		NxScene*		getScene();
-		NxVec3			getGravity();
 
-		void			addRobot(SRE::Robot::Robot* robot);
-
-		bool			getIsSimulate();
-		void			setIsSimulate(bool flag);
-		void			switchIsSimulate();
-
-	protected:
 		//PhysX
 		//To Handle these pointers at static Function (ClenUp), 
 		//they need to be static members.
@@ -101,12 +102,10 @@ namespace World{
 		//bool						isShrink;				///Flag for Shrink
 
 		//Robots
-		//std::vector<TumblingRobots> robots;					///Store Tumbling Robots
-		//std::vector<SpringRobot>	spRobots;				///Store Spring Robots
-		std::vector<SRE::Robot::Robot*>				robots;				///StoreRobots
+		static std::vector<SRE::Robot::Robot*>		robots;			///StoreRobots
 		
 		//Subsumption Architecture
-		SRE::ExtendedSA::Server*	host;					///Server for Extended Subsumption Architecture
+		static SRE::ExtendedSA::Server*	host;					///Server for Extended Subsumption Architecture
 
 	};	//class World
 
@@ -121,6 +120,10 @@ namespace World{
 		return DefaultGravity;
 	}
 
+	/**
+	 Add a Robot to World Stack
+	 @param robot ìoò^Ç∑ÇÈObject - subclass of Robot class
+	 */
 	inline void			World::addRobot(SRE::Robot::Robot* robot){
 		robots.push_back(robot);
 	}

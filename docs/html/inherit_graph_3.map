@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$class_s_r_e_1_1_robot_1_1_part.html" title="SRE::Robot::Part" alt="" coords="5,32,128,61"/>
+<area shape="rect" id="node3" href="$class_tumbling_arm.html" title="TumblingArm" alt="" coords="179,5,277,35"/>
+<area shape="rect" id="node5" href="$class_tumbling_body.html" title="TumblingBody" alt="" coords="176,59,280,88"/>
+</map>
